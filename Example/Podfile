@@ -1,0 +1,13 @@
+use_frameworks!
+
+platform :ios, '9.0'
+
+target 'VMaxZeeAdsPlugin_Example' do
+  pod 'VMaxZeeAdsPlugin', :path => '../'
+
+  target 'VMaxZeeAdsPlugin_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
