@@ -1,0 +1,6 @@
+framework module VMaxZeeAdsPlugin {
+  umbrella header "VMaxZeeAdsPlugin-umbrella.h"
+
+  export *
+  module * { export * }
+}

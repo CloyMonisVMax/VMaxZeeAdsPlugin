@@ -1,0 +1,6 @@
+framework module VMaxAdsSDK {
+  umbrella header "VMaxAdsSDK.h"
+
+  export *
+  module * { export * }
+}

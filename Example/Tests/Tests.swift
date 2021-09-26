@@ -1,5 +1,5 @@
 import XCTest
-import VMaxZeeAdsPlugin
+//import VMaxZeeAdsPlugin
 
 class Tests: XCTestCase {
     

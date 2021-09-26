@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_0" orientation="landscape" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ZeeUIView" customModule="VMaxAdsPluginSource" customModuleProvider="target">
+            <connections>
+                <outlet property="contentView" destination="J1u-G1-J3Y" id="28Z-Db-P6T"/>
+                <outlet property="zeeContainer" destination="h3x-u8-q40" id="aQl-pb-NHn"/>
+                <outlet property="zeeVmaxAdView" destination="01s-Ud-oAu" id="2lo-Ym-zCO"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="J1u-G1-J3Y">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="200"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="01s-Ud-oAu" customClass="ZeeVmaxAdView" customModule="VMaxAdsPluginSource" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="200"/>
+                    <subviews>
+                        <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="h3x-u8-q40">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="200"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EBA-Ig-oc0">
+                                    <rect key="frame" x="12" y="168.33333333333334" width="8.3333333333333357" height="19.666666666666657"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <fontDescription key="fontDescription" name="NotoSansOriya" family="Noto Sans Oriya" pointSize="14"/>
+                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L34-Tt-24u">
+                                    <rect key="frame" x="20.333333333333332" y="178.33333333333334" width="2" height="0.0"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="2" id="RMv-gx-FtV"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" name="NotoSansOriya-Bold" family="Noto Sans Oriya" pointSize="17"/>
+                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5k1-UP-vuW">
+                                    <rect key="frame" x="22.333333333333332" y="178.33333333333334" width="0.0" height="0.0"/>
+                                    <fontDescription key="fontDescription" name="NotoSansOriya" family="Noto Sans Oriya" pointSize="14"/>
+                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="O2I-9P-eWn">
+                                    <rect key="frame" x="0.0" y="198" width="414" height="2"/>
+                                    <color key="tintColor" red="1" green="0.7725490196" blue="0.1843137255" alpha="1" colorSpace="calibratedRGB"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="4" id="l8k-aK-S0h"/>
+                                        <constraint firstAttribute="height" constant="4" id="ldl-42-4qh">
+                                            <variation key="heightClass=compact" constant="2"/>
+                                        </constraint>
+                                    </constraints>
+                                    <variation key="default">
+                                        <mask key="constraints">
+                                            <exclude reference="ldl-42-4qh"/>
+                                        </mask>
+                                    </variation>
+                                    <variation key="heightClass=compact">
+                                        <mask key="constraints">
+                                            <exclude reference="l8k-aK-S0h"/>
+                                            <include reference="ldl-42-4qh"/>
+                                        </mask>
+                                    </variation>
+                                </progressView>
+                                <button hidden="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="37S-h3-lI0" customClass="ZeeSkipAdButton" customModule="VMaxAdsPluginSource" customModuleProvider="target">
+                                    <rect key="frame" x="336" y="146" width="78" height="40"/>
+                                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="40" id="niy-EJ-bTl"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" name="NotoSansOriya" family="Noto Sans Oriya" pointSize="17"/>
+                                    <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <state key="normal" title="Skip Ad" image="skip_link">
+                                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    </state>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                            <integer key="value" value="2"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                            <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                            <real key="value" value="2"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                </button>
+                                <label userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Oe8-l0-jyW" customClass="VMaxAdSkipCounterLabel" customModule="VMaxAdsPluginSource" customModuleProvider="target">
+                                    <rect key="frame" x="294" y="146" width="120" height="40"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.5954720402" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="120" id="ttR-0J-QmP"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" name="NotoSansOriya" family="Noto Sans Oriya" pointSize="14"/>
+                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <nil key="highlightedColor"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                            <color key="value" white="0.0" alpha="0.20120966830000001" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                            <real key="value" value="2"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                            <real key="value" value="2"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                </label>
+                                <button opaque="NO" contentMode="scaleToFill" semanticContentAttribute="forceRightToLeft" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lR8-2Q-YZw">
+                                    <rect key="frame" x="282" y="5" width="127" height="23"/>
+                                    <fontDescription key="fontDescription" name="NotoSansOriya" family="Noto Sans Oriya" pointSize="15"/>
+                                    <state key="normal" title="Visit Advertiser" image="Link_Icon">
+                                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </state>
+                                </button>
+                                <view hidden="YES" opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NFE-01-tCv">
+                                    <rect key="frame" x="12" y="108.33333333333331" width="320" height="50"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="320" id="RtY-ii-gof"/>
+                                        <constraint firstAttribute="height" constant="50" id="Ux3-gx-ea3"/>
+                                    </constraints>
+                                </view>
+                            </subviews>
+                            <constraints>
+                                <constraint firstAttribute="bottom" secondItem="O2I-9P-eWn" secondAttribute="bottom" id="3Kc-zS-kmD"/>
+                                <constraint firstItem="EBA-Ig-oc0" firstAttribute="leading" secondItem="h3x-u8-q40" secondAttribute="leading" constant="12" id="7Jh-nl-9tO"/>
+                                <constraint firstItem="5k1-UP-vuW" firstAttribute="centerY" secondItem="L34-Tt-24u" secondAttribute="centerY" id="8ie-Sp-Mc0"/>
+                                <constraint firstItem="O2I-9P-eWn" firstAttribute="leading" secondItem="h3x-u8-q40" secondAttribute="leading" id="Az7-3J-0Nw"/>
+                                <constraint firstAttribute="bottom" secondItem="EBA-Ig-oc0" secondAttribute="bottom" constant="12" id="FVz-OC-JQT"/>
+                                <constraint firstItem="37S-h3-lI0" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="5k1-UP-vuW" secondAttribute="trailing" constant="8" symbolic="YES" id="Fs8-fy-p9P"/>
+                                <constraint firstItem="NFE-01-tCv" firstAttribute="leading" secondItem="h3x-u8-q40" secondAttribute="leading" constant="12" id="HAM-3a-ZDh"/>
+                                <constraint firstAttribute="trailing" secondItem="37S-h3-lI0" secondAttribute="trailing" id="OjB-7I-Wyd"/>
+                                <constraint firstItem="Oe8-l0-jyW" firstAttribute="height" secondItem="37S-h3-lI0" secondAttribute="height" id="SsT-SK-h0b"/>
+                                <constraint firstItem="L34-Tt-24u" firstAttribute="centerY" secondItem="EBA-Ig-oc0" secondAttribute="centerY" id="Uq8-sg-Htl"/>
+                                <constraint firstAttribute="trailing" secondItem="lR8-2Q-YZw" secondAttribute="trailing" constant="5" id="W7d-wr-vDZ"/>
+                                <constraint firstAttribute="trailing" secondItem="O2I-9P-eWn" secondAttribute="trailing" id="Ycy-3S-oPQ"/>
+                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="L34-Tt-24u" secondAttribute="trailing" constant="20" symbolic="YES" id="a3f-gq-hKK"/>
+                                <constraint firstItem="5k1-UP-vuW" firstAttribute="leading" secondItem="L34-Tt-24u" secondAttribute="trailing" id="aCP-1f-wln"/>
+                                <constraint firstItem="EBA-Ig-oc0" firstAttribute="top" secondItem="NFE-01-tCv" secondAttribute="bottom" constant="10" id="hyN-Hd-82u"/>
+                                <constraint firstItem="lR8-2Q-YZw" firstAttribute="top" secondItem="h3x-u8-q40" secondAttribute="top" constant="5" id="plz-hf-ZcS"/>
+                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="5k1-UP-vuW" secondAttribute="trailing" constant="20" symbolic="YES" id="qqW-1k-mPd"/>
+                                <constraint firstItem="L34-Tt-24u" firstAttribute="leading" secondItem="EBA-Ig-oc0" secondAttribute="trailing" id="sCy-2P-pNj"/>
+                                <constraint firstItem="Oe8-l0-jyW" firstAttribute="trailing" secondItem="37S-h3-lI0" secondAttribute="trailing" id="sVD-GS-QjK"/>
+                                <constraint firstItem="O2I-9P-eWn" firstAttribute="top" secondItem="37S-h3-lI0" secondAttribute="bottom" constant="12" id="ts7-4O-uSu"/>
+                                <constraint firstItem="Oe8-l0-jyW" firstAttribute="centerY" secondItem="37S-h3-lI0" secondAttribute="centerY" id="wEl-sJ-1DR"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="h3x-u8-q40" secondAttribute="trailing" id="C2c-c9-puz"/>
+                        <constraint firstItem="h3x-u8-q40" firstAttribute="leading" secondItem="01s-Ud-oAu" secondAttribute="leading" id="OmH-92-y7P"/>
+                        <constraint firstItem="h3x-u8-q40" firstAttribute="top" secondItem="01s-Ud-oAu" secondAttribute="top" id="PHb-57-dUM"/>
+                        <constraint firstAttribute="bottom" secondItem="h3x-u8-q40" secondAttribute="bottom" id="fnH-dv-oof"/>
+                    </constraints>
+                    <connections>
+                        <outlet property="btnCTA" destination="lR8-2Q-YZw" id="Uh7-1v-W2U"/>
+                        <outlet property="btnSkipAd" destination="37S-h3-lI0" id="y6j-ru-NAW"/>
+                        <outlet property="layoutOverlay" destination="NFE-01-tCv" id="9r2-kv-Ady"/>
+                        <outlet property="lblAdText" destination="EBA-Ig-oc0" id="6ll-oU-IgM"/>
+                        <outlet property="lblSkipAd" destination="Oe8-l0-jyW" id="LXh-W8-S9k"/>
+                        <outlet property="lblVideoCount" destination="5k1-UP-vuW" id="vOy-hA-dd7"/>
+                        <outlet property="progressView" destination="O2I-9P-eWn" id="3NX-OK-c7s"/>
+                    </connections>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="TAP-ax-sra"/>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="01s-Ud-oAu" secondAttribute="trailing" id="75E-uU-Lld"/>
+                <constraint firstAttribute="leading" secondItem="01s-Ud-oAu" secondAttribute="leading" id="DW8-dk-t0h"/>
+                <constraint firstItem="01s-Ud-oAu" firstAttribute="bottom" secondItem="J1u-G1-J3Y" secondAttribute="bottom" id="usD-lQ-FBf"/>
+                <constraint firstAttribute="top" secondItem="01s-Ud-oAu" secondAttribute="top" id="vWi-UE-6zZ"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="131.51658767772511" y="113.84615384615384"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="Link_Icon" width="24" height="22.666666030883789"/>
+        <image name="skip_link" width="16" height="16"/>
+    </resources>
+</document>

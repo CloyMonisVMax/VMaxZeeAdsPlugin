@@ -1,0 +1,55 @@
+{
+    "video_break": {
+        "0":  {
+            "adspot_key": "e878cd2c",
+            "requested_ads": 3,
+            "max_time": 60,
+            "expected_time": 50,
+            "end_card_time": 5,
+            "use_total_duration_for_complete_ad": true,
+            "order_by_time_ascending": true,
+            "allow_only_complete_ad": true
+        }
+    },
+    "display_ads": {
+        "sticky_bottom": [
+            {
+                "adspot_key": "79238ad9"
+            }
+        ],
+        "landscape_overlay": [
+            {
+                "adspot_key": "0e24ba4f"
+            }
+        ]
+    },
+    "key_values": {
+        "video_id": "0-1-kundalibhagya-kundalibhagyaseason1-episode_910238122",
+        "episode_number": "295",
+        "video_title": "Kundali Bhagya - Episode 295 - August 24 2018 - Full Episode",
+        "channel_id": "0-9-zeetv",
+        "show_id": "0-6-366",
+        "show_name": "Kundali Bhagya",
+        "season_id": "0-2-KundaliBhagya1",
+        "asset_subtype": "episode",
+        "audio_language": "hi",
+        "translation": "",
+        "user_language": "",
+        "genre": "Drama",
+        "collection_id": "",
+        "content_creator": "Zee Entertainment Enterprises Ltd",
+        "certificate_type": "U",
+        "app_version": "26.0309004.1-9cb5fd3",
+        "user_type": "guest",
+        "is_lat": "",
+        "bd_source": "",
+        "gender": "",
+        "age": "",
+        "content_name": "Kundali Bhagya",
+        "screen_id": "",
+        "content_length": "long_form",
+        "sports": "Cricket,Football",
+        "channel": "sony"
+    },
+    "account_id": "207947"
+}

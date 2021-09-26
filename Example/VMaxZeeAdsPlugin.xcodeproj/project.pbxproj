@@ -15,6 +15,9 @@
 		607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Images.xcassets */; };
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
 		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
+		9A0B1BB726FF1B59004228FA /* InitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A0B1BB426FF1B58004228FA /* InitialViewController.swift */; };
+		9A0B1BB826FF1B59004228FA /* VideoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A0B1BB526FF1B58004228FA /* VideoView.swift */; };
+		9A0B1BB926FF1B59004228FA /* b2b.json in Resources */ = {isa = PBXBuildFile; fileRef = 9A0B1BB626FF1B59004228FA /* b2b.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -30,8 +33,8 @@
 /* Begin PBXFileReference section */
 		03C5F4A954CCCDD422C901C8 /* Pods-VMaxZeeAdsPlugin_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VMaxZeeAdsPlugin_Tests.release.xcconfig"; path = "Target Support Files/Pods-VMaxZeeAdsPlugin_Tests/Pods-VMaxZeeAdsPlugin_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		0E52A88077A0CA9735129855 /* Pods-VMaxZeeAdsPlugin_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VMaxZeeAdsPlugin_Example.release.xcconfig"; path = "Target Support Files/Pods-VMaxZeeAdsPlugin_Example/Pods-VMaxZeeAdsPlugin_Example.release.xcconfig"; sourceTree = "<group>"; };
-		0F5C35400C136249B53433C5 /* VMaxZeeAdsPlugin.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = VMaxZeeAdsPlugin.podspec; path = ../VMaxZeeAdsPlugin.podspec; sourceTree = "<group>"; };
-		13F7BF199D7A2BF21811ADCE /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		0F5C35400C136249B53433C5 /* VMaxZeeAdsPlugin.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = VMaxZeeAdsPlugin.podspec; path = ../VMaxZeeAdsPlugin.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		13F7BF199D7A2BF21811ADCE /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		607FACD01AFB9204008FA782 /* VMaxZeeAdsPlugin_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VMaxZeeAdsPlugin_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACD51AFB9204008FA782 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -44,7 +47,10 @@
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
 		63545EF2DAFDF38039802A0C /* Pods_VMaxZeeAdsPlugin_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VMaxZeeAdsPlugin_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		804384D4E97E49BB3D449227 /* Pods-VMaxZeeAdsPlugin_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VMaxZeeAdsPlugin_Example.debug.xcconfig"; path = "Target Support Files/Pods-VMaxZeeAdsPlugin_Example/Pods-VMaxZeeAdsPlugin_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		81287D8382DB5295B5C87A6A /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		81287D8382DB5295B5C87A6A /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		9A0B1BB426FF1B58004228FA /* InitialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InitialViewController.swift; sourceTree = "<group>"; };
+		9A0B1BB526FF1B58004228FA /* VideoView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoView.swift; sourceTree = "<group>"; };
+		9A0B1BB626FF1B59004228FA /* b2b.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = b2b.json; sourceTree = "<group>"; };
 		A306E9C84968DBC5C2DFBE26 /* Pods-VMaxZeeAdsPlugin_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VMaxZeeAdsPlugin_Tests.debug.xcconfig"; path = "Target Support Files/Pods-VMaxZeeAdsPlugin_Tests/Pods-VMaxZeeAdsPlugin_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		B6ECFD3E7AEDF1CC90AB1BFE /* Pods_VMaxZeeAdsPlugin_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VMaxZeeAdsPlugin_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -93,6 +99,9 @@
 		607FACD21AFB9204008FA782 /* Example for VMaxZeeAdsPlugin */ = {
 			isa = PBXGroup;
 			children = (
+				9A0B1BB626FF1B59004228FA /* b2b.json */,
+				9A0B1BB426FF1B58004228FA /* InitialViewController.swift */,
+				9A0B1BB526FF1B58004228FA /* VideoView.swift */,
 				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
 				607FACD71AFB9204008FA782 /* ViewController.swift */,
 				607FACD91AFB9204008FA782 /* Main.storyboard */,
@@ -147,7 +156,6 @@
 				A306E9C84968DBC5C2DFBE26 /* Pods-VMaxZeeAdsPlugin_Tests.debug.xcconfig */,
 				03C5F4A954CCCDD422C901C8 /* Pods-VMaxZeeAdsPlugin_Tests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -213,6 +221,7 @@
 				TargetAttributes = {
 					607FACCF1AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
+						DevelopmentTeam = UNJ6ZB598Z;
 						LastSwiftMigration = 0900;
 					};
 					607FACE41AFB9204008FA782 = {
@@ -227,6 +236,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -248,6 +258,7 @@
 			files = (
 				607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */,
 				607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */,
+				9A0B1BB926FF1B59004228FA /* b2b.json in Resources */,
 				607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -313,10 +324,12 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-VMaxZeeAdsPlugin_Example/Pods-VMaxZeeAdsPlugin_Example-frameworks.sh",
+				"${PODS_ROOT}/VMaxAdsSDK/VMaxAdsSDK.framework",
 				"${BUILT_PRODUCTS_DIR}/VMaxZeeAdsPlugin/VMaxZeeAdsPlugin.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/VMaxAdsSDK.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/VMaxZeeAdsPlugin.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -331,6 +344,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9A0B1BB826FF1B59004228FA /* VideoView.swift in Sources */,
+				9A0B1BB726FF1B59004228FA /* InitialViewController.swift in Sources */,
 				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
 			);
@@ -478,10 +493,12 @@
 			baseConfigurationReference = 804384D4E97E49BB3D449227 /* Pods-VMaxZeeAdsPlugin_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = UNJ6ZB598Z;
 				INFOPLIST_FILE = VMaxZeeAdsPlugin/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.test;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 4.0;
@@ -493,10 +510,12 @@
 			baseConfigurationReference = 0E52A88077A0CA9735129855 /* Pods-VMaxZeeAdsPlugin_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = UNJ6ZB598Z;
 				INFOPLIST_FILE = VMaxZeeAdsPlugin/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.test;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 4.0;
