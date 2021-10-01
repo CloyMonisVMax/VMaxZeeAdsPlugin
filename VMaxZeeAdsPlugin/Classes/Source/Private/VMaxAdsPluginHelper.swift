@@ -43,19 +43,6 @@ class VMaxAdsPluginHelper {
         return (adsScheduled,midRollDurations)
     }
     
-    func getNextMidRoll(midRollDurations: Set<Int>) -> Int?{
-        var scheduledMidRoll: Int?
-        let arrayMidRollSetSeconds = Array(midRollDurations)
-        if let val = arrayMidRollSetSeconds.min(){
-            scheduledMidRoll = val
-        }
-        guard let nextMidRoll = scheduledMidRoll else{
-            return nil
-        }
-        vmLog("nextMidRoll:\(nextMidRoll)")
-        return scheduledMidRoll
-    }
-    
     func validate(vmaxAdsConfig: VMaxZeeAdsConfig) throws {
         if vmaxAdsConfig.b2b == nil {
             vmLog("b2b not set in config", .error)

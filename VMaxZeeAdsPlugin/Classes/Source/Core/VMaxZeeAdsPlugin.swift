@@ -1,8 +1,8 @@
 //
-//  VMaxZeeAdsPlugin.swift
-//  VMaxZeeAdsPlugin
+//  VMaxAdsPlugin.swift
+//  VMaxAdsPluginSource
 //
-//  Created by Cloy Monis on 24/09/21.
+//  Created by Cloy Monis on 18/08/21.
 //
 
 import Foundation
@@ -17,7 +17,7 @@ public class VMaxZeeAdsPlugin: NSObject {
     private var vmaxAdBreakEvents: VMaxAdBreakEvents?
     private var vmaxAdBreakStatusInfo: VMaxAdBreakStateInfo?
     private var midRollDurations: Set<Int> = Set<Int>()
-    private var scheduledMidRoll: Int?
+    private var selectedMidRoll: Int?
     private var adBreaksRendered: [VMaxAdBreakStateInfo] = [VMaxAdBreakStateInfo]()
     private var adBreaksStarted: [VMaxAdBreakStateInfo] = [VMaxAdBreakStateInfo]()
     private var adsScheduled = AdsScheduled()
@@ -40,7 +40,6 @@ public class VMaxZeeAdsPlugin: NSObject {
         adsScheduled = tuple.0
         midRollDurations = tuple.1
         preroll()
-        //addObservers()
         setupBanner()
     }
     
@@ -55,17 +54,17 @@ public class VMaxZeeAdsPlugin: NSObject {
             delegate.requestContentResume()
             return
         }
-        guard let scheduledMidRoll = scheduledMidRoll else{
+        guard let selectedMidRoll = selectedMidRoll else{
             vmLog("no cue point to start",.error)
             delegate.requestContentResume()
             return
         }
-        guard helper.cuePointExist(seconds: scheduledMidRoll, vmaxAdBreakStateInfo: adBreaksRendered) == false else{
-            vmLog("\(scheduledMidRoll) cue point already rendered",.error)
+        guard helper.cuePointExist(seconds: selectedMidRoll, vmaxAdBreakStateInfo: adBreaksRendered) == false else{
+            vmLog("\(selectedMidRoll) cue point already rendered",.error)
             delegate.requestContentResume()
             return
         }
-        requestAdBreak(cuePoint: scheduledMidRoll)
+        requestAdBreak(cuePoint: selectedMidRoll)
     }
     
     public func pause(){
@@ -85,35 +84,37 @@ public class VMaxZeeAdsPlugin: NSObject {
         }
         adBreak.resume()
     }
-        
+    
     public func playbackObserver(_ playBackTime: CMTime) {
         let currentSecond = Int(CMTimeGetSeconds(playBackTime))
+        vmLog("currentSecond:\(currentSecond),midRollDurations:\(midRollDurations)")
         let scratchForward = (currentSecond - lastPlayedSecond) >= 2
-        if let mediaDuration = config.mediaDuration {
-            vmLog("currentSecond:\(currentSecond),totalDuration:\(Int(CMTimeGetSeconds(mediaDuration))),lastPlayedSecond:\(lastPlayedSecond),scratchForward:\(scratchForward)")
-        }
         if let mediaDuration = config.mediaDuration,
            currentSecond >= Int(CMTimeGetSeconds(mediaDuration)) &&
-            adsScheduled.postRoll &&
-            helper.cuePointExist(seconds: -1, vmaxAdBreakStateInfo: adBreaksStarted) == false {
+            adsScheduled.postRoll && helper.cuePointExist(seconds: -1, vmaxAdBreakStateInfo: adBreaksStarted) == false {
             requestAdBreak(cuePoint: VMaxAdsConstants.postroll)
-        }else if let midroll = self.scheduledMidRoll,
-           //(currentSecond == midroll || (scratchForward && currentSecond >= midroll && currentSecond >= lastPlayedSecond)) &&
-            currentSecond >= midroll &&
-            helper.cuePointExist(seconds: midroll, vmaxAdBreakStateInfo: adBreaksStarted) == false{
-            clearSkippedMidroll(currentSeconds: currentSecond)
-            delegate.requestContentPause()
-            //if let currentMidroll = scheduledMidRoll {
-            //    vmLog("cue point found currentMidroll:\(currentMidroll) done")
-            //    scheduledMidRoll = nil
-            //    midRollDurations.remove(currentMidroll)
-            //    self.scheduledMidRoll = helper.getNextMidRoll(midRollDurations: midRollDurations)
-            //}
+        }else if midRollDurations.contains(currentSecond) && cueNotRendered(currentSecond) && selectedMidRoll == nil {
+            selectedMidRoll = currentSecond
+            if let selectedMidRoll = selectedMidRoll{
+                vmLog("Found Cue Point\(selectedMidRoll)")
+                delegate.requestContentPause()
+            }
+        }else if let maxCuePoint = midRollDurations.max(),
+                 scratchForward && cueNotRendered(maxCuePoint) && selectedMidRoll == nil && cuePointsRenderedForwardScratch(currentSecond) == false {
+            selectedMidRoll = maxCuePoint
+            if let selectedMidRoll = selectedMidRoll{
+                vmLog("Found Cue Point after scratch\(selectedMidRoll)")
+                delegate.requestContentPause()
+            }
         }
         if currentSecond != lastPlayedSecond{
             lastPlayedSecond = currentSecond
         }
     }
+    
+    //public func updateVolumeChange(event: VMaxVolumeEvents, level: Float){
+    //    vmaxAdBreak?.updateVolumeChange(event, withLevel: CGFloat(level))
+    //}
     
 }
 
@@ -127,6 +128,8 @@ extension VMaxZeeAdsPlugin: VMaxAdBreakEvents {
     
     public func onAdBreakReady() {
         vmLog("onAdBreakReady")
+        //stopWatch.stop()
+        //vmLog("onAdBreakReady stopWatch \(stopWatch.elapsedS) sec \(stopWatch.elapsedMs) msec")
         vmaxAdBreakEvents?.onAdBreakReady()
         guard let vmaxAdBreakStatusInfo = vmaxAdBreakStatusInfo else{
             vmLog("vmaxAdBreakStatusInfo is nil")
@@ -175,15 +178,14 @@ extension VMaxZeeAdsPlugin: VMaxAdBreakEvents {
             return
         }
         if vmaxAdBreakStatusInfo.cuePoint != 0 && vmaxAdBreakStatusInfo.cuePoint != -1 {
-            if let currentMidroll = scheduledMidRoll {
+            if let currentMidroll = selectedMidRoll {
                 vmLog("currentMidroll:\(currentMidroll) done")
-                scheduledMidRoll = nil
+                self.selectedMidRoll = nil
                 midRollDurations.remove(currentMidroll)
             }
         }
         adBreaksRendered.append(vmaxAdBreakStatusInfo)
         self.vmaxAdBreakStatusInfo = nil
-        scheduledMidRoll = helper.getNextMidRoll(midRollDurations: midRollDurations)
     }
     
 }
@@ -193,13 +195,11 @@ extension VMaxZeeAdsPlugin {
     private func preroll(){
         vmLog("adsScheduled.preRoll:\(adsScheduled.preRoll)")
         guard adsScheduled.preRoll else {
-            scheduledMidRoll = helper.getNextMidRoll(midRollDurations: midRollDurations)
             delegate.requestContentResume()
             return
         }
         guard helper.cuePointExist(seconds: 0, vmaxAdBreakStateInfo: adBreaksRendered) == false else{
             vmLog("preroll rendered")
-            scheduledMidRoll = helper.getNextMidRoll(midRollDurations: midRollDurations)
             delegate.requestContentResume()
             return
         }
@@ -243,35 +243,7 @@ extension VMaxZeeAdsPlugin {
         if let vmaxAdBreakStatusInfo = vmaxAdBreakStatusInfo{
             adBreaksStarted.append(vmaxAdBreakStatusInfo)
         }
-    }
-    
-    private func clearSkippedMidroll(currentSeconds:Int) {
-        guard let scheduledMidRoll = scheduledMidRoll else{
-            vmLog("no scheduledMidRoll")
-            return
-        }
-        guard currentSeconds > scheduledMidRoll else {
-            vmLog("no cue points to skip")
-            return
-        }
-        var midRollsSkipped = [Int]()
-        for midRoll in midRollDurations{
-            if midRoll < currentSeconds{
-                midRollsSkipped.append(midRoll)
-                vmLog("midRoll missed :\(midRoll)")
-            }
-        }
-        midRollsSkipped.sort()
-        self.scheduledMidRoll = midRollsSkipped.max()
-        if let scheduledMidRoll = self.scheduledMidRoll {
-            for midRoll in midRollsSkipped {
-                if midRoll != scheduledMidRoll && midRoll < currentSeconds{
-                    vmLog("midRoll:\(midRoll) to skip")
-                    midRollDurations.remove(midRoll)
-                }
-            }
-        }
-        vmLog("scheduledMidRoll:\(String(describing: self.scheduledMidRoll))")
+        //let _ = stopWatch.start()
     }
     
     private func addObservers() {
@@ -366,6 +338,22 @@ extension VMaxZeeAdsPlugin {
         }
     }
     
+    private func cueNotRendered(_ seconds: Int) -> Bool{
+        return helper.cuePointExist(seconds: seconds, vmaxAdBreakStateInfo: adBreaksRendered) == false
+    }
+    
+    private func cuePointsRenderedForwardScratch(_ seconds: Int) -> Bool{
+        vmLog("seconds:\(seconds)")
+        var response = false
+        for each in adBreaksRendered{
+            vmLog("each.cuePoint:\(each.cuePoint)")
+            if each.cuePoint < seconds{
+                response = true
+                break
+            }
+        }
+        return response
+    }
+    
 }
-
 

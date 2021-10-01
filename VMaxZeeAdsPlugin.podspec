@@ -9,7 +9,7 @@ Pod::Spec.new do |s|
   s.author           = { 'CloyMonisVMax' => 'cloy.m@vserv.com' }
   s.source           = { :git => 'https://github.com/CloyMonisVMax/VMaxZeeAdsPlugin.git', :tag => s.version.to_s }
   s.ios.deployment_target = '12.0'
-  #s.swift_version = '5'
+  s.swift_version = '5'
   s.source_files = 'VMaxZeeAdsPlugin/Classes/**/*'
   s.dependency 'VMaxAdsSDK'
   s.user_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
