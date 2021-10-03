@@ -10,6 +10,7 @@
 #import <Foundation/Foundation.h>
 #import "VMaxViewabilityTracker.h"
 #import <WebKit/WebKit.h>
+#import "VMaxAdView.h"
 
 @protocol VMaxViewabilityAd <NSObject>
 
@@ -50,15 +51,16 @@
 
 
 -(void)createReactiveVideoTrackerWithDict:(NSMutableDictionary *)adDictionary;
--(void)dispatchVolumeChangeEvent:(VOLUME_EVENTS)volState;
+-(void)dispatchVolumeChangeEvent:(VMaxVolumeEvents)event withLevel:(CGFloat)volume;
 // OM
 
 -(void)activateOMSDK;
 - (void)endDisplayAdSession;
 //-(void)startVastAdSession :(AVPlayer *)avplayer andview:(UIView *)playerView andVendorKey:(NSString *)strVendorKey andVerificationParam:(NSString *)strVerificationParam andResourceURL:(NSString *)strResourceURL andJSServiceContent:(NSString *)strJSServiceContent andDelay:(int *)delay andisFullscreenAd:(Boolean *)isFullscreenAd andfriendlyObstructions:(NSMutableArray *)friendlyObstructions;
--(void)startVastAdSessions :(AVPlayer *)avplayer andview:(UIView *)playerView andOmResources:(NSMutableArray *)andOmResources andJSServiceContent:(NSString *)strJSServiceContent andDelay:(int *)delay andisFullscreenAd:(Boolean *)isFullscreenAd andfriendlyObstructions:(NSMutableArray *)friendlyObstructions; //662 story
+-(void)startVastAdSessions :(AVPlayer *)avplayer andview:(UIView *)playerView andOmResources:(NSMutableArray *)andOmResources andJSServiceContent:(NSString *)strJSServiceContent andDelay:(int)delay andisFullscreenAd:(Boolean *)isFullscreenAd andfriendlyObstructions:(NSMutableArray *)friendlyObstructions; //662 story
 - (void)endVastAdSessionOM;
 -(void)recordVastEvent :(NSString *)strEvent;
+- (void)recordVastEvent:(NSString *)strEvent withDictionary:(NSDictionary*)info; //3.15.0 OM
 //-(void)startNativeAdSession :(UIView *)adview andVendorKey:(NSString *)strVendorKey andVerificationParam:(NSString *)strVerificationParam andResourceURL:(NSString *)strResourceURL andJSServiceContent:(NSString *)strJSServiceContent;
 -(void)startNativeAdSessions :(UIView *)adview andOmResources:(NSMutableArray *)andOmResources andJSServiceContent:(NSString *)strJSServiceContent;//662 story
 -(void)endNativeAdSession;

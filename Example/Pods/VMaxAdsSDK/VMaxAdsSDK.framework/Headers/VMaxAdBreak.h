@@ -48,6 +48,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 -(VMaxAdBreakStatus)get;
 
+-(void)updateVolumeChange:(VMaxVolumeEvents)event withLevel:(CGFloat)volume;
+
+
 @end
 
 NS_ASSUME_NONNULL_END

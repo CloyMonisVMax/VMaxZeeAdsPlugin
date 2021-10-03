@@ -112,9 +112,9 @@ public class VMaxZeeAdsPlugin: NSObject {
         }
     }
     
-    //public func updateVolumeChange(event: VMaxVolumeEvents, level: Float){
-    //    vmaxAdBreak?.updateVolumeChange(event, withLevel: CGFloat(level))
-    //}
+    public func updateVolumeChange(event: VMaxVolumeEvents, level: Float){
+        vmaxAdBreak?.updateVolumeChange(event, withLevel: CGFloat(level))
+    }
     
 }
 

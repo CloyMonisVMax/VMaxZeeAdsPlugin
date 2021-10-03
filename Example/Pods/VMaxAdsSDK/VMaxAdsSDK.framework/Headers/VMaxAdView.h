@@ -222,6 +222,12 @@ typedef NS_ENUM(NSUInteger,VMaxAdVideoTag) {
 };
 //3.14.1.1 Video tagging
 
+typedef NS_ENUM(NSUInteger, VMaxVolumeEvents) {
+    MUTED = 1,
+    UNMUTED = 2,
+    VOLUME_CHANGE
+};
+
 // Tagging Approach
 /*
 typedef NS_ENUM(NSUInteger, VMaxAdVideoTag) {
