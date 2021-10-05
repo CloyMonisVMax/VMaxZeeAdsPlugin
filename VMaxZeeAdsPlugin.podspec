@@ -14,6 +14,9 @@ Pod::Spec.new do |s|
   s.dependency 'VMaxAdsSDK'
   s.user_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
   s.pod_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
+  s.resource_bundles = {
+      'VMaxZeeAdsPlugin' => ['VMaxZeeAdsPlugin/**']
+  }
   s.resources = "VMaxZeeAdsPlugin/**/*.{png,json,xcassets,imageset,json}"
   
 end

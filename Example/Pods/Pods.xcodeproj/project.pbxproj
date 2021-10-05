@@ -30,7 +30,7 @@
 		6F173387DEE6233E6C43B4E7AEDDE1BF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
 		7EF0D2B3CDEFA761FC5B7F85D1899A10 /* Models&Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7FDA09427145A8FBEDB1D4E7CA55F12 /* Models&Extensions.swift */; };
 		940EABFBA403478EE8C5AE5A140DABAA /* WoctaView.xib in Sources */ = {isa = PBXBuildFile; fileRef = 8F2EBAFB3310C9F4A3E7CB5AF912B858 /* WoctaView.xib */; };
-		9A284323270C2E9D006D78CB /* VMaxZeeAds.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9A284322270C2E9D006D78CB /* VMaxZeeAds.xcassets */; };
+		9A353243270CAFA400FABB5C /* VMaxZeeAds.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9A353242270CAFA400FABB5C /* VMaxZeeAds.xcassets */; };
 		9D32DA92029E96DBD8FA7470A0CF3F78 /* VMaxAdsLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A4B12DEF253F432D6717679025C2FA6 /* VMaxAdsLogger.swift */; };
 		A07CE29BB109781F595C9A4DA83424A9 /* ZeeView.xib in Sources */ = {isa = PBXBuildFile; fileRef = 03038386571992F22DA3DCC956FAA6AE /* ZeeView.xib */; };
 		A2E589BA5A46EF07E4FEB71B283AC247 /* ZeeLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1665074D664F8E4C4F06353FE08EE63 /* ZeeLayout.swift */; };
@@ -106,7 +106,7 @@
 		95886B5C81697BF0A596DEE6BBFAFF29 /* VMaxZeeAdsPlugin-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "VMaxZeeAdsPlugin-Info.plist"; sourceTree = "<group>"; };
 		974530261DA3FA79775D400A83D51525 /* VMaxZeeAdsPlugin-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "VMaxZeeAdsPlugin-dummy.m"; sourceTree = "<group>"; };
 		98D6CA2302492F2B53590C0DB8F1EF5A /* VMaxAdsPluginDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = VMaxAdsPluginDelegate.swift; sourceTree = "<group>"; };
-		9A284322270C2E9D006D78CB /* VMaxZeeAds.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = VMaxZeeAds.xcassets; sourceTree = "<group>"; };
+		9A353242270CAFA400FABB5C /* VMaxZeeAds.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = VMaxZeeAds.xcassets; path = VMaxZeeAdsPlugin/Assets/VMaxZeeAds.xcassets; sourceTree = "<group>"; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		A5745512B0CC82FBDB5E06F4FF0367E7 /* Pods-VMaxZeeAdsPlugin_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-VMaxZeeAdsPlugin_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		A7459CC2644A81E65760EBB1D27F3B5D /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
@@ -208,7 +208,6 @@
 			children = (
 				EFB2EA4A13F7FE01584C19540D7B73FE /* WoctaLayout */,
 				6EACD17A93FC9C368F89A945EA8A00A3 /* ZeeLayout */,
-				9A284322270C2E9D006D78CB /* VMaxZeeAds.xcassets */,
 			);
 			name = AdLayouts;
 			path = VMaxZeeAdsPlugin/Classes/Source/AdLayouts;
@@ -270,6 +269,7 @@
 		846BD8991BC1E423EE8D230CABD09CF5 /* VMaxZeeAdsPlugin */ = {
 			isa = PBXGroup;
 			children = (
+				9A353242270CAFA400FABB5C /* VMaxZeeAds.xcassets */,
 				445689E876DA839206B9902F9340023E /* AdLayouts */,
 				80B752DB91181F9C6D3A8A85652B66B3 /* Core */,
 				1A22BB0DD19493DD1A9AC80DE63227C2 /* Pod */,
@@ -505,7 +505,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9A284323270C2E9D006D78CB /* VMaxZeeAds.xcassets in Resources */,
+				9A353243270CAFA400FABB5C /* VMaxZeeAds.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
