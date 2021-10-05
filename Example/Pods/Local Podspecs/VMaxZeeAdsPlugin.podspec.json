@@ -1,6 +1,6 @@
 {
   "name": "VMaxZeeAdsPlugin",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "summary": "VMaxZeeAdsPlugin integrates VMaxAdsSDK to show instream ads",
   "description": "VMaxZeeAdsPlugin has currently integtared Instream Video Ads with companion banner ads.",
   "homepage": "https://github.com/CloyMonisVMax/VMaxZeeAdsPlugin",
@@ -13,7 +13,7 @@
   },
   "source": {
     "git": "https://github.com/CloyMonisVMax/VMaxZeeAdsPlugin.git",
-    "tag": "0.1.0"
+    "tag": "0.1.1"
   },
   "platforms": {
     "ios": "12.0"

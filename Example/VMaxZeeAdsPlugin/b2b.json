@@ -1,8 +1,8 @@
 {
     "video_break": {
         "0":  {
-            "adspot_key": "e878cd2c",
-            "requested_ads": 3,
+            "adspot_key": "d753af64",
+            "requested_ads": 1,
             "max_time": 60,
             "expected_time": 50,
             "end_card_time": 5,
