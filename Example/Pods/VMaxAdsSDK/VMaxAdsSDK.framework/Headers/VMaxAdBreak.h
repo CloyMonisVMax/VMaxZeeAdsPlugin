@@ -50,6 +50,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 -(void)updateVolumeChange:(VMaxVolumeEvents)event withLevel:(CGFloat)volume;
 
+-(void)invalidate;
+
 
 @end
 

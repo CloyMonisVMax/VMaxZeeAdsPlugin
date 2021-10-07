@@ -27,6 +27,7 @@ public class VMaxZeeAdsPlugin: NSObject {
     private var blurEffectView: UIVisualEffectView?
     private var activityView: UIActivityIndicatorView?
     private var lastPlayedSecond = 0
+    private var scratchedAndRendered = false
     
     public init(config: VMaxZeeAdsConfig,delegate: VMaxAdsPluginDelegate) throws {
         self.config = config
@@ -91,7 +92,7 @@ public class VMaxZeeAdsPlugin: NSObject {
         let scratchForward = (currentSecond - lastPlayedSecond) >= 2
         if let mediaDuration = config.mediaDuration,
            currentSecond >= Int(CMTimeGetSeconds(mediaDuration)) &&
-            adsScheduled.postRoll && helper.cuePointExist(seconds: -1, vmaxAdBreakStateInfo: adBreaksStarted) == false {
+            adsScheduled.postRoll && helper.cuePointExist(seconds: VMaxAdsConstants.postroll, vmaxAdBreakStateInfo: adBreaksStarted) == false {
             requestAdBreak(cuePoint: VMaxAdsConstants.postroll)
         }else if midRollDurations.contains(currentSecond) && cueNotRendered(currentSecond) && selectedMidRoll == nil {
             selectedMidRoll = currentSecond
@@ -100,8 +101,9 @@ public class VMaxZeeAdsPlugin: NSObject {
                 delegate.requestContentPause()
             }
         }else if let maxCuePoint = midRollDurations.max(),
-                 scratchForward && cueNotRendered(maxCuePoint) && selectedMidRoll == nil && cuePointsRenderedForwardScratch(currentSecond) == false {
+                 scratchForward && cueNotRendered(maxCuePoint) && selectedMidRoll == nil && scratchedAndRendered == false {
             selectedMidRoll = maxCuePoint
+            scratchedAndRendered = true
             if let selectedMidRoll = selectedMidRoll{
                 vmLog("Found Cue Point after scratch\(selectedMidRoll)")
                 delegate.requestContentPause()
@@ -128,8 +130,6 @@ extension VMaxZeeAdsPlugin: VMaxAdBreakEvents {
     
     public func onAdBreakReady() {
         vmLog("onAdBreakReady")
-        //stopWatch.stop()
-        //vmLog("onAdBreakReady stopWatch \(stopWatch.elapsedS) sec \(stopWatch.elapsedMs) msec")
         vmaxAdBreakEvents?.onAdBreakReady()
         guard let vmaxAdBreakStatusInfo = vmaxAdBreakStatusInfo else{
             vmLog("vmaxAdBreakStatusInfo is nil")
@@ -171,6 +171,7 @@ extension VMaxZeeAdsPlugin: VMaxAdBreakEvents {
     }
     
     private func afterAdBreakCompletes(){
+        //vmaxAdBreak?.invalidate()
         vmaxAdBreak?.delegate = nil
         vmaxAdBreak = nil
         guard let vmaxAdBreakStatusInfo = vmaxAdBreakStatusInfo else{
@@ -243,7 +244,6 @@ extension VMaxZeeAdsPlugin {
         if let vmaxAdBreakStatusInfo = vmaxAdBreakStatusInfo{
             adBreaksStarted.append(vmaxAdBreakStatusInfo)
         }
-        //let _ = stopWatch.start()
     }
     
     private func addObservers() {
@@ -323,8 +323,10 @@ extension VMaxZeeAdsPlugin {
             blurEffectView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
             blurEffectView.alpha = 0.8
             playerView.addSubview(blurEffectView)
-            activityView.center = playerView.center
+            activityView.center = CGPoint(x: playerView.frame.width/2, y: playerView.frame.height/2)
+            activityView.color = UIColor.white
             playerView.addSubview(activityView)
+            playerView.bringSubviewToFront(activityView)
             activityView.hidesWhenStopped = true
             activityView.startAnimating()
         }
