@@ -1,9 +1,5 @@
 //
 //  VMaxBannerAdHelper.swift
-//  VMaxZeeAdsPlugin
-//
-//  Created by Cloy Monis on 24/09/21.
-//
 
 import Foundation
 import UIKit
@@ -30,10 +26,24 @@ class VMaxBannerAdHelper : NSObject {
         self.vMaxAdView.delegate = self
         self.vMaxAdView.delegateCompanion = self
         self.vMaxAdView.setAdType(.companion)
+        self.addObservers()
     }
     
     deinit {
+        self.removeObservers()
         self.vMaxAdView.invalidateAd()
+    }
+    
+    private func addObservers(){
+        NotificationCenter.default.addObserver(self, selector: #selector(self.orientationChanged(notification:)), name: UIDevice.orientationDidChangeNotification, object: nil)
+    }
+    
+    private func removeObservers(){
+        NotificationCenter.default.removeObserver(self, name: UIDevice.orientationDidChangeNotification, object: nil)
+    }
+    
+    @objc func orientationChanged(notification : NSNotification){
+        self.vMaxAdView.layoutSubviews()
     }
     
 }

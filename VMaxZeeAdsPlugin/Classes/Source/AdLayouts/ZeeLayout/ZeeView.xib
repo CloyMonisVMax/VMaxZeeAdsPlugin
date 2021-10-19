@@ -2,13 +2,12 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_0" orientation="landscape" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ZeeUIView" customModule="VMaxZeeAdsPlugin" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ZeeUIView" customModule="VMaxAdsPluginSource" customModuleProvider="target">
             <connections>
                 <outlet property="contentView" destination="J1u-G1-J3Y" id="28Z-Db-P6T"/>
                 <outlet property="zeeContainer" destination="h3x-u8-q40" id="aQl-pb-NHn"/>
@@ -20,21 +19,21 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="200"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="01s-Ud-oAu" customClass="ZeeVmaxAdView" customModule="VMaxZeeAdsPlugin" customModuleProvider="target">
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="01s-Ud-oAu" customClass="ZeeVmaxAdView" customModule="VMaxAdsPluginSource" customModuleProvider="target">
                     <rect key="frame" x="0.0" y="0.0" width="414" height="200"/>
                     <subviews>
                         <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="h3x-u8-q40">
                             <rect key="frame" x="0.0" y="0.0" width="414" height="200"/>
                             <subviews>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EBA-Ig-oc0">
-                                    <rect key="frame" x="12" y="168.33333333333334" width="8.3333333333333357" height="19.666666666666657"/>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EBA-Ig-oc0">
+                                    <rect key="frame" x="12" y="188" width="0.0" height="0.0"/>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <fontDescription key="fontDescription" name="NotoSansOriya" family="Noto Sans Oriya" pointSize="14"/>
                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L34-Tt-24u">
-                                    <rect key="frame" x="20.333333333333332" y="178.33333333333334" width="2" height="0.0"/>
+                                    <rect key="frame" x="12" y="188" width="2" height="0.0"/>
                                     <constraints>
                                         <constraint firstAttribute="width" constant="2" id="RMv-gx-FtV"/>
                                     </constraints>
@@ -43,7 +42,7 @@
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5k1-UP-vuW">
-                                    <rect key="frame" x="22.333333333333332" y="178.33333333333334" width="0.0" height="0.0"/>
+                                    <rect key="frame" x="14" y="188" width="0.0" height="0.0"/>
                                     <fontDescription key="fontDescription" name="NotoSansOriya" family="Noto Sans Oriya" pointSize="14"/>
                                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <nil key="highlightedColor"/>
@@ -69,7 +68,7 @@
                                         </mask>
                                     </variation>
                                 </progressView>
-                                <button hidden="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="37S-h3-lI0" customClass="ZeeSkipAdButton" customModule="VMaxZeeAdsPlugin" customModuleProvider="target">
+                                <button hidden="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="37S-h3-lI0" customClass="ZeeSkipAdButton" customModule="VMaxAdsPluginSource" customModuleProvider="target">
                                     <rect key="frame" x="336" y="146" width="78" height="40"/>
                                     <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                     <constraints>
@@ -92,7 +91,7 @@
                                         </userDefinedRuntimeAttribute>
                                     </userDefinedRuntimeAttributes>
                                 </button>
-                                <label userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Oe8-l0-jyW" customClass="VMaxAdSkipCounterLabel" customModule="VMaxZeeAdsPlugin" customModuleProvider="target">
+                                <label hidden="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Oe8-l0-jyW" customClass="VMaxAdSkipCounterLabel" customModule="VMaxAdsPluginSource" customModuleProvider="target">
                                     <rect key="frame" x="294" y="146" width="120" height="40"/>
                                     <color key="backgroundColor" white="0.0" alpha="0.5954720402" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <constraints>
@@ -113,7 +112,7 @@
                                         </userDefinedRuntimeAttribute>
                                     </userDefinedRuntimeAttributes>
                                 </label>
-                                <button opaque="NO" contentMode="scaleToFill" semanticContentAttribute="forceRightToLeft" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lR8-2Q-YZw">
+                                <button hidden="YES" opaque="NO" contentMode="scaleToFill" semanticContentAttribute="forceRightToLeft" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lR8-2Q-YZw">
                                     <rect key="frame" x="282" y="5" width="127" height="23"/>
                                     <fontDescription key="fontDescription" name="NotoSansOriya" family="Noto Sans Oriya" pointSize="15"/>
                                     <state key="normal" title="Visit Advertiser" image="Link_Icon">
@@ -121,7 +120,7 @@
                                     </state>
                                 </button>
                                 <view hidden="YES" opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NFE-01-tCv">
-                                    <rect key="frame" x="12" y="108.33333333333331" width="320" height="50"/>
+                                    <rect key="frame" x="12" y="128" width="320" height="50"/>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <constraints>
                                         <constraint firstAttribute="width" constant="320" id="RtY-ii-gof"/>
@@ -129,6 +128,7 @@
                                     </constraints>
                                 </view>
                             </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
                                 <constraint firstAttribute="bottom" secondItem="O2I-9P-eWn" secondAttribute="bottom" id="3Kc-zS-kmD"/>
                                 <constraint firstItem="EBA-Ig-oc0" firstAttribute="leading" secondItem="h3x-u8-q40" secondAttribute="leading" constant="12" id="7Jh-nl-9tO"/>
@@ -173,7 +173,7 @@
                 </view>
             </subviews>
             <viewLayoutGuide key="safeArea" id="TAP-ax-sra"/>
-            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
                 <constraint firstAttribute="trailing" secondItem="01s-Ud-oAu" secondAttribute="trailing" id="75E-uU-Lld"/>
                 <constraint firstAttribute="leading" secondItem="01s-Ud-oAu" secondAttribute="leading" id="DW8-dk-t0h"/>

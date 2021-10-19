@@ -2,7 +2,6 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -20,7 +19,7 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="200"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4V1-qO-Kho" userLabel="WoctaVmaxAdView" customClass="WoctaVmaxAdView" customModule="VMaxZeeAdsPlugin" customModuleProvider="target">
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4V1-qO-Kho" userLabel="WoctaVmaxAdView" customClass="WoctaVmaxAdView" customModule="VMaxAdsPluginSource" customModuleProvider="target">
                     <rect key="frame" x="0.0" y="0.0" width="414" height="200"/>
                     <subviews>
                         <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7Eb-sH-N2Z">
@@ -68,7 +67,7 @@
                                         </mask>
                                     </variation>
                                 </progressView>
-                                <button hidden="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WI5-Y2-BPC" customClass="ZeeSkipAdButton" customModule="VMaxZeeAdsPlugin" customModuleProvider="target">
+                                <button hidden="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WI5-Y2-BPC" customClass="ZeeSkipAdButton" customModule="VMaxAdsPluginSource" customModuleProvider="target">
                                     <rect key="frame" x="336" y="144" width="78" height="40"/>
                                     <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                     <constraints>
@@ -91,7 +90,7 @@
                                         </userDefinedRuntimeAttribute>
                                     </userDefinedRuntimeAttributes>
                                 </button>
-                                <label userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4yj-ib-mlb" customClass="VMaxAdSkipCounterLabel" customModule="VMaxZeeAdsPlugin" customModuleProvider="target">
+                                <label hidden="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4yj-ib-mlb" customClass="VMaxAdSkipCounterLabel" customModule="VMaxAdsPluginSource" customModuleProvider="target">
                                     <rect key="frame" x="294" y="144" width="120" height="40"/>
                                     <color key="backgroundColor" white="0.0" alpha="0.5954720402" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <constraints>
@@ -162,7 +161,7 @@
                 </view>
             </subviews>
             <viewLayoutGuide key="safeArea" id="hr9-r8-zZ3"/>
-            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
                 <constraint firstAttribute="top" secondItem="4V1-qO-Kho" secondAttribute="top" id="9yi-5N-uJP"/>
                 <constraint firstAttribute="leading" secondItem="4V1-qO-Kho" secondAttribute="leading" id="LBP-EL-zsK"/>

@@ -18,6 +18,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (NSDictionary*)getCustomData;
 
+- (void)setMaxDurationPerAd:(int)duration;
+
 @end
 
 NS_ASSUME_NONNULL_END

@@ -1,9 +1,5 @@
 //
 //  VMaxZeeAdsConfig.swift
-//  VMaxZeeAdsConfig
-//
-//  Created by Cloy Monis on 24/09/21.
-//
 
 import Foundation
 import VMaxAdsSDK

@@ -1,9 +1,5 @@
 //
 //  VMaxB2BjsonParser.swift
-//  VMaxZeeAdsPlugin
-//
-//  Created by Cloy Monis on 24/09/21.
-//
 
 import Foundation
 import VMaxAdsSDK
@@ -24,6 +20,7 @@ class VMaxB2BjsonParser{
     func get(json: NSDictionary) throws -> [String: VMaxAdMetaData]  {
         var dictionary = [String: VMaxAdMetaData]()
         let jsonKeyValue = self.parseKeyValuePair(vmaxJson: json)
+        attachAccountId(vmaxJson: json)
         guard let videoAdJson : NSDictionary = json["video_break"] as? NSDictionary else{
             throw VMaxJsonParsingError.videoAdsInvalid
         }
@@ -51,6 +48,9 @@ class VMaxB2BjsonParser{
             }
             let adspotKeys = Array(repeating: adspotKey, count: count)
             let adMetaData = VMaxAdMetaData(adSpotKeys: adspotKeys, customData: jsonKeyValues)
+            if let maxDurationPerAd = videoBreak["max_duration_per_ad"] as? Int32{
+                adMetaData.setMaxDurationPerAd(maxDurationPerAd)
+            }
             dictionary[cuePoint] = adMetaData
         }
         return dictionary
@@ -71,6 +71,12 @@ class VMaxB2BjsonParser{
         }
         return mutableJsonKeyValue
     }
+    
+    private func attachAccountId(vmaxJson: NSDictionary){
+        if let accountId = vmaxJson["account_id"] as? String, let accountIdInt = Int(accountId){
+            VMaxAdSDK.setAccountId(accountIdInt)
+        }
+    }
 
     func getBannerAdSpot(json: NSDictionary,key: String) -> String?{
         guard let displayAdsJson: NSDictionary = json["display_ads"] as? NSDictionary else{
@@ -87,5 +93,5 @@ class VMaxB2BjsonParser{
         }
         return key
     }
-
+ 
 }

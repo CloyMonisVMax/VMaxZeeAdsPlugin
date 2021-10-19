@@ -1,9 +1,5 @@
 //
 //  VMaxAdsPlugin.swift
-//  VMaxAdsPluginSource
-//
-//  Created by Cloy Monis on 18/08/21.
-//
 
 import Foundation
 import VMaxAdsSDK
@@ -148,7 +144,7 @@ extension VMaxZeeAdsPlugin: VMaxAdBreakEvents {
             return
         }
         vmaxAdBreak.play(view)
-        hideLoaderView()
+        //hideLoaderView()
     }
     
     public func onAdBreakStart() {

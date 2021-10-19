@@ -1,6 +1,6 @@
 PODS:
-  - VMaxAdsSDK (0.0.83)
-  - VMaxZeeAdsPlugin (0.1.5):
+  - VMaxAdsSDK (0.0.86)
+  - VMaxZeeAdsPlugin (0.1.7):
     - VMaxAdsSDK
 
 DEPENDENCIES:
@@ -15,8 +15,8 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  VMaxAdsSDK: 244df2b355fd034221bdf5687ac247207ed6ba10
-  VMaxZeeAdsPlugin: 67d4e261c1d0b8c77225ddc19b240f5a67b9f084
+  VMaxAdsSDK: c2e3952cc5b61661aedaeea11a0a99e21dfd15a4
+  VMaxZeeAdsPlugin: 44230d7c9b8027e58d059e06089e4f80532cf5e3
 
 PODFILE CHECKSUM: 46ba75e463d09cf5149acd3ce4ca77acf04f3856
 
