@@ -16,25 +16,25 @@
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view contentMode="scaleToFill" id="J1u-G1-J3Y">
+        <view hidden="YES" contentMode="scaleToFill" id="J1u-G1-J3Y">
             <rect key="frame" x="0.0" y="0.0" width="414" height="200"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="01s-Ud-oAu" customClass="ZeeVmaxAdView" customModule="VMaxZeeAdsPlugin">
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="01s-Ud-oAu" customClass="ZeeVmaxAdView" customModule="VMaxZeeAdsPlugin" customModuleProvider="target">
                     <rect key="frame" x="0.0" y="0.0" width="414" height="200"/>
                     <subviews>
                         <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="h3x-u8-q40">
                             <rect key="frame" x="0.0" y="0.0" width="414" height="200"/>
                             <subviews>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EBA-Ig-oc0">
-                                    <rect key="frame" x="12" y="188" width="0.0" height="0.0"/>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EBA-Ig-oc0">
+                                    <rect key="frame" x="12" y="168.33333333333334" width="8.3333333333333357" height="19.666666666666657"/>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <fontDescription key="fontDescription" name="NotoSansOriya" family="Noto Sans Oriya" pointSize="14"/>
                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L34-Tt-24u">
-                                    <rect key="frame" x="12" y="188" width="2" height="0.0"/>
+                                    <rect key="frame" x="20.333333333333332" y="178.33333333333334" width="2" height="0.0"/>
                                     <constraints>
                                         <constraint firstAttribute="width" constant="2" id="RMv-gx-FtV"/>
                                     </constraints>
@@ -43,7 +43,7 @@
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5k1-UP-vuW">
-                                    <rect key="frame" x="14" y="188" width="0.0" height="0.0"/>
+                                    <rect key="frame" x="22.333333333333332" y="178.33333333333334" width="0.0" height="0.0"/>
                                     <fontDescription key="fontDescription" name="NotoSansOriya" family="Noto Sans Oriya" pointSize="14"/>
                                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <nil key="highlightedColor"/>
@@ -121,7 +121,7 @@
                                     </state>
                                 </button>
                                 <view hidden="YES" opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NFE-01-tCv">
-                                    <rect key="frame" x="12" y="128" width="320" height="50"/>
+                                    <rect key="frame" x="12" y="108.33333333333331" width="320" height="50"/>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <constraints>
                                         <constraint firstAttribute="width" constant="320" id="RtY-ii-gof"/>
@@ -129,7 +129,6 @@
                                     </constraints>
                                 </view>
                             </subviews>
-                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
                                 <constraint firstAttribute="bottom" secondItem="O2I-9P-eWn" secondAttribute="bottom" id="3Kc-zS-kmD"/>
                                 <constraint firstItem="EBA-Ig-oc0" firstAttribute="leading" secondItem="h3x-u8-q40" secondAttribute="leading" constant="12" id="7Jh-nl-9tO"/>
@@ -174,7 +173,7 @@
                 </view>
             </subviews>
             <viewLayoutGuide key="safeArea" id="TAP-ax-sra"/>
-            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstAttribute="trailing" secondItem="01s-Ud-oAu" secondAttribute="trailing" id="75E-uU-Lld"/>
                 <constraint firstAttribute="leading" secondItem="01s-Ud-oAu" secondAttribute="leading" id="DW8-dk-t0h"/>
