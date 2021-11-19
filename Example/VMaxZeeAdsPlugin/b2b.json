@@ -2,13 +2,7 @@
     "video_break": {
         "0":  {
             "adspot_key": "9a2799a4",
-            "requested_ads": 1,
-            "max_time": 60,
-            "expected_time": 50,
-            "end_card_time": 5,
-            "use_total_duration_for_complete_ad": true,
-            "order_by_time_ascending": true,
-            "allow_only_complete_ad": true
+            "requested_ads": 1
         }
     },
     "display_ads": {

@@ -19,6 +19,4 @@ Pod::Spec.new do |s|
   }
   s.resources = "VMaxZeeAdsPlugin/**/*.{png,json,xcassets,imageset,json}"
   
-  
 end
-
