@@ -8,7 +8,6 @@ Pod::Spec.new do |s|
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'CloyMonisVMax' => 'cloy.m@vserv.com' }
   s.source           = { :git => 'https://github.com/CloyMonisVMax/VMaxZeeAdsPlugin.git', :tag => s.version.to_s }
-  platform :ios, '10.0'
   s.ios.deployment_target = '10.0'
   s.swift_version = '5'
   s.source_files = 'VMaxZeeAdsPlugin/Classes/**/*'
