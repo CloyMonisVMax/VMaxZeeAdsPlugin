@@ -3,7 +3,7 @@
 
 #import <Foundation/Foundation.h>
 #import "VMaxAdPartner.h"
-
+#import "VMaxTimeout.h"
 #import <CoreLocation/CoreLocation.h>
 
 //3.14.5 shorts
@@ -199,6 +199,10 @@ typedef NS_ENUM(NSUInteger, Environment) {
 //3.14.11 Jio 3.14.1 ppid story
 +(NSString *)getPPID:(NSString *)adSpot;
 //..
+
++(VMaxTimeout*)getTimeout; //3.15.1
+
++(void)setTimeout:(VMaxTimeout*)timeout; //3.15.1
 
 NS_ASSUME_NONNULL_END
 @end

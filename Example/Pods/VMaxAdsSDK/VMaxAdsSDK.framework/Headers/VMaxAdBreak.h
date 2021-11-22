@@ -11,6 +11,7 @@
 #import "VMaxAdBreakEvents.h"
 #import "VMaxError.h"
 #import "VMaxAdEvents.h"
+#import "IAdsReordering.h"
 
 typedef NS_ENUM(NSUInteger, VMaxAdBreakStatus) {
     UNOWNED,
@@ -49,6 +50,16 @@ NS_ASSUME_NONNULL_BEGIN
 -(VMaxAdBreakStatus)get;
 
 -(void)updateVolumeChange:(VMaxVolumeEvents)event withLevel:(CGFloat)volume;
+
+-(void)setMaxTimeInSeconds:(UInt32)maximumTime;
+
+-(void)setExpectedTimeInSeconds:(UInt32)expectedTime;
+
+-(void)enableAdsReordering:(id<IAdsReordering>)iAdsReordering;
+
+-(void)useTotalDurationForCompleteAd:(BOOL)useTotalDurationForCompleteAd;
+
+-(void)allowOnlyCompleteAd:(BOOL)allowOnlyCompleteAd;
 
 -(void)invalidate;
 

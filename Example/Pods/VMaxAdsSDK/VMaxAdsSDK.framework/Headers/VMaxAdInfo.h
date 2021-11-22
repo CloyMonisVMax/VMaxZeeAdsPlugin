@@ -45,3 +45,17 @@
 @property (strong,nonatomic) NSString *videoLayout;
 
 @end
+
+@interface AdViewMetaData : NSObject
+
+@property (nonatomic, strong) NSString *adspotKey;
+
+@property (nonatomic, strong) NSString *adId;
+
+@property (nonatomic, assign) UInt32 adDuration;
+
+@property (nonatomic, assign) UInt32 mediationLocalBackupDuration;
+
+@property (nonatomic, strong) VMaxAdView *adView;
+
+@end

@@ -12,6 +12,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface VMaxAdMetaData : NSObject
 
+@property (assign, nonatomic) NSInteger endCardTime;
+
 - (id)initWithAdSpotKeys:(NSArray*)adSpotKeys customData:(NSDictionary*)customData;
 
 - (NSArray*)getAdSpotKeys;

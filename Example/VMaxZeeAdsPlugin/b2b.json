@@ -45,5 +45,19 @@
         "sports": "Cricket,Football",
         "channel": "sony"
     },
-    "account_id": "207947"
+    "account_id": "207947",
+    "settings": {
+        "timeout": {
+            "media_load": {
+                "3G": 15,
+                "4G": 12,
+                "wifi": 12,
+            },
+            "ad_request": {
+                "3G": 15,
+                "4G": 12,
+                "wifi": 12,
+            }
+        }
+    }
 }
