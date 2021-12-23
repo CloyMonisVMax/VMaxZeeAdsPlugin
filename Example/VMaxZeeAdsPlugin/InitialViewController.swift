@@ -158,6 +158,7 @@ extension InitialViewController{
         config.vmaxAdEvents = self
         config.vmaxCompanionAdEvents = self
         config.bannerView = self.bannerAdView
+        config.requestedBitrate = 1788
         return config
     }
     

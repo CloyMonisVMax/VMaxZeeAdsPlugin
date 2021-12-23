@@ -13,10 +13,14 @@
 #define kMediaLoadTimeout  6
 
 typedef NS_ENUM(NSUInteger, VMaxConnectionType){
-    VMaxConnectionTypeUnknown = 1,
-    VMaxConnectionType3G = 2,
-    VMaxConnectionType4G = 3,
-    VMaxConnectionTypeWifi = 4
+    VMaxConnectionTypeUnknown = 0,
+    VMaxConnectionTypeWifi = 1,
+    VMaxConnectionTypeCarrier = 2,
+    VMaxConnectionType2G = 3,
+    VMaxConnectionType3G = 4,
+    VMaxConnectionType4G = 5,
+    VMaxConnectionTypeLAN = 6,
+    VMaxConnectionType5G = 7,
 };
 
 typedef NS_ENUM(NSUInteger, VMaxTimeoutType) {

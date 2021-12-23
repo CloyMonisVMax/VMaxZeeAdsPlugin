@@ -222,6 +222,9 @@ extension VMaxZeeAdsPlugin {
         if let overlayAdSpot = helper.getLandscapeOverlayAdSpot(vmaxAdsConfig: config) {
             vmaxAdBreak?.adSpotBanner = overlayAdSpot
         }
+        if let bitrate = config.requestedBitrate, bitrate > 0{
+            vmaxAdBreak?.setRequestedBitrate(UInt32(bitrate))
+        }
         vmaxAdBreakStatusInfo = VMaxAdBreakStateInfo(cuePoint: cuePoint)
         guard let vmaxAdBreak = vmaxAdBreak else{
             vmLog("vmaxAdBreak is nil")

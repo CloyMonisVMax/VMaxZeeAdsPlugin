@@ -14,6 +14,7 @@ public class VMaxZeeAdsConfig: NSObject{
     public var vmaxCompanionAdEvents: VMaxCompanionAdEvents?
     public var bannerView: UIView?
     public var meta: VMaxAdMetaData?
+    public var requestedBitrate: Int?
 }
 extension VMaxZeeAdsConfig {
     public override var debugDescription: String {
@@ -29,6 +30,7 @@ extension VMaxZeeAdsConfig {
         vmaxAdEvents:\(String(describing: vmaxAdEvents))
         vmaxCompanionAdEvents:\(String(describing: vmaxCompanionAdEvents))
         bannerView:\(String(describing: bannerView))
+        requestedBitrate:\(String(describing: requestedBitrate))
         ----------------------------------------------------------------------
         ----------------------------------------------------------------------
         """

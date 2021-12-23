@@ -63,6 +63,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 -(void)invalidate;
 
+-(void)setRequestedBitrate:(UInt32)bitrate;
 
 @end
 

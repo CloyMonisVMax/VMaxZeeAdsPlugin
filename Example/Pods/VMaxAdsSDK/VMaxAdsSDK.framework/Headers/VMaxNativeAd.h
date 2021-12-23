@@ -230,6 +230,13 @@ typedef NS_ENUM(NSUInteger, VMaxNativeAdType) {
  */
 @property (assign,nonatomic) BOOL autoLoading;
 
+//3.15.2 1161.1
+/*!
+ @property
+ @abstract layout name
+ */
+@property (strong,nonatomic,getter=getLayout) NSString* layout;
+
 @property (strong, nonatomic) NSString *adSpotId;//(MOAT)
 
 /*!
