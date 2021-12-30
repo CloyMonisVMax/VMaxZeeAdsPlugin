@@ -14,7 +14,7 @@ class VMaxAdsPluginHelper {
         return res
     }
     
-    func getAdsScheduled(dict: [String: VMaxAdMetaData]) -> (AdsScheduled,Set<Int>) {
+    func getAdsScheduled(dict: [String: VmaxAndTimeBreakMetaInfo]) -> (AdsScheduled,Set<Int>) {
         var adsScheduled = AdsScheduled()
         var midRollDurations: Set<Int> = Set<Int>()
         var arrayCuePoints = [Int]()
@@ -60,7 +60,7 @@ class VMaxAdsPluginHelper {
         }
     }
     
-    func parseb2b(vmaxAdsConfig: VMaxZeeAdsConfig) throws -> [String: VMaxAdMetaData] {
+    func parseb2b(vmaxAdsConfig: VMaxZeeAdsConfig) throws -> [String: VmaxAndTimeBreakMetaInfo] {
         let jsonParser = VMaxB2BjsonParser()
         guard let json = vmaxAdsConfig.b2b else {
             throw VMaxJsonParsingError.vmaxInvalid

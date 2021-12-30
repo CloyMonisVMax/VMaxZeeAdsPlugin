@@ -15,10 +15,24 @@ enum VMaxJsonParsingError: Error{
     case invalidJson
 }
 
+struct TimeBreakMeta{
+    var maxTime: Int?
+    var expectedTime: Int?
+    var endCardTime: Int?
+    var useTotalDurationForCompleteAd: Bool?
+    var orderByTimeAscending: Bool?
+    var allowOnlyCompleteAd: Bool?
+}
+
+struct VmaxAndTimeBreakMetaInfo{
+    let vMaxAdMetaData: VMaxAdMetaData
+    let timeBreakMeta: TimeBreakMeta
+}
+
 class VMaxB2BjsonParser{
     
-    func get(json: NSDictionary) throws -> [String: VMaxAdMetaData]  {
-        var dictionary = [String: VMaxAdMetaData]()
+    func get(json: NSDictionary) throws -> [String: VmaxAndTimeBreakMetaInfo]  {
+        var dictionary = [String: VmaxAndTimeBreakMetaInfo]()
         let jsonKeyValue = self.parseKeyValuePair(vmaxJson: json)
         attachAccountId(vmaxJson: json)
         parseTimeout(vmaxJson: json)
@@ -52,7 +66,27 @@ class VMaxB2BjsonParser{
             if let maxDurationPerAd = videoBreak["max_duration_per_ad"] as? Int32{
                 adMetaData.setMaxDurationPerAd(maxDurationPerAd)
             }
-            dictionary[cuePoint] = adMetaData
+            var timeBreakMeta = TimeBreakMeta()
+            if let maxTime = videoBreak["max_time"] as? Int{
+                timeBreakMeta.maxTime = maxTime
+            }
+            if let expectedTime = videoBreak["expected_time"] as? Int{
+                timeBreakMeta.expectedTime = expectedTime
+            }
+            if let endCardTime = videoBreak["end_card_time"] as? Int{
+                timeBreakMeta.endCardTime = endCardTime
+            }
+            if let useTotalDurationForCompleteAd = videoBreak["use_total_duration_for_complete_ad"] as? Bool{
+                timeBreakMeta.useTotalDurationForCompleteAd = useTotalDurationForCompleteAd
+            }
+            if let orderByTimeAscending = videoBreak["order_by_time_ascending"] as? Bool{
+                timeBreakMeta.orderByTimeAscending = orderByTimeAscending
+            }
+            if let allowOnlyCompleteAd = videoBreak["allow_only_complete_ad"] as? Bool{
+                timeBreakMeta.allowOnlyCompleteAd = allowOnlyCompleteAd
+            }
+            let vmaxAndTimeBreakMetaInfo = VmaxAndTimeBreakMetaInfo(vMaxAdMetaData: adMetaData, timeBreakMeta: timeBreakMeta)
+            dictionary[cuePoint] = vmaxAndTimeBreakMetaInfo
         }
         return dictionary
     }
@@ -94,7 +128,7 @@ class VMaxB2BjsonParser{
         }
         return key
     }
-    
+        
     private func parseTimeout(vmaxJson: NSDictionary){
          let vmaxTimeout = VMaxTimeout()
          guard let settings = vmaxJson["settings"] as? NSDictionary else{

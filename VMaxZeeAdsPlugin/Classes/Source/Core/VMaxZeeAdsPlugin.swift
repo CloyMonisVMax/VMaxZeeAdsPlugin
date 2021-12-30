@@ -8,7 +8,7 @@ public class VMaxZeeAdsPlugin: NSObject {
     
     private var config: VMaxZeeAdsConfig
     private var delegate: VMaxAdsPluginDelegate
-    private var metaObjects: [String: VMaxAdMetaData] = [String: VMaxAdMetaData]()
+    private var metaObjects: [String: VmaxAndTimeBreakMetaInfo] = [String: VmaxAndTimeBreakMetaInfo]()
     private var vmaxAdBreak: VMaxAdBreak?
     private var vmaxAdBreakEvents: VMaxAdBreakEvents?
     private var vmaxAdBreakStatusInfo: VMaxAdBreakStateInfo?
@@ -82,6 +82,13 @@ public class VMaxZeeAdsPlugin: NSObject {
         adBreak.resume()
     }
     
+    public func stop(){
+        vmLog("")
+        self.vmaxAdBreak?.delegate = nil
+        self.vmaxAdBreak?.invalidate()
+        self.vmaxAdBreak = nil
+    }
+    
     public func playbackObserver(_ playBackTime: CMTime) {
         let currentSecond = Int(CMTimeGetSeconds(playBackTime))
         vmLog("currentSecond:\(currentSecond),midRollDurations:\(midRollDurations)")
@@ -144,7 +151,6 @@ extension VMaxZeeAdsPlugin: VMaxAdBreakEvents {
             return
         }
         vmaxAdBreak.play(view)
-        //hideLoaderView()
     }
     
     public func onAdBreakStart() {
@@ -167,7 +173,6 @@ extension VMaxZeeAdsPlugin: VMaxAdBreakEvents {
     }
     
     private func afterAdBreakCompletes(){
-        //vmaxAdBreak?.invalidate()
         vmaxAdBreak?.delegate = nil
         vmaxAdBreak = nil
         guard let vmaxAdBreakStatusInfo = vmaxAdBreakStatusInfo else{
@@ -218,17 +223,38 @@ extension VMaxZeeAdsPlugin {
             vmLog("config.viewController is nil")
             return
         }
-        vmaxAdBreak = VMaxAdBreak(vMaxMetaData: metaObject, viewController: viewController)
+        let timeBreakMeta = metaObject.timeBreakMeta
+        let vMaxAdMetaData = metaObject.vMaxAdMetaData
+        if let endCardTime = timeBreakMeta.endCardTime{
+            vMaxAdMetaData.endCardTime = endCardTime
+        }
+        vmaxAdBreak = VMaxAdBreak(vMaxMetaData: vMaxAdMetaData , viewController: viewController)
         if let overlayAdSpot = helper.getLandscapeOverlayAdSpot(vmaxAdsConfig: config) {
             vmaxAdBreak?.adSpotBanner = overlayAdSpot
-        }
-        if let bitrate = config.requestedBitrate, bitrate > 0{
-            vmaxAdBreak?.setRequestedBitrate(UInt32(bitrate))
         }
         vmaxAdBreakStatusInfo = VMaxAdBreakStateInfo(cuePoint: cuePoint)
         guard let vmaxAdBreak = vmaxAdBreak else{
             vmLog("vmaxAdBreak is nil")
             return
+        }
+        if let maxTime = timeBreakMeta.maxTime {
+            vmaxAdBreak.setMaxTimeInSeconds(UInt32(maxTime))
+        }
+        if let expectedTime = timeBreakMeta.expectedTime {
+            vmaxAdBreak.setExpectedTimeInSeconds(UInt32(expectedTime))
+        }
+        if let useTotalDurationForCompleteAd = timeBreakMeta.useTotalDurationForCompleteAd {
+            vmaxAdBreak.useTotalDuration(forCompleteAd: useTotalDurationForCompleteAd)
+        }
+        if let allowCompleteAd = timeBreakMeta.allowOnlyCompleteAd {
+            vmaxAdBreak.allowOnlyCompleteAd(allowCompleteAd)
+        }
+        if let orderByAscending = timeBreakMeta.orderByTimeAscending, orderByAscending == true{
+            let zeeAdsReordering = ZeeIAdsReordering()
+            vmaxAdBreak.enable(zeeAdsReordering)
+        }
+        if let bitrate = config.requestedBitrate, bitrate > 0{
+            vmaxAdBreak.setRequestedBitrate(UInt32(bitrate))
         }
         vmLog("requestAdBreak for cuePoint:\(cuePoint)")
         vmaxAdBreak.delegate = self
@@ -320,7 +346,7 @@ extension VMaxZeeAdsPlugin {
             }
             blurEffectView.frame = playerView.bounds
             blurEffectView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-            blurEffectView.alpha = 0.8
+            blurEffectView.alpha = 1
             playerView.addSubview(blurEffectView)
             activityView.center = CGPoint(x: playerView.frame.width/2, y: playerView.frame.height/2)
             activityView.color = UIColor.white
@@ -357,4 +383,3 @@ extension VMaxZeeAdsPlugin {
     }
     
 }
-

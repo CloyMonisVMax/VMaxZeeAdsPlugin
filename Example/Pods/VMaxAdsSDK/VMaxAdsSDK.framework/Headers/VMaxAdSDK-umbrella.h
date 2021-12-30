@@ -52,6 +52,8 @@
 #import "VMaxAdBreakEvents.h"
 #import "VMaxAdEvents.h"
 #import "VMaxTimeout.h"
+#import "AdViewMetaData.h"
+#import "IAdsReordering.h"
 
 #endif /* VMaxAdSDK_umbrella_h */
 
