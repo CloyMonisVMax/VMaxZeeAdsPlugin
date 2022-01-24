@@ -1,26 +1,100 @@
 {
     "video_break": {
-        "0":  {
+        "0": {
             "adspot_key": "a69f5d19",
-            "requested_ads": 3,
-            "max_duration_per_ad": 1000,
-            "max_time": 50,
-            "expected_time": 40,
-            "end_card_time": 5,
-            "use_total_duration_for_complete_ad": false,
+            "tagid": "Stage_Zee5_IOs_Preroll",
+            "requested_ads": 1,
+            "max_time": 40,
+            "expected_time": 30,
+            "use_total_duration_for_complete_ad": true,
             "order_by_time_ascending": true,
-            "allow_only_complete_ad": true
+            "allow_only_complete_ad": true,
+            "override_companion_params": {
+                "DelayShowClose": {
+                    "show_delay": 3,
+                    "close_delay": 5,
+                    "hide_on_endcard": true
+                }
+            }
+        },
+        "-1": {
+            "adspot_key": "a69f5d19",
+            "tagid": "Stage_Zee5_IOs_Preroll",
+            "requested_ads": 1,
+            "max_time": 40,
+            "expected_time": 30,
+            "use_total_duration_for_complete_ad": true,
+            "order_by_time_ascending": true,
+            "allow_only_complete_ad": true,
+            "override_companion_params": {
+                "DelayShowClose": {
+                    "show_delay": 3,
+                    "close_delay": 5,
+                    "hide_on_endcard": true
+                }
+            }
+        },
+        "50": {
+            "adspot_key": "a69f5d19",
+            "tagid": "Stage_Zee5_IOs_Preroll",
+            "requested_ads": 1,
+            "max_time": 40,
+            "expected_time": 30,
+            "use_total_duration_for_complete_ad": true,
+            "order_by_time_ascending": true,
+            "allow_only_complete_ad": true,
+            "override_companion_params": {
+                "DelayShowClose": {
+                    "show_delay": 3,
+                    "close_delay": 5,
+                    "hide_on_endcard": true
+                }
+            }
+        },
+        "100": {
+            "adspot_key": "a69f5d19",
+            "tagid": "Stage_Zee5_IOs_Preroll",
+            "requested_ads": 1,
+            "max_time": 40,
+            "expected_time": 30,
+            "use_total_duration_for_complete_ad": true,
+            "order_by_time_ascending": true,
+            "allow_only_complete_ad": true,
+            "override_companion_params": {
+                "DelayShowClose": {
+                    "show_delay": 3,
+                    "close_delay": 5,
+                    "hide_on_endcard": true
+                }
+            }
+        },
+        "150": {
+            "adspot_key": "a69f5d19",
+            "tagid": "Stage_Zee5_IOs_Preroll",
+            "requested_ads": 1,
+            "max_time": 40,
+            "expected_time": 30,
+            "use_total_duration_for_complete_ad": true,
+            "order_by_time_ascending": true,
+            "allow_only_complete_ad": true,
+            "override_companion_params": {
+                "DelayShowClose": {
+                    "show_delay": 3,
+                    "close_delay": 5,
+                    "hide_on_endcard": true
+                }
+            }
         }
     },
     "display_ads": {
         "sticky_bottom": [
             {
-                "adspot_key": "79238ad9"
+                "adspot_key": "21665149170"
             }
         ],
         "landscape_overlay": [
             {
-                "adspot_key": "0e24ba4f"
+                "adspot_key": "21665149170"
             }
         ]
     },
@@ -52,19 +126,5 @@
         "sports": "Cricket,Football",
         "channel": "sony"
     },
-    "account_id": "207947",
-    "settings": {
-        "timeout": {
-            "media_load": {
-                "3G": 15,
-                "4G": 12,
-                "wifi": 12,
-            },
-            "ad_request": {
-                "3G": 15,
-                "4G": 12,
-                "wifi": 12,
-            }
-        }
-    }
+    "account_id": "207947"
 }

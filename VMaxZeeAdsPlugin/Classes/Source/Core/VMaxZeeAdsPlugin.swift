@@ -23,7 +23,6 @@ public class VMaxZeeAdsPlugin: NSObject {
     private var blurEffectView: UIVisualEffectView?
     private var activityView: UIActivityIndicatorView?
     private var lastPlayedSecond = 0
-    private var scratchedAndRendered = false
     
     public init(config: VMaxZeeAdsConfig,delegate: VMaxAdsPluginDelegate) throws {
         self.config = config
@@ -91,7 +90,8 @@ public class VMaxZeeAdsPlugin: NSObject {
     
     public func playbackObserver(_ playBackTime: CMTime) {
         let currentSecond = Int(CMTimeGetSeconds(playBackTime))
-        vmLog("currentSecond:\(currentSecond),midRollDurations:\(midRollDurations)")
+        let midRollsFiltered = midRollDurations.filter(){ $0 <= currentSecond }
+        vmLog("currentSecond:\(currentSecond),midRollDurations:\(midRollDurations),midRollsFiltered:\(midRollsFiltered)")
         let scratchForward = (currentSecond - lastPlayedSecond) >= 2
         if let mediaDuration = config.mediaDuration,
            currentSecond >= Int(CMTimeGetSeconds(mediaDuration)) &&
@@ -103,10 +103,10 @@ public class VMaxZeeAdsPlugin: NSObject {
                 vmLog("Found Cue Point\(selectedMidRoll)")
                 delegate.requestContentPause()
             }
-        }else if let maxCuePoint = midRollDurations.max(),
-                 scratchForward && cueNotRendered(maxCuePoint) && selectedMidRoll == nil && scratchedAndRendered == false {
+        }else if let maxCuePoint = midRollsFiltered.max(),let minCuePoint = midRollsFiltered.min(),
+                 scratchForward && cueNotRendered(maxCuePoint) && selectedMidRoll == nil && currentSecond > minCuePoint
+                {
             selectedMidRoll = maxCuePoint
-            scratchedAndRendered = true
             if let selectedMidRoll = selectedMidRoll{
                 vmLog("Found Cue Point after scratch\(selectedMidRoll)")
                 delegate.requestContentPause()
