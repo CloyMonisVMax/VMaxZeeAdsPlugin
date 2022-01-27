@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name             = 'VMaxZeeAdsPlugin'
-  s.version          = '0.1.18'
+  s.version          = '0.1.20'
   s.summary          = 'VMaxZeeAdsPlugin integrates VMaxAdsSDK to show instream ads'
   s.description      = 'VMaxZeeAdsPlugin has currently integtared Instream Video Ads with companion banner ads.'
   s.homepage         = 'https://github.com/CloyMonisVMax/VMaxZeeAdsPlugin'
@@ -12,8 +12,8 @@ Pod::Spec.new do |s|
   s.swift_version = '5'
   s.source_files = 'VMaxZeeAdsPlugin/Classes/**/*'
   s.dependency 'VMaxAdsSDK'
-  s.user_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64 i386' }
-  s.pod_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64 i386' }
+  s.user_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'i386' }
+  s.pod_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'i386' }
   s.resource_bundles = {
       'VMaxZeeAdsPlugin' => ['VMaxZeeAdsPlugin/**']
   }
