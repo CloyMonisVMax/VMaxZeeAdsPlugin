@@ -83,6 +83,7 @@ public class VMaxZeeAdsPlugin: NSObject {
     
     public func stop(){
         vmLog("")
+        hideLoaderView()
         self.vmaxAdBreak?.delegate = nil
         self.vmaxAdBreak?.invalidate()
         self.vmaxAdBreak = nil
