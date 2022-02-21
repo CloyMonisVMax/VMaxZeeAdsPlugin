@@ -10,6 +10,7 @@
 #endif
 #endif
 
+#import "VMaxOM.h"
 
 FOUNDATION_EXPORT double VMaxZeeAdsPluginVersionNumber;
 FOUNDATION_EXPORT const unsigned char VMaxZeeAdsPluginVersionString[];
