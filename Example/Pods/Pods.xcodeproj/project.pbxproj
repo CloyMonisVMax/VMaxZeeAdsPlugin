@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 52;
+	objectVersion = 46;
 	objects = {
 
 /* Begin PBXAggregateTarget section */
@@ -42,7 +42,6 @@
 		752AC063DF79F06BD166C8ED3D5E8565 /* ZeeView.xib in Sources */ = {isa = PBXBuildFile; fileRef = 339B4ADC4917FA952A1EFBF066C25ACC /* ZeeView.xib */; };
 		812678C3EADCCB1208C11E44157487AD /* VMaxAdsPluginDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A152D8660AC96EB21C12F764BD9CA1E /* VMaxAdsPluginDelegate.swift */; };
 		8E926A0022AC01959422CDB9B738FB58 /* Models&Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1B4F20FE791BC14188C053E32509FE6 /* Models&Extensions.swift */; };
-		9AE829C627C3E34E00EA992C /* OMSDK_Zeedigitalesselgroup.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AE829C527C3E34E00EA992C /* OMSDK_Zeedigitalesselgroup.xcframework */; };
 		9BD8126C8B413E6C56DD3397910A60BB /* Pods-VMaxZeeAdsPlugin_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = BCA5143AC9E5739184AC1D9888C764DE /* Pods-VMaxZeeAdsPlugin_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A58BB5A6440221A044776212E309B703 /* ZeeIAdsReordering.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70C08221EF3342879423E6176A1143AC /* ZeeIAdsReordering.swift */; };
 		ABC28360F2D6B90421F2471B78596DC8 /* VMaxOM.h in Headers */ = {isa = PBXBuildFile; fileRef = 59214FD1FCAAAEDCB2CB5B0031608600 /* VMaxOM.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -126,7 +125,6 @@
 		95A52F8ABD206424BA7E0444688756FF /* WoctaView.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; path = WoctaView.xib; sourceTree = "<group>"; };
 		9601EF5772189BBA909D7D541FAB1F19 /* VMaxB2BjsonParser.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = VMaxB2BjsonParser.swift; sourceTree = "<group>"; };
 		9871EA3777C8E8938B3B60A189EEC130 /* WoctaLayout.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = WoctaLayout.swift; sourceTree = "<group>"; };
-		9AE829C527C3E34E00EA992C /* OMSDK_Zeedigitalesselgroup.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = OMSDK_Zeedigitalesselgroup.xcframework; path = ../../OMSDK_Zeedigitalesselgroup.xcframework; sourceTree = "<group>"; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		A5745512B0CC82FBDB5E06F4FF0367E7 /* Pods-VMaxZeeAdsPlugin_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-VMaxZeeAdsPlugin_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		ADC202396FAE8763FC26FC0584AA0663 /* VMaxZeeAdsPlugin.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = VMaxZeeAdsPlugin.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
@@ -165,7 +163,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				6D0E51EDD1196CC6978E6748545D4BA3 /* Foundation.framework in Frameworks */,
-				9AE829C627C3E34E00EA992C /* OMSDK_Zeedigitalesselgroup.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -346,7 +343,6 @@
 		CF1408CF629C7361332E53B88F7BD30C = {
 			isa = PBXGroup;
 			children = (
-				9AE829C527C3E34E00EA992C /* OMSDK_Zeedigitalesselgroup.xcframework */,
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
 				96CD81166EFF665F60C1D871CE65B7D0 /* Development Pods */,
 				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
@@ -715,11 +711,7 @@
 				INFOPLIST_FILE = "Target Support Files/VMaxZeeAdsPlugin/VMaxZeeAdsPlugin-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/VMaxZeeAdsPlugin/VMaxZeeAdsPlugin.modulemap";
 				PRODUCT_MODULE_NAME = VMaxZeeAdsPlugin;
 				PRODUCT_NAME = VMaxZeeAdsPlugin;
@@ -751,11 +743,7 @@
 				INFOPLIST_FILE = "Target Support Files/Pods-VMaxZeeAdsPlugin_Tests/Pods-VMaxZeeAdsPlugin_Tests-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-VMaxZeeAdsPlugin_Tests/Pods-VMaxZeeAdsPlugin_Tests.modulemap";
 				OTHER_LDFLAGS = "";
@@ -804,11 +792,7 @@
 				INFOPLIST_FILE = "Target Support Files/Pods-VMaxZeeAdsPlugin_Example/Pods-VMaxZeeAdsPlugin_Example-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-VMaxZeeAdsPlugin_Example/Pods-VMaxZeeAdsPlugin_Example.modulemap";
 				OTHER_LDFLAGS = "";
@@ -841,11 +825,7 @@
 				INFOPLIST_FILE = "Target Support Files/Pods-VMaxZeeAdsPlugin_Example/Pods-VMaxZeeAdsPlugin_Example-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-VMaxZeeAdsPlugin_Example/Pods-VMaxZeeAdsPlugin_Example.modulemap";
 				OTHER_LDFLAGS = "";
@@ -933,8 +913,7 @@
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_INSTALLED_PRODUCT = NO;
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 5.0;
 				SYMROOT = "${SRCROOT}/../build";
 			};
@@ -948,10 +927,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -974,11 +950,7 @@
 				INFOPLIST_FILE = "Target Support Files/VMaxZeeAdsPlugin/VMaxZeeAdsPlugin-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/VMaxZeeAdsPlugin/VMaxZeeAdsPlugin.modulemap";
 				PRODUCT_MODULE_NAME = VMaxZeeAdsPlugin;
 				PRODUCT_NAME = VMaxZeeAdsPlugin;
@@ -1009,11 +981,7 @@
 				INFOPLIST_FILE = "Target Support Files/Pods-VMaxZeeAdsPlugin_Tests/Pods-VMaxZeeAdsPlugin_Tests-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-VMaxZeeAdsPlugin_Tests/Pods-VMaxZeeAdsPlugin_Tests.modulemap";
 				OTHER_LDFLAGS = "";
@@ -1104,10 +1072,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
