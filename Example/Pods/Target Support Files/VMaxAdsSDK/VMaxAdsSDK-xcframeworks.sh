@@ -106,5 +106,4 @@ install_xcframework() {
 }
 
 install_xcframework "${PODS_ROOT}/VMaxAdsSDK/VMaxAdsSDK.xcframework" "VMaxAdsSDK" "framework" "ios-arm64_armv7" "ios-arm64_i386_x86_64-simulator"
-install_xcframework "${PODS_ROOT}/VMaxAdsSDK/OMSDK_Zeedigitalesselgroup.xcframework" "VMaxAdsSDK" "framework" "ios-arm64_armv7" "ios-arm64_i386_x86_64-simulator"
 

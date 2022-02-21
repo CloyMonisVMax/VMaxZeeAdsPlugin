@@ -66,9 +66,10 @@ UIView *viewMainAdPlayerView;
 }
 
 -(void)script {
-    NSString *path = [[NSBundle mainBundle] pathForResource:@"vmax_omid" ofType:@"js"];
+    NSString *path =[[NSBundle bundleForClass: self.class] pathForResource:@"vmax_omid" ofType:@"js"];
     NSData *data = [NSData dataWithContentsOfFile:path];
     strScript = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+    VLog(@"%@",strScript);
 }
 
 #pragma mark Register Display Ad
