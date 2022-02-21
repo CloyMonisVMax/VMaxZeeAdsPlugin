@@ -324,13 +324,15 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-VMaxZeeAdsPlugin_Example/Pods-VMaxZeeAdsPlugin_Example-frameworks.sh",
-				"${PODS_ROOT}/VMaxAdsSDK/VMaxAdsSDK.framework",
 				"${BUILT_PRODUCTS_DIR}/VMaxZeeAdsPlugin/VMaxZeeAdsPlugin.framework",
+				"${PODS_XCFRAMEWORKS_BUILD_DIR}/VMaxAdsSDK/VMaxAdsSDK.framework/VMaxAdsSDK",
+				"${PODS_XCFRAMEWORKS_BUILD_DIR}/VMaxAdsSDK/OMSDK_Zeedigitalesselgroup.framework/OMSDK_Zeedigitalesselgroup",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/VMaxAdsSDK.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/VMaxZeeAdsPlugin.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/VMaxAdsSDK.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/OMSDK_Zeedigitalesselgroup.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
