@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 52;
+	objectVersion = 46;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -18,7 +18,6 @@
 		9A0B1BB726FF1B59004228FA /* InitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A0B1BB426FF1B58004228FA /* InitialViewController.swift */; };
 		9A0B1BB826FF1B59004228FA /* VideoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A0B1BB526FF1B58004228FA /* VideoView.swift */; };
 		9A0B1BB926FF1B59004228FA /* b2b.json in Resources */ = {isa = PBXBuildFile; fileRef = 9A0B1BB626FF1B59004228FA /* b2b.json */; };
-		9AE829C827C3E3BC00EA992C /* OMSDK_Zeedigitalesselgroup.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AE829C727C3E3BC00EA992C /* OMSDK_Zeedigitalesselgroup.xcframework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,7 +62,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				4FC9CD6D78AD0F7CA211B648 /* Pods_VMaxZeeAdsPlugin_Example.framework in Frameworks */,
-				9AE829C827C3E3BC00EA992C /* OMSDK_Zeedigitalesselgroup.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -330,11 +328,13 @@
 				"${PODS_ROOT}/Target Support Files/Pods-VMaxZeeAdsPlugin_Example/Pods-VMaxZeeAdsPlugin_Example-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/VMaxZeeAdsPlugin/VMaxZeeAdsPlugin.framework",
 				"${PODS_XCFRAMEWORKS_BUILD_DIR}/VMaxAdsSDK/VMaxAdsSDK.framework/VMaxAdsSDK",
+				"${PODS_XCFRAMEWORKS_BUILD_DIR}/VMaxZeeOMSDK/OMSDK_Zeedigitalesselgroup.framework/OMSDK_Zeedigitalesselgroup",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/VMaxZeeAdsPlugin.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/VMaxAdsSDK.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/OMSDK_Zeedigitalesselgroup.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -487,8 +487,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -501,10 +500,7 @@
 				DEVELOPMENT_TEAM = UNJ6ZB598Z;
 				INFOPLIST_FILE = VMaxZeeAdsPlugin/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = com.zeeTV.DIDS4;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -521,10 +517,7 @@
 				DEVELOPMENT_TEAM = UNJ6ZB598Z;
 				INFOPLIST_FILE = VMaxZeeAdsPlugin/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = com.zeeTV.DIDS4;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -546,11 +539,7 @@
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = Tests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
@@ -568,11 +557,7 @@
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = Tests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
