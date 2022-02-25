@@ -31,16 +31,17 @@ NS_ASSUME_NONNULL_BEGIN
 -(void)onAdPause:(VmaxAdInfo*)vmaxAdInfo;
 -(void)onAdResume:(VmaxAdInfo*)vmaxAdInfo;
 -(void)onAdMediaBitrateChange:(float)indicatedBitrate;
+-(void)onAdTapped:(VmaxAdInfo*)vmaxAdInfo;
 
 @end
 
 @protocol VMaxCompanionAdEvents <NSObject>
 
-- (void)onCompanionReady;
-- (void)onCompanionRender;
-- (void)onCompanionError:(NSError *)error;
-- (void)onCompanionClose;
-- (void)onCompanionClick;
+- (void)onCompanionReady:(NSString*)adSlotId;
+- (void)onCompanionRender:(NSString*)adSlotId;
+- (void)onCompanionError:(NSString*)adSlotId;
+- (void)onCompanionClose:(NSString*)adSlotId;
+- (void)onCompanionClick:(NSString*)adSlotId;
 
 @end
 

@@ -54,7 +54,7 @@
 		</data>
 		<key>Headers/VMaxAdDelegate.h</key>
 		<data>
-		ANfhOdjNHC8Zu9NxjIOmtPup1hY=
+		F0YgKvfAst+YCgoHieDeshbMG14=
 		</data>
 		<key>Headers/VMaxAdError.h</key>
 		<data>
@@ -66,7 +66,7 @@
 		</data>
 		<key>Headers/VMaxAdEvents.h</key>
 		<data>
-		rqjU+xdiRu+EENww1tVadiIswsg=
+		9ylS0EMHoqKMAp8RfTqGXmG9yqA=
 		</data>
 		<key>Headers/VMaxAdInfo.h</key>
 		<data>
@@ -86,7 +86,7 @@
 		</data>
 		<key>Headers/VMaxAdSDK.h</key>
 		<data>
-		6Eb7Jh4S5x4ObAxhomsckuSU+oo=
+		zXkJRL7zE66usWOyu1WVb3vGpgc=
 		</data>
 		<key>Headers/VMaxAdSettings.h</key>
 		<data>
@@ -106,7 +106,7 @@
 		</data>
 		<key>Headers/VMaxCache.h</key>
 		<data>
-		HoF+HeDscUzD7ZNNCJgKNsTwMzQ=
+		ULd3+RhD4jLNnQz6RYdRGJfS4Bo=
 		</data>
 		<key>Headers/VMaxCompanionDelegate.h</key>
 		<data>
@@ -595,11 +595,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			ANfhOdjNHC8Zu9NxjIOmtPup1hY=
+			F0YgKvfAst+YCgoHieDeshbMG14=
 			</data>
 			<key>hash2</key>
 			<data>
-			4N4aLOYpmRv29lPnVsNXrC4onLjluuPmYWTohDwsCJw=
+			xSXOQh4LoSQQWonTR4BOwz5aFA11dsBaxfPZnY1Kk2E=
 			</data>
 		</dict>
 		<key>Headers/VMaxAdError.h</key>
@@ -628,11 +628,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			rqjU+xdiRu+EENww1tVadiIswsg=
+			9ylS0EMHoqKMAp8RfTqGXmG9yqA=
 			</data>
 			<key>hash2</key>
 			<data>
-			akF9Bct4sASVQbd8YgPenQjArjSxeRink28wTLdFz6s=
+			opq8jo/Y4r7+xmKWEBTw2xGN6CIoXff3k/Skw5+f0wo=
 			</data>
 		</dict>
 		<key>Headers/VMaxAdInfo.h</key>
@@ -683,11 +683,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			6Eb7Jh4S5x4ObAxhomsckuSU+oo=
+			zXkJRL7zE66usWOyu1WVb3vGpgc=
 			</data>
 			<key>hash2</key>
 			<data>
-			M1vanL9Ua8DPmgfKc9feKrEN/sFe4PuWa2s5xp9xjXY=
+			UPT3my4TVFxkJC/QyuHU6WePcJEFwCJvIic7ZCKM1OA=
 			</data>
 		</dict>
 		<key>Headers/VMaxAdSettings.h</key>
@@ -738,11 +738,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			HoF+HeDscUzD7ZNNCJgKNsTwMzQ=
+			ULd3+RhD4jLNnQz6RYdRGJfS4Bo=
 			</data>
 			<key>hash2</key>
 			<data>
-			x5GDoVK9UoVz8Eq6qePwgilYWom83+UaT4i4vbEf/f0=
+			P/JUN5W11pTQ5guLUmru5pk3Zvud2XQEOM+BtY7v4wM=
 			</data>
 		</dict>
 		<key>Headers/VMaxCompanionDelegate.h</key>

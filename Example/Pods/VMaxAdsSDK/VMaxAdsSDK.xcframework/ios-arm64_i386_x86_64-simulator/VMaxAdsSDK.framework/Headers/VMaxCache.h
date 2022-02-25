@@ -34,6 +34,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 -(void)getContentHeight:(void(^)(int))webContentHeight; //3.14.9 companion adaptive
 
+-(void)invalidate;
+
 @end
 
 NS_ASSUME_NONNULL_END

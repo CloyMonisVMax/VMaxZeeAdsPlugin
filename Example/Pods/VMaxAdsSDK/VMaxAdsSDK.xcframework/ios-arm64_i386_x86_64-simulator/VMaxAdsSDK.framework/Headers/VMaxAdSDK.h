@@ -204,5 +204,7 @@ typedef NS_ENUM(NSUInteger, Environment) {
 
 +(void)setTimeout:(VMaxTimeout*)timeout; //3.15.1
 
++(void)clearUserDataFilter; //3.15.4 VMaxUserDataFilter
+
 NS_ASSUME_NONNULL_END
 @end
