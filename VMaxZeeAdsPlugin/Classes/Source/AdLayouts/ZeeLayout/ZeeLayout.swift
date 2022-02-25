@@ -36,8 +36,32 @@ class ZeeUIView: UIView{
         self.commonInit()
     }
     
+    deinit{
+        if (self.zeeVmaxAdView.btnCTA != nil){
+            self.zeeVmaxAdView.btnCTA.removeFromSuperview()
+        }
+        if (self.zeeVmaxAdView.progressView != nil){
+            self.zeeVmaxAdView.progressView.removeFromSuperview()
+        }
+        if (self.zeeVmaxAdView.lblVideoCount != nil){
+            self.zeeVmaxAdView.lblVideoCount.removeFromSuperview()
+        }
+        if (self.zeeVmaxAdView.lblSkipAd != nil){
+            self.zeeVmaxAdView.lblSkipAd.removeFromSuperview()
+        }
+        if (self.zeeVmaxAdView.btnSkipAd != nil){
+            self.zeeVmaxAdView.btnSkipAd.removeFromSuperview()
+        }
+        if (self.zeeVmaxAdView.lblAdText != nil){
+            self.zeeVmaxAdView.lblAdText.removeFromSuperview()
+        }
+        if (self.zeeVmaxAdView.layoutOverlay != nil){
+            self.zeeVmaxAdView.layoutOverlay.removeFromSuperview()
+        }
+        print("deinit ZeeUIView")
+    }
+    
     private func commonInit(){
-        //Bundle.main.loadNibNamed("ZeeView", owner: self, options: nil)
         Bundle(for: Self.self).loadNibNamed("ZeeView", owner: self, options: nil)
         addSubview(contentView)
         contentView.frame = self.bounds

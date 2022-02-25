@@ -3,82 +3,22 @@
         "0": {
             "adspot_key": "251e9b17",
             "tagid": "Stage_Zee5_IOs_Preroll",
-            "requested_ads": 1,
-            "max_time": 40,
-            "expected_time": 30,
+            "requested_ads": 2,
+            "max_time": 70,
+            "expected_time": 60,
             "use_total_duration_for_complete_ad": true,
             "order_by_time_ascending": true,
             "allow_only_complete_ad": true,
-            "override_companion_params": {
-                "DelayShowClose": {
+            "max_duration_per_ad": 30,
+            "adslots": {
+                "020b1a04": {
+                    "behavior": "DelayShowClose",
                     "show_delay": 3,
                     "close_delay": 5,
                     "hide_on_endcard": true
-                }
-            }
-        },
-        "-1": {
-            "adspot_key": "a69f5d19",
-            "tagid": "Stage_Zee5_IOs_Preroll",
-            "requested_ads": 1,
-            "max_time": 40,
-            "expected_time": 30,
-            "use_total_duration_for_complete_ad": true,
-            "order_by_time_ascending": true,
-            "allow_only_complete_ad": true,
-            "override_companion_params": {
-                "DelayShowClose": {
-                    "show_delay": 3,
-                    "close_delay": 5,
-                    "hide_on_endcard": true
-                }
-            }
-        },
-        "50": {
-            "adspot_key": "a69f5d19",
-            "tagid": "Stage_Zee5_IOs_Preroll",
-            "requested_ads": 1,
-            "max_time": 40,
-            "expected_time": 30,
-            "use_total_duration_for_complete_ad": true,
-            "order_by_time_ascending": true,
-            "allow_only_complete_ad": true,
-            "override_companion_params": {
-                "DelayShowClose": {
-                    "show_delay": 3,
-                    "close_delay": 5,
-                    "hide_on_endcard": true
-                }
-            }
-        },
-        "100": {
-            "adspot_key": "a69f5d19",
-            "tagid": "Stage_Zee5_IOs_Preroll",
-            "requested_ads": 1,
-            "max_time": 40,
-            "expected_time": 30,
-            "use_total_duration_for_complete_ad": true,
-            "order_by_time_ascending": true,
-            "allow_only_complete_ad": true,
-            "override_companion_params": {
-                "DelayShowClose": {
-                    "show_delay": 3,
-                    "close_delay": 5,
-                    "hide_on_endcard": true
-                }
-            }
-        },
-        "150": {
-            "adspot_key": "a69f5d19",
-            "tagid": "Stage_Zee5_IOs_Preroll",
-            "requested_ads": 1,
-            "max_time": 40,
-            "expected_time": 30,
-            "use_total_duration_for_complete_ad": true,
-            "order_by_time_ascending": true,
-            "allow_only_complete_ad": true,
-            "override_companion_params": {
-                "DelayShowClose": {
+                },
+                "9b024bbe": {
+                    "behavior": "DelayShowClose",
                     "show_delay": 3,
                     "close_delay": 5,
                     "hide_on_endcard": true
@@ -86,45 +26,45 @@
             }
         }
     },
-    "display_ads": {
-        "sticky_bottom": [
-            {
-                "adspot_key": "21665149170"
-            }
-        ],
-        "landscape_overlay": [
-            {
-                "adspot_key": "21665149170"
-            }
-        ]
-    },
     "key_values": {
-        "video_id": "0-1-kundalibhagya-kundalibhagyaseason1-episode_910238122",
-        "episode_number": "295",
-        "video_title": "Kundali Bhagya - Episode 295 - August 24 2018 - Full Episode",
-        "channel_id": "0-9-zeetv",
+        "video_id": "0-1-6z598967",
+        "video_title": "Preeta Fires Mona",
+        "episode_number": "1184",
         "show_id": "0-6-366",
         "show_name": "Kundali Bhagya",
+        "channel_id": "",
         "season_id": "0-2-KundaliBhagya1",
         "asset_subtype": "episode",
-        "audio_language": "hi",
-        "translation": "",
-        "user_language": "",
-        "genre": "Drama",
-        "collection_id": "",
-        "content_creator": "Zee Entertainment Enterprises Ltd",
+        "content_creator": "Zee Entertainment Enterprises Limited",
         "certificate_type": "U",
-        "app_version": "26.0309004.1-9cb5fd3",
+        "content_length": "long_form",
+        "audio_language": "hi",
+        "translation": "en",
+        "user_language": "en,hi,mr",
         "user_type": "guest",
+        "age": "",
+        "age_group": "",
+        "gender": "",
+        "brand": "",
+        "model": "",
+        "ca": "LFO7,LFO7,0-1-6z598967",
+        "aud": "LFO7,LFO7",
+        "collection_id": "",
+        "app_version": "2.50.67.1",
         "is_lat": "",
         "bd_source": "",
-        "gender": "",
-        "age": "",
         "content_name": "Kundali Bhagya",
         "screen_id": "",
-        "content_length": "long_form",
-        "sports": "Cricket,Football",
-        "channel": "sony"
+        "cue_point": "",
+        "ad_pos": "",
+        "genre": "Drama,Romance",
+        "utm_source": "",
+        "utm_medium": "",
+        "utm_campaign": "",
+        "utm_term": "",
+        "utm_content": "",
+        "dekey": "",
+        "utmpageurl_latest": ""
     },
-    "account_id": "207947"
+    "account_id": 207947
 }

@@ -13,13 +13,15 @@ let TAG = "InitialViewController"
 
 class InitialViewController: UIViewController {
 
+    var playerObserver: Any?
     var avPlayer: AVPlayer?
     var mediaDuration: CMTime?
     var periodicTimeObserver: ((CMTime) -> Void)?
     @IBOutlet var slider: UISlider!
     @IBOutlet var videoView: VideoView!
     @IBOutlet var bannerAdView: UIView!
-    let mediaUrl = "https://cfvod.kaltura.com/hls/p/2215841/sp/221584100/serveFlavor/entryId/1_w9zx2eti/v/1/ev/5/flavorId/1_,1obpcggb,3f4sp5qu,1xdbzoa6,k16ccgto,r6q0xdb6,/name/a.mp4/index.m3u8.urlset/master.m3u8"
+    let mediaUrl = "https://alpha-zee5-media.vmax.com/v/vast/481763_1626776912699_sd.mp4"
+    //let mediaUrl = "https://cfvod.kaltura.com/hls/p/2215841/sp/221584100/serveFlavor/entryId/1_w9zx2eti/v/1/ev/5/flavorId/1_,1obpcggb,3f4sp5qu,1xdbzoa6,k16ccgto,r6q0xdb6,/name/a.mp4/index.m3u8.urlset/master.m3u8"
     //let mediaUrl = "https://alpha-zee5-media.vmax.com/v/vast/481763_1626776912699_sd.mp4"
     //let mediaUrl = "https://jioads.akamaized.net/devp/v/s/vast/78853_480795_7083_hd.mp4/master.m3u8?199777.C3752663_480795_ad8c0a70_ccb=[ccb]_A-IO-3.14.7"
     //let mediaUrl = "https://alpha-zee5-media.vmax.com/v/s/vast/78466_1622718741157_sd.mp4/master.m3u8"
@@ -41,6 +43,17 @@ class InitialViewController: UIViewController {
         }
         started = true
         playContentVideo()
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        print("\(TAG) viewDidDisappear")
+        if isBeingDismissed{
+            print("\(TAG) viewDidDisappear isBeingDismissed")
+            playerObserver = nil
+            plugin?.stop()
+            plugin = nil
+            self.avPlayer?.pause()
+        }
     }
     
     func playContentVideo(){
@@ -131,7 +144,8 @@ class InitialViewController: UIViewController {
         }
         let timeScale = CMTimeScale(NSEC_PER_SEC)
         let time = CMTime(seconds: 0.5, preferredTimescale: timeScale)
-        avPlayer.addPeriodicTimeObserver(forInterval: time, queue: .main, using: plugin.playbackObserver(_:))
+        let playbackObserver = PlayerObserver(plugin: plugin)
+        playerObserver = avPlayer.addPeriodicTimeObserver(forInterval: time, queue: .main, using: playbackObserver.observer(_:))
     }
     
 }
@@ -339,28 +353,32 @@ extension InitialViewController: VMaxAdEvents{
         print("\(TAG) onAdMediaBitrateChange\(bitrate)")
     }
     
+    func onAdTapped(_ vmaxAdInfo: VmaxAdInfo) {
+        print("\(TAG) onAdTapped\(vmaxAdInfo)")
+    }
+    
 }
 
 extension InitialViewController : VMaxCompanionAdEvents{
     
-    func onCompanionReady() {
-        print("\(TAG) VMaxCompanionAdEvents onCompanionReady")
+    func onCompanionReady(_ adSlotId: String) {
+        print("\(TAG) VMaxCompanionAdEvents onCompanionReady adSlotId:\(adSlotId)")
     }
     
-    func onCompanionClose() {
-        print("\(TAG) VMaxCompanionAdEvents onCompanionClose")
+    func onCompanionClose(_ adSlotId: String) {
+        print("\(TAG) VMaxCompanionAdEvents onCompanionClose adSlotId:\(adSlotId)")
     }
     
-    func onCompanionRender() {
-        print("\(TAG) VMaxCompanionAdEvents onCompanionRender")
+    func onCompanionRender(_ adSlotId: String) {
+        print("\(TAG) VMaxCompanionAdEvents onCompanionRender adSlotId:\(adSlotId)")
     }
     
-    func onCompanionClick() {
-        print("\(TAG) VMaxCompanionAdEvents onCompanionClick")
+    func onCompanionClick(_ adSlotId: String) {
+        print("\(TAG) VMaxCompanionAdEvents onCompanionClick adSlotId:\(adSlotId)")
     }
     
-    func onCompanionError(_ error: Error) {
-        print("\(TAG) VMaxCompanionAdEvents onCompanionError:\(error)")
+    func onCompanionError(_ adSlotId: String) {
+        print("\(TAG) VMaxCompanionAdEvents onCompanionError adSlotId:\(adSlotId)")
     }
 }
 

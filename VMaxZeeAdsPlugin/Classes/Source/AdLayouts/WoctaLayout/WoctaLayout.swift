@@ -35,8 +35,29 @@ class WoctaUIView: UIView{
         self.commonInit()
     }
     
+    deinit{
+        if (self.woctaVmaxAdView.progressView != nil){
+            self.woctaVmaxAdView.progressView.removeFromSuperview()
+        }
+        if (self.woctaVmaxAdView.lblVideoCount != nil){
+            self.woctaVmaxAdView.lblVideoCount.removeFromSuperview()
+        }
+        if (self.woctaVmaxAdView.lblSkipAd != nil){
+            self.woctaVmaxAdView.lblSkipAd.removeFromSuperview()
+        }
+        if (self.woctaVmaxAdView.btnSkipAd != nil){
+            self.woctaVmaxAdView.btnSkipAd.removeFromSuperview()
+        }
+        if (self.woctaVmaxAdView.lblAdText != nil){
+            self.woctaVmaxAdView.lblAdText.removeFromSuperview()
+        }
+        if (self.woctaVmaxAdView.layoutOverlay != nil){
+            self.woctaVmaxAdView.layoutOverlay.removeFromSuperview()
+        }
+        print("deinit WoctaUIView")
+    }
+    
     private func commonInit(){
-        //Bundle.init(identifier: "org.vmax.VMaxZeeAdsPlugin")?.loadNibNamed("WoctaView", owner: self, options: nil)
         Bundle(for: Self.self).loadNibNamed("WoctaView", owner: self, options: nil)
         addSubview(contentView)
         contentView.frame = self.bounds

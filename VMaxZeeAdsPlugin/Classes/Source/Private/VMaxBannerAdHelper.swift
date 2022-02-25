@@ -7,31 +7,33 @@ import VMaxAdsSDK
 
 class VMaxBannerAdHelper : NSObject {
     
-    private var vMaxAdView: VMaxAdView
-    private var viewController: UIViewController
-    private var bannerView: UIView
+    private var vMaxAdView: VMaxAdView?
+    private var viewController: UIViewController?
+    private var bannerView: UIView?
     private var companionAdEvents: VMaxCompanionAdEvents?
     
     init(adSpotKey:String, bannerView: UIView,viewController: UIViewController,delegate: VMaxCompanionAdEvents?) {
-        self.viewController = viewController
         self.bannerView = bannerView
-        self.vMaxAdView = VMaxAdView(adspotID: adSpotKey, viewController: viewController, withAdUXType: .banner)
-        self.vMaxAdView.viewForVMax = self.bannerView
-        self.vMaxAdView.frame = self.bannerView.bounds
-        self.bannerView.addSubview(self.vMaxAdView)
-        self.bannerView.bringSubviewToFront(self.vMaxAdView)
+        self.viewController = viewController
         self.companionAdEvents = delegate
+        self.vMaxAdView = VMaxAdView(adspotID: adSpotKey, viewController: viewController, withAdUXType: .banner)
         super.init()
-        self.addSameConstraintsFromParentView(parentView: self.bannerView, childView: vMaxAdView)
-        self.vMaxAdView.delegate = self
-        self.vMaxAdView.delegateCompanion = self
-        self.vMaxAdView.setAdType(.companion)
+        vmLog("")
+        guard let vMaxAdView = self.vMaxAdView, let bannerView = self.bannerView else {
+            return
+        }
+        vMaxAdView.frame = bannerView.bounds
+        bannerView.addSubview(vMaxAdView)
+        bannerView.bringSubviewToFront(vMaxAdView)
+        self.addSameConstraintsFromParentView(parentView: bannerView, childView: vMaxAdView)
+        vMaxAdView.delegate = self
+        vMaxAdView.delegateCompanion = self
+        vMaxAdView.setAdType(.companion)
         self.addObservers()
     }
     
     deinit {
-        self.removeObservers()
-        self.vMaxAdView.invalidateAd()
+        vmLog("")
     }
     
     private func addObservers(){
@@ -43,7 +45,19 @@ class VMaxBannerAdHelper : NSObject {
     }
     
     @objc func orientationChanged(notification : NSNotification){
-        self.vMaxAdView.layoutSubviews()
+        vMaxAdView?.layoutSubviews()
+    }
+    
+    internal func invalidate() {
+        removeObservers()
+        companionAdEvents = nil
+        bannerView = nil
+        viewController = nil
+        vMaxAdView?.removeFromSuperview()
+        vMaxAdView?.invalidateAd()
+        vMaxAdView?.delegate = nil
+        vMaxAdView?.delegateCompanion = nil
+        vMaxAdView = nil
     }
     
 }
@@ -72,27 +86,27 @@ extension VMaxBannerAdHelper: VMaxCompanionDelegate {
     
     func onCompanionReady(_ adView: VMaxAdView!) {
         vmLog("onCompanionReady")
-        self.companionAdEvents?.onCompanionReady()
+        companionAdEvents?.onCompanionReady(adView.adspotID)
     }
     
     func onCompanionRender(_ adView: VMaxAdView!) {
         vmLog("onCompanionRender")
-        self.companionAdEvents?.onCompanionRender()
+        companionAdEvents?.onCompanionRender(adView.adspotID)
     }
     
     func onCompanionError(_ adView: VMaxAdView!) {
         vmLog("onCompanionError")
-        //self.companionAdEvents?.onCompanionError(T##error: Error##Error)
+        companionAdEvents?.onCompanionError(adView.adspotID)
     }
     
     func onCompanionClose(_ adView: VMaxAdView!) {
         vmLog("onCompanionClose")
-        self.companionAdEvents?.onCompanionClose()
+        companionAdEvents?.onCompanionClose(adView.adspotID)
     }
     
     func onCompanionClick(_ adView: VMaxAdView!) {
         vmLog("onCompanionClick")
-        self.companionAdEvents?.onCompanionClick()
+        companionAdEvents?.onCompanionClick(adView.adspotID)
     }
 }
 

@@ -6,28 +6,30 @@ import VMaxAdsSDK
 
 public class VMaxZeeAdsPlugin: NSObject {
     
-    private var config: VMaxZeeAdsConfig
-    private var delegate: VMaxAdsPluginDelegate
+    internal var config: VMaxZeeAdsConfig?
+    internal var delegate: VMaxAdsPluginDelegate?
     private var metaObjects: [String: VmaxAndTimeBreakMetaInfo] = [String: VmaxAndTimeBreakMetaInfo]()
     private var vmaxAdBreak: VMaxAdBreak?
     private var vmaxAdBreakEvents: VMaxAdBreakEvents?
     private var vmaxAdBreakStatusInfo: VMaxAdBreakStateInfo?
-    private var midRollDurations: Set<Int> = Set<Int>()
-    private var selectedMidRoll: Int?
+    internal var midRollDurations: Set<Int> = Set<Int>()
+    internal var selectedMidRoll: Int?
     private var adBreaksRendered: [VMaxAdBreakStateInfo] = [VMaxAdBreakStateInfo]()
-    private var adBreaksStarted: [VMaxAdBreakStateInfo] = [VMaxAdBreakStateInfo]()
-    private var adsScheduled = AdsScheduled()
-    private var helper = VMaxAdsPluginHelper()
+    internal var adBreaksStarted: [VMaxAdBreakStateInfo] = [VMaxAdBreakStateInfo]()
+    internal var adsScheduled = AdsScheduled()
+    internal var helper = VMaxAdsPluginHelper()
     private let videoLayouts = ["zee":"ZeeUIView","wocta":"WoctaUIView"]
     private var blurEffect: UIBlurEffect?
     private var blurEffectView: UIVisualEffectView?
     private var activityView: UIActivityIndicatorView?
-    private var lastPlayedSecond = 0
+    internal var lastPlayedSecond = 0
+    public var playerObserver: PlayerObserver?
+    private var bannerAdHelper: VMaxBannerAdHelper?
     
     public init(config: VMaxZeeAdsConfig,delegate: VMaxAdsPluginDelegate) throws {
         self.config = config
         self.delegate = delegate
-        self.vmaxAdBreakEvents = self.config.adBreakEvents
+        self.vmaxAdBreakEvents = self.config?.adBreakEvents
         super.init()
         vmLog("")
         try helper.validate(vmaxAdsConfig: config)
@@ -47,17 +49,17 @@ public class VMaxZeeAdsPlugin: NSObject {
         vmLog("")
         if adsScheduled.preRoll && helper.cuePointExist(seconds: VMaxAdsConstants.preroll, vmaxAdBreakStateInfo: adBreaksRendered) == false {
             vmLog("pre roll validations",.error)
-            delegate.requestContentResume()
+            delegate?.requestContentResume()
             return
         }
         guard let selectedMidRoll = selectedMidRoll else{
             vmLog("no cue point to start",.error)
-            delegate.requestContentResume()
+            delegate?.requestContentResume()
             return
         }
         guard helper.cuePointExist(seconds: selectedMidRoll, vmaxAdBreakStateInfo: adBreaksRendered) == false else{
             vmLog("\(selectedMidRoll) cue point already rendered",.error)
-            delegate.requestContentResume()
+            delegate?.requestContentResume()
             return
         }
         requestAdBreak(cuePoint: selectedMidRoll)
@@ -84,38 +86,20 @@ public class VMaxZeeAdsPlugin: NSObject {
     public func stop(){
         vmLog("")
         hideLoaderView()
-        self.vmaxAdBreak?.delegate = nil
-        self.vmaxAdBreak?.invalidate()
-        self.vmaxAdBreak = nil
-    }
-    
-    public func playbackObserver(_ playBackTime: CMTime) {
-        let currentSecond = Int(CMTimeGetSeconds(playBackTime))
-        let midRollsFiltered = midRollDurations.filter(){ $0 <= currentSecond }
-        vmLog("currentSecond:\(currentSecond),midRollDurations:\(midRollDurations),midRollsFiltered:\(midRollsFiltered)")
-        let scratchForward = (currentSecond - lastPlayedSecond) >= 2
-        if let mediaDuration = config.mediaDuration,
-           currentSecond >= Int(CMTimeGetSeconds(mediaDuration)) &&
-            adsScheduled.postRoll && helper.cuePointExist(seconds: VMaxAdsConstants.postroll, vmaxAdBreakStateInfo: adBreaksStarted) == false {
-            requestAdBreak(cuePoint: VMaxAdsConstants.postroll)
-        }else if midRollDurations.contains(currentSecond) && cueNotRendered(currentSecond) && selectedMidRoll == nil {
-            selectedMidRoll = currentSecond
-            if let selectedMidRoll = selectedMidRoll{
-                vmLog("Found Cue Point\(selectedMidRoll)")
-                delegate.requestContentPause()
-            }
-        }else if let maxCuePoint = midRollsFiltered.max(),let minCuePoint = midRollsFiltered.min(),
-                 scratchForward && cueNotRendered(maxCuePoint) && selectedMidRoll == nil && currentSecond > minCuePoint
-                {
-            selectedMidRoll = maxCuePoint
-            if let selectedMidRoll = selectedMidRoll{
-                vmLog("Found Cue Point after scratch\(selectedMidRoll)")
-                delegate.requestContentPause()
-            }
-        }
-        if currentSecond != lastPlayedSecond{
-            lastPlayedSecond = currentSecond
-        }
+        metaObjects.removeAll()
+        vmaxAdBreakEvents = nil
+        adBreaksRendered.removeAll()
+        adBreaksStarted.removeAll()
+        blurEffect = nil
+        blurEffectView = nil
+        delegate = nil
+        config = nil
+        playerObserver = nil
+        bannerAdHelper?.invalidate()
+        bannerAdHelper = nil
+        vmaxAdBreak?.delegate = nil
+        vmaxAdBreak?.invalidate()
+        vmaxAdBreak = nil
     }
     
     public func updateVolumeChange(event: VMaxVolumeEvents, level: Float){
@@ -143,8 +127,8 @@ extension VMaxZeeAdsPlugin: VMaxAdBreakEvents {
             vmLog("vmaxAdBreakStatusInfo.requested should be true")
             return
         }
-        guard let view = config.videoView else {
-            vmLog("config.videoView is nil")
+        guard let view = config?.videoView else {
+            vmLog("config?.videoView is nil")
             return
         }
         guard let vmaxAdBreak = vmaxAdBreak else {
@@ -198,18 +182,18 @@ extension VMaxZeeAdsPlugin {
     private func preroll(){
         vmLog("adsScheduled.preRoll:\(adsScheduled.preRoll)")
         guard adsScheduled.preRoll else {
-            delegate.requestContentResume()
+            delegate?.requestContentResume()
             return
         }
         guard helper.cuePointExist(seconds: 0, vmaxAdBreakStateInfo: adBreaksRendered) == false else{
             vmLog("preroll rendered")
-            delegate.requestContentResume()
+            delegate?.requestContentResume()
             return
         }
         requestAdBreak(cuePoint: VMaxAdsConstants.preroll)
     }
     
-    private func requestAdBreak(cuePoint: Int){
+    internal func requestAdBreak(cuePoint: Int){
         vmLog("cuePoint:\(cuePoint)")
         let cuePointsRendered = adBreaksRendered.map{$0.cuePoint}
         guard cuePointsRendered.contains(cuePoint) == false else {
@@ -220,8 +204,8 @@ extension VMaxZeeAdsPlugin {
             vmLog("cue point:\(cuePoint) not found")
             return
         }
-        guard let viewController = config.viewController else{
-            vmLog("config.viewController is nil")
+        guard let viewController = config?.viewController else{
+            vmLog("config?.viewController is nil")
             return
         }
         let timeBreakMeta = metaObject.timeBreakMeta
@@ -230,7 +214,7 @@ extension VMaxZeeAdsPlugin {
             vMaxAdMetaData.endCardTime = endCardTime
         }
         vmaxAdBreak = VMaxAdBreak(vMaxMetaData: vMaxAdMetaData , viewController: viewController)
-        if let overlayAdSpot = helper.getLandscapeOverlayAdSpot(vmaxAdsConfig: config) {
+        if let config = config, let overlayAdSpot = helper.getLandscapeOverlayAdSpot(vmaxAdsConfig: config) {
             vmaxAdBreak?.adSpotBanner = overlayAdSpot
         }
         vmaxAdBreakStatusInfo = VMaxAdBreakStateInfo(cuePoint: cuePoint)
@@ -254,15 +238,15 @@ extension VMaxZeeAdsPlugin {
             let zeeAdsReordering = ZeeIAdsReordering()
             vmaxAdBreak.enable(zeeAdsReordering)
         }
-        if let bitrate = config.requestedBitrate, bitrate > 0{
+        if let bitrate = config?.requestedBitrate, bitrate > 0{
             vmaxAdBreak.setRequestedBitrate(UInt32(bitrate))
         }
         vmLog("requestAdBreak for cuePoint:\(cuePoint)")
         vmaxAdBreak.delegate = self
-        if let adBreakEvents = config.adBreakEvents as? VMaxAdEvents {
+        if let adBreakEvents = config?.adBreakEvents as? VMaxAdEvents {
             vmaxAdBreak.vmaxAdEvents = adBreakEvents
         }
-        if let vmaxCompanionAdEvents = config.vmaxCompanionAdEvents{
+        if let vmaxCompanionAdEvents = config?.vmaxCompanionAdEvents{
             vmaxAdBreak.vmaxCompaionAdEvents = vmaxCompanionAdEvents
         }
         vmaxAdBreak.setLayoutInfo(videoLayouts)
@@ -299,8 +283,8 @@ extension VMaxZeeAdsPlugin {
     
     private func rotateView(orientation: UIDeviceOrientation) {
         vmLog("device.orientation\(orientation.rawValue)")
-        guard let customView = config.videoView,
-              let parentViewController = config.viewController else {
+        guard let customView = config?.videoView,
+              let parentViewController = config?.viewController else {
             vmLog("customView | parentViewController is nil")
             return
         }
@@ -326,15 +310,15 @@ extension VMaxZeeAdsPlugin {
     }
     
     private func setupBanner(){
-        guard let viewController = config.viewController ,let bannerView = config.bannerView,let bannerAdSpot = helper.getStickyBottomAdSpot(vmaxAdsConfig: config) else {
+        guard let config = config, let viewController = config.viewController ,let bannerView = config.bannerView,let bannerAdSpot = helper.getStickyBottomAdSpot(vmaxAdsConfig: config) else {
             return
         }
-        let _ = VMaxBannerAdHelper(adSpotKey: bannerAdSpot, bannerView: bannerView, viewController: viewController, delegate: config.vmaxCompanionAdEvents)
+        bannerAdHelper = VMaxBannerAdHelper(adSpotKey: bannerAdSpot, bannerView: bannerView, viewController: viewController, delegate: config.vmaxCompanionAdEvents)
     }
     
     private func showLoaderView(){
         DispatchQueue.main.async {
-            guard let playerView = self.config.videoView else{
+            guard let playerView = self.config?.videoView else{
                 vmLog("videoView is nil",.error)
                 return
             }
@@ -366,7 +350,7 @@ extension VMaxZeeAdsPlugin {
         }
     }
     
-    private func cueNotRendered(_ seconds: Int) -> Bool{
+    internal func cueNotRendered(_ seconds: Int) -> Bool{
         return helper.cuePointExist(seconds: seconds, vmaxAdBreakStateInfo: adBreaksRendered) == false
     }
     
@@ -381,6 +365,48 @@ extension VMaxZeeAdsPlugin {
             }
         }
         return response
+    }
+    
+}
+
+public class PlayerObserver {
+    
+    weak var plugin: VMaxZeeAdsPlugin?
+    
+    public init(plugin: VMaxZeeAdsPlugin? = nil){
+        self.plugin = plugin
+    }
+    
+    public func observer(_ playBackTime: CMTime) {
+        let currentSecond = Int(CMTimeGetSeconds(playBackTime))
+        guard let plugin = plugin else {
+            return
+        }
+        let midRollsFiltered = plugin.midRollDurations.filter(){ $0 <= currentSecond }
+        vmLog("currentSecond:\(currentSecond),midRollDurations:\(plugin.midRollDurations),midRollsFiltered:\(midRollsFiltered)")
+        let scratchForward = (currentSecond - plugin.lastPlayedSecond) >= 2
+        if let mediaDuration = plugin.config?.mediaDuration,
+           currentSecond >= Int(CMTimeGetSeconds(mediaDuration)) &&
+            plugin.adsScheduled.postRoll && plugin.helper.cuePointExist(seconds: VMaxAdsConstants.postroll, vmaxAdBreakStateInfo: plugin.adBreaksStarted) == false {
+            plugin.requestAdBreak(cuePoint: VMaxAdsConstants.postroll)
+        }else if plugin.midRollDurations.contains(currentSecond) && plugin.cueNotRendered(currentSecond) && plugin.selectedMidRoll == nil {
+            plugin.selectedMidRoll = currentSecond
+            if let selectedMidRoll = plugin.selectedMidRoll{
+                vmLog("Found Cue Point\(selectedMidRoll)")
+                plugin.delegate?.requestContentPause()
+            }
+        }else if let maxCuePoint = midRollsFiltered.max(),let minCuePoint = midRollsFiltered.min(),
+                 scratchForward && plugin.cueNotRendered(maxCuePoint) && plugin.selectedMidRoll == nil && currentSecond > minCuePoint
+                {
+            plugin.selectedMidRoll = maxCuePoint
+            if let selectedMidRoll = plugin.selectedMidRoll{
+                vmLog("Found Cue Point after scratch\(selectedMidRoll)")
+                plugin.delegate?.requestContentPause()
+            }
+        }
+        if currentSecond != plugin.lastPlayedSecond{
+            plugin.lastPlayedSecond = currentSecond
+        }
     }
     
 }
