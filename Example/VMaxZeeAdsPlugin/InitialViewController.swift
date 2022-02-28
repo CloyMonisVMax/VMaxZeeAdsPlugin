@@ -270,6 +270,9 @@ extension InitialViewController: VMaxAdBreakEvents{
         }
         print("\(TAG) avPlayer.play")
         avPlayer.play()
+        DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
+            self.bannerAdView.isHidden = true
+        }
     }
     
 }
@@ -371,6 +374,14 @@ extension InitialViewController : VMaxCompanionAdEvents{
     
     func onCompanionRender(_ adSlotId: String) {
         print("\(TAG) VMaxCompanionAdEvents onCompanionRender adSlotId:\(adSlotId)")
+        if adSlotId == "endcard"{
+            self.bannerAdView.isHidden = true
+            DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
+                self.bannerAdView.isHidden = false
+            }
+        }else{
+            self.bannerAdView.isHidden = false
+        }
     }
     
     func onCompanionClick(_ adSlotId: String) {

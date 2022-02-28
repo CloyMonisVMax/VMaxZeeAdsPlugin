@@ -86,27 +86,27 @@ extension VMaxBannerAdHelper: VMaxCompanionDelegate {
     
     func onCompanionReady(_ adView: VMaxAdView!) {
         vmLog("onCompanionReady")
-        companionAdEvents?.onCompanionReady(adView.adspotID)
+        companionAdEvents?.onCompanionReady(adView.adslotID)
     }
     
     func onCompanionRender(_ adView: VMaxAdView!) {
         vmLog("onCompanionRender")
-        companionAdEvents?.onCompanionRender(adView.adspotID)
+        companionAdEvents?.onCompanionRender(adView.adslotID)
     }
     
     func onCompanionError(_ adView: VMaxAdView!) {
         vmLog("onCompanionError")
-        companionAdEvents?.onCompanionError(adView.adspotID)
+        companionAdEvents?.onCompanionError(adView.adslotID)
     }
     
     func onCompanionClose(_ adView: VMaxAdView!) {
         vmLog("onCompanionClose")
-        companionAdEvents?.onCompanionClose(adView.adspotID)
+        companionAdEvents?.onCompanionClose(adView.adslotID)
     }
     
     func onCompanionClick(_ adView: VMaxAdView!) {
         vmLog("onCompanionClick")
-        companionAdEvents?.onCompanionClick(adView.adspotID)
+        companionAdEvents?.onCompanionClick(adView.adslotID)
     }
 }
 

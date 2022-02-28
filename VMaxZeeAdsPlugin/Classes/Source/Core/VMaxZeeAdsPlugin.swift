@@ -408,5 +408,4 @@ public class PlayerObserver {
             plugin.lastPlayedSecond = currentSecond
         }
     }
-    
 }

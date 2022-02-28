@@ -26,6 +26,23 @@
             }
         }
     },
+    "display_ads": {
+        "sticky_bottom": [
+            {
+                "adspot_key": "9b024bbe"
+            }
+        ],
+        "landscape_overlay": [
+            {
+                "adspot_key": "020b1a04"
+            }
+        ],
+        "endcard": [
+            {
+                "adspot_key": "endcard"
+            }
+        ]
+    },
     "key_values": {
         "video_id": "0-1-6z598967",
         "video_title": "Preeta Fires Mona",
