@@ -301,6 +301,7 @@ typedef NS_ENUM(NSUInteger, VMaxAdVideoTag) {
 @property (strong, nonatomic) NSLayoutConstraint *nativeAdChoiceTrialingConstraint; //..(3.6.46) Added
 @property (assign,nonatomic) int latencyPerAdFromConfig;//..(3.11.7) ADDED
 @property (strong, nonatomic) id<VMaxCompanionDelegate> delegateCompanion; //3.14.3 S_476 pa
+@property (strong, nonatomic, readonly) NSString *adslotID; //3.15.4 adslot 
 
 - (NSDictionary*)getAdditionalParameters;
 
