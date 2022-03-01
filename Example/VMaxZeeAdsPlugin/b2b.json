@@ -3,7 +3,7 @@
         "0": {
             "adspot_key": "251e9b17",
             "tagid": "Stage_Zee5_IOs_Preroll",
-            "requested_ads": 2,
+            "requested_ads": 1,
             "max_time": 70,
             "expected_time": 60,
             "use_total_duration_for_complete_ad": true,

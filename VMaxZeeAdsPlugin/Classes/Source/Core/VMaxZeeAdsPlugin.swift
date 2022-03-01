@@ -372,12 +372,15 @@ extension VMaxZeeAdsPlugin {
 public class PlayerObserver {
     
     weak var plugin: VMaxZeeAdsPlugin?
+    lazy public var addObserver: ((CMTime) -> Void) = { [weak self] (time) in
+        self?.observer(time)
+    }
     
     public init(plugin: VMaxZeeAdsPlugin? = nil){
         self.plugin = plugin
     }
     
-    public func observer(_ playBackTime: CMTime) {
+    func observer(_ playBackTime: CMTime) {
         let currentSecond = Int(CMTimeGetSeconds(playBackTime))
         guard let plugin = plugin else {
             return
@@ -397,7 +400,7 @@ public class PlayerObserver {
             }
         }else if let maxCuePoint = midRollsFiltered.max(),let minCuePoint = midRollsFiltered.min(),
                  scratchForward && plugin.cueNotRendered(maxCuePoint) && plugin.selectedMidRoll == nil && currentSecond > minCuePoint
-                {
+        {
             plugin.selectedMidRoll = maxCuePoint
             if let selectedMidRoll = plugin.selectedMidRoll{
                 vmLog("Found Cue Point after scratch\(selectedMidRoll)")

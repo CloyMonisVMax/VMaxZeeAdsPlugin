@@ -13,6 +13,7 @@ let TAG = "InitialViewController"
 
 class InitialViewController: UIViewController {
 
+    var playbackObserver: PlayerObserver?
     var playerObserver: Any?
     var avPlayer: AVPlayer?
     var mediaDuration: CMTime?
@@ -49,7 +50,12 @@ class InitialViewController: UIViewController {
         print("\(TAG) viewDidDisappear")
         if isBeingDismissed{
             print("\(TAG) viewDidDisappear isBeingDismissed")
-            playerObserver = nil
+            //playbackObserver?.weakSelf = nil
+            //playbackObserver?.plugin = nil
+            playbackObserver = nil
+            if let avPlayer = avPlayer, let playerObserver = playerObserver {
+                avPlayer.removeTimeObserver(playerObserver)
+            }
             plugin?.stop()
             plugin = nil
             self.avPlayer?.pause()
@@ -144,8 +150,10 @@ class InitialViewController: UIViewController {
         }
         let timeScale = CMTimeScale(NSEC_PER_SEC)
         let time = CMTime(seconds: 0.5, preferredTimescale: timeScale)
-        let playbackObserver = PlayerObserver(plugin: plugin)
-        playerObserver = avPlayer.addPeriodicTimeObserver(forInterval: time, queue: .main, using: playbackObserver.observer(_:))
+        playbackObserver = PlayerObserver(plugin: plugin)
+        if let playbackObserver = playbackObserver {
+            playerObserver = avPlayer.addPeriodicTimeObserver(forInterval: time, queue: .main, using: playbackObserver.addObserver)
+        }
     }
     
 }
