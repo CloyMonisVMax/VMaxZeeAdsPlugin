@@ -13,8 +13,8 @@ let TAG = "InitialViewController"
 
 class InitialViewController: UIViewController {
 
-    var playbackObserver: PlayerObserver?
-    var playerObserver: Any?
+    var playbackObserver: Any?
+    var playerObserver: PlayerObserver?
     var avPlayer: AVPlayer?
     var mediaDuration: CMTime?
     var periodicTimeObserver: ((CMTime) -> Void)?
@@ -22,14 +22,6 @@ class InitialViewController: UIViewController {
     @IBOutlet var videoView: VideoView!
     @IBOutlet var bannerAdView: UIView!
     let mediaUrl = "https://alpha-zee5-media.vmax.com/v/vast/481763_1626776912699_sd.mp4"
-    //let mediaUrl = "https://cfvod.kaltura.com/hls/p/2215841/sp/221584100/serveFlavor/entryId/1_w9zx2eti/v/1/ev/5/flavorId/1_,1obpcggb,3f4sp5qu,1xdbzoa6,k16ccgto,r6q0xdb6,/name/a.mp4/index.m3u8.urlset/master.m3u8"
-    //let mediaUrl = "https://alpha-zee5-media.vmax.com/v/vast/481763_1626776912699_sd.mp4"
-    //let mediaUrl = "https://jioads.akamaized.net/devp/v/s/vast/78853_480795_7083_hd.mp4/master.m3u8?199777.C3752663_480795_ad8c0a70_ccb=[ccb]_A-IO-3.14.7"
-    //let mediaUrl = "https://alpha-zee5-media.vmax.com/v/s/vast/78466_1622718741157_sd.mp4/master.m3u8"
-    //ascending
-    //let mediaUrl = "https://alpha-zee5-media.vmax.com/v/s/vast/78613_a744c0e70ba48ed916e687f246d534fa.mp4/master.m3u8"
-    //manipulated
-    //let mediaUrl = "https://alpha-zee5-media.vmax.com/v/s/vast/78466_1622718741157_sd.mp4/master.m3u8"
     var started = false
     var plugin: VMaxZeeAdsPlugin?
     var observeToken: Any?
@@ -38,28 +30,26 @@ class InitialViewController: UIViewController {
         super.viewDidLoad()
     }
     
+    override func viewDidDisappear(_ animated: Bool) {
+        print("\(TAG) viewDidDisappear")
+        if isBeingDismissed{
+            print("\(TAG) viewDidDisappear isBeingDismissed")
+            playerObserver = nil
+            if let avPlayer = avPlayer, let playbackObserver = playbackObserver {
+                avPlayer.removeTimeObserver(playbackObserver)
+            }
+            plugin?.stop()
+            plugin = nil
+            self.avPlayer?.pause()
+        }
+    }
+    
     @IBAction func start(_ sender: Any) {
         guard started == false else {
             return
         }
         started = true
         playContentVideo()
-    }
-    
-    override func viewDidDisappear(_ animated: Bool) {
-        print("\(TAG) viewDidDisappear")
-        if isBeingDismissed{
-            print("\(TAG) viewDidDisappear isBeingDismissed")
-            //playbackObserver?.weakSelf = nil
-            //playbackObserver?.plugin = nil
-            playbackObserver = nil
-            if let avPlayer = avPlayer, let playerObserver = playerObserver {
-                avPlayer.removeTimeObserver(playerObserver)
-            }
-            plugin?.stop()
-            plugin = nil
-            self.avPlayer?.pause()
-        }
     }
     
     func playContentVideo(){
@@ -83,15 +73,15 @@ class InitialViewController: UIViewController {
                 print("\(TAG) unknown")
             case .readyToPlay:
                 print("\(TAG) readyToPlay")
+                
+                //avPlayer.play()
                 self.mediaDuration = self.avPlayer?.currentItem?.asset.duration
                 if let mediaDuration = self.mediaDuration{
                     let mediaDurationSeconds = CMTimeGetSeconds(mediaDuration)
                     print("\(TAG) mediaDurationSeconds:\(mediaDurationSeconds)")
                     self.startPlugin()
-                    //self.avPlayer?.play()
-                    //AVPlayerItemNewAccessLogEntryNotification
-                    //NotificationCenter.default.addObserver(self, selector: #selector(self.avlayerItemNewAccessLogEntry(_:)), name: .AVPlayerItemNewAccessLogEntry, object: self.avPlayer?.currentItem)
                 }
+                
             case .failed:
                 print("\(TAG) failed")
             @unknown default:
@@ -102,38 +92,16 @@ class InitialViewController: UIViewController {
         let time = CMTime(seconds: 0.5, preferredTimescale: timeScale)
         avPlayer.addPeriodicTimeObserver(forInterval: time, queue: .main, using: observerAvPlayer(_:))
         slider.addTarget(self, action: #selector(sliderValueChange(_:)), for: .valueChanged)
-    }
-    
-    @objc func avlayerItemNewAccessLogEntry(_ notification: NSNotification) {
-        guard let currentItem = notification.object as? AVPlayerItem else{
-            print("\(TAG) bitrate currentItem == nil")
-            return
+        if let currentItem = avPlayer.currentItem {
+            let sel = #selector(self.playerDidFinishPlaying(note:))
+            NotificationCenter.default.addObserver(self, selector: sel,name: NSNotification.Name.AVPlayerItemDidPlayToEndTime, object: currentItem)
         }
-        printBitrate(currentItem: currentItem)
     }
-    
-    func printBitrate(currentItem: AVPlayerItem){
-        guard let avPlayerItemAccessLog = currentItem.accessLog() else{
-            print("\(TAG) bitrate avPlayerItemAccessLog == nil")
-            return
-        }
-        guard let avPlayerItemAccessLogEvent = avPlayerItemAccessLog.events.last else {
-            print("\(TAG) bitrate avPlayerItemAccessLogEvent == nil")
-            return
-        }
-        print("\(TAG) -----------------------------")
-        print("\(TAG) indicatedBitrate \(avPlayerItemAccessLogEvent.indicatedBitrate.toSeconds)")
-        print("\(TAG) switchBitrate \(avPlayerItemAccessLogEvent.switchBitrate.toSeconds)")
-        print("\(TAG) observedBitrate \(avPlayerItemAccessLogEvent.observedBitrate.toSeconds)")
-        print("\(TAG) observedMinBitrate \(avPlayerItemAccessLogEvent.observedMinBitrate.toSeconds)")
-        print("\(TAG) observedMaxBitrate \(avPlayerItemAccessLogEvent.observedMaxBitrate.toSeconds)")
-        print("\(TAG) averageVideoBitrate \(avPlayerItemAccessLogEvent.averageVideoBitrate.toSeconds)")
-        print("\(TAG) averageAudioBitrate \(avPlayerItemAccessLogEvent.averageAudioBitrate.toSeconds)")
-        print("\(TAG) indicatedAverageBitrate \(avPlayerItemAccessLogEvent.indicatedAverageBitrate.toSeconds)")
-        print("\(TAG) observedBitrateStandardDeviation \(avPlayerItemAccessLogEvent.observedBitrateStandardDeviation.toSeconds)")
-        print("\(TAG) -----------------------------")
+    @objc func playerDidFinishPlaying(note: NSNotification) {
+        print("Video Finished")
+        plugin?.stop()
+        plugin = nil
     }
-    
     func startPlugin(){
         guard let vmaxAdsConfig = getVMaxAdsConfig() else {
             print("vmaxAdsConfig is nil")
@@ -150,12 +118,17 @@ class InitialViewController: UIViewController {
         }
         let timeScale = CMTimeScale(NSEC_PER_SEC)
         let time = CMTime(seconds: 0.5, preferredTimescale: timeScale)
-        playbackObserver = PlayerObserver(plugin: plugin)
-        if let playbackObserver = playbackObserver {
-            playerObserver = avPlayer.addPeriodicTimeObserver(forInterval: time, queue: .main, using: playbackObserver.addObserver)
+        playerObserver = PlayerObserver(plugin: plugin)
+        if let playerObserver = playerObserver {
+            playbackObserver = avPlayer.addPeriodicTimeObserver(forInterval: time, queue: .main, using: playerObserver.addObserver)
         }
     }
     
+    @objc func avPlayerDidComplete(notification: NSNotification) {
+        print("completed")
+        //plugin?.stop()
+        //plugin = nil
+    }
 }
 
 extension InitialViewController{
@@ -180,7 +153,7 @@ extension InitialViewController{
         config.vmaxAdEvents = self
         config.vmaxCompanionAdEvents = self
         config.bannerView = self.bannerAdView
-        config.requestedBitrate = 1788
+        config.requestedBitrate = 1799
         return config
     }
     
@@ -314,6 +287,7 @@ extension InitialViewController: VMaxAdEvents{
     
     func onAdMediaFirstQuartile(_ vmaxAdInfo: VmaxAdInfo) {
         print("\(TAG) VMaxAdEvents onAdMediaFirstQuartile vmaxAdInfo:\(getAdInfo(vmaxAdInfo))")
+        plugin?.updateVolumeChange(event: .MUTED, level: 0)
     }
     
     func onAdMediaMidPoint(_ vmaxAdInfo: VmaxAdInfo) {
@@ -365,7 +339,7 @@ extension InitialViewController: VMaxAdEvents{
     }
     
     func onAdTapped(_ vmaxAdInfo: VmaxAdInfo) {
-        print("\(TAG) onAdTapped\(vmaxAdInfo)")
+        print("\(TAG) onAdTapped")
     }
     
 }
@@ -399,6 +373,7 @@ extension InitialViewController : VMaxCompanionAdEvents{
     func onCompanionError(_ adSlotId: String) {
         print("\(TAG) VMaxCompanionAdEvents onCompanionError adSlotId:\(adSlotId)")
     }
+    
 }
 
 extension VmaxAdInfo {
@@ -428,65 +403,5 @@ extension VmaxAdInfo {
         ----------------------------------------------------------------------
         ----------------------------------------------------------------------
         """
-    }
-}
-
-
-extension InitialViewController {
-    private func addObservers() {
-        let sel = #selector(self.orientationChanged(notification:))
-        addObserver(sel: sel, name: NSNotification.Name.UIDeviceOrientationDidChange)
-    }
-    
-    private func addObserver(sel: Selector, name: NSNotification.Name) {
-        NotificationCenter.default.addObserver(self, selector: sel, name: name, object: nil)
-    }
-    
-    @objc func orientationChanged(notification: NSNotification) {
-        //if orientationUpdatedProgramtically != nil {
-        //    orientationUpdatedProgramtically = nil
-        //    return
-        //}
-        guard let device = notification.object as? UIDevice else {
-            print("\(TAG) device is nil")
-            return
-        }
-        print("\(TAG) device.orientation\(device.orientation.rawValue)")
-        switch device.orientation {
-        case .portrait, .landscapeLeft, .landscapeRight:
-            rotateView(orientation: device.orientation)
-        case .unknown, .faceUp, .faceDown, .portraitUpsideDown:
-            print("\(TAG) rotation not supported for current orientation")
-        @unknown default:
-            print("\(TAG) rotation not supported for current orientation @unknown")
-        }
-    }
-    
-    private func rotateView(orientation: UIDeviceOrientation) {
-        print("\(TAG) device.orientation\(orientation.rawValue)")
-        //guard let customView = config.videoView,
-        //      let parentViewController = config.viewController else {
-        //    vmLog("customView | parentViewController is nil")
-        //    return
-        //}
-        let value: Int = orientation.rawValue
-        UIDevice.current.setValue(value, forKey: "orientation")
-        switch orientation {
-        case .portrait:
-            UIView.animate(withDuration: 0.3) {
-                self.videoView.transform = CGAffineTransform.identity
-            }
-            //rotated = false
-        case .landscapeLeft, .landscapeRight:
-            print("\(TAG) unsupported rotation")
-            //UIView.animate(withDuration: 0.3) {
-            //    self.videoView.transform = CGAffineTransform(from: self.videoView.frame as! Decoder, to: self.view.frame)
-            //}
-            //rotated = true
-        case .unknown, .portraitUpsideDown, .faceDown, .faceUp:
-            print("\(TAG) unsupported rotation")
-        @unknown default:
-            print("\(TAG) default unsupported rotation")
-        }
     }
 }
