@@ -251,6 +251,9 @@ extension VMaxZeeAdsPlugin {
         }
         vmaxAdBreak.setLayoutInfo(videoLayouts)
         vmaxAdBreak.start()
+        if let podIndex = timeBreakMeta.podIndex{
+            vmLog("podIndex:\(podIndex)")
+        }
         if let vmaxAdBreakStatusInfo = vmaxAdBreakStatusInfo{
             adBreaksStarted.append(vmaxAdBreakStatusInfo)
         }

@@ -16,6 +16,7 @@ enum VMaxJsonParsingError: Error{
 }
 
 struct TimeBreakMeta{
+    var podIndex: Int?
     var maxTime: Int?
     var expectedTime: Int?
     var endCardTime: Int?
@@ -46,7 +47,7 @@ class VMaxB2BjsonParser{
             }
             arrayCuePoints.append(durationAsString)
         }
-        for cuePoint in arrayCuePoints{
+        for (i,cuePoint) in arrayCuePoints.enumerated(){
             guard let videoBreak: NSDictionary = videoAdJson[cuePoint] as? NSDictionary else{
                 break
             }
@@ -67,6 +68,7 @@ class VMaxB2BjsonParser{
                 adMetaData.setMaxDurationPerAd(maxDurationPerAd)
             }
             var timeBreakMeta = TimeBreakMeta()
+            timeBreakMeta.podIndex = i
             if let maxTime = videoBreak["max_time"] as? Int{
                 timeBreakMeta.maxTime = maxTime
             }

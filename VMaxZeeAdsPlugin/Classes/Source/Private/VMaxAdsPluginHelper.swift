@@ -4,7 +4,9 @@
 import Foundation
 import VMaxAdsSDK
 
-class VMaxAdsPluginHelper {
+public class VMaxAdsPluginHelper {
+    
+    public init(){}
     
     func cuePointExist(seconds: Int,vmaxAdBreakStateInfo: [VMaxAdBreakStateInfo]) -> Bool {
         var res = false
@@ -69,7 +71,7 @@ class VMaxAdsPluginHelper {
         return dict
     }
     
-    func getStickyBottomAdSpot(vmaxAdsConfig: VMaxZeeAdsConfig) -> String?{
+    public func getStickyBottomAdSpot(vmaxAdsConfig: VMaxZeeAdsConfig) -> String?{
         let jsonParser = VMaxB2BjsonParser()
         guard let json = vmaxAdsConfig.b2b else{
             return nil

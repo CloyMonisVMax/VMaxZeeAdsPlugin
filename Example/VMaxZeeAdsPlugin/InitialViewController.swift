@@ -28,6 +28,10 @@ class InitialViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.bannerAdView.isHidden = true
+        NotificationCenter.default.addObserver(self, selector: #selector(self.hideCompanionView(notification:)), name: NSNotification.Name(kVMaxNotificationHideCompanion), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(self.unHideCompanionView(notification:)), name: NSNotification.Name(kVMaxNotificationUnHideCompanion), object: nil)
     }
     
     override func viewDidDisappear(_ animated: Bool) {
@@ -41,7 +45,26 @@ class InitialViewController: UIViewController {
             plugin?.stop()
             plugin = nil
             self.avPlayer?.pause()
+            NotificationCenter.default.removeObserver(self)
         }
+    }
+    
+    @objc func hideCompanionView(notification: NSNotification){
+        print("\(TAG) hideCompanionView \(String(describing: notification.userInfo))")
+        //guard let userInfo = notification.userInfo as NSDictionary?, let adSlot = userInfo[kVMaxAdSlotId] as? String, adSlot == "9b024bbe" else {
+        //    return
+        //}
+        //print("\(TAG) hideCompanionView hidden = true \(adSlot)")
+        //self.bannerAdView.isHidden = true
+    }
+    
+    @objc func unHideCompanionView(notification: NSNotification){
+        print("\(TAG) unHideCompanionView \(String(describing: notification.userInfo))")
+        //guard let userInfo = notification.userInfo as NSDictionary?, let adSlot = userInfo[kVMaxAdSlotId] as? String, adSlot == "9b024bbe" else {
+        //    return
+        //}
+        //print("\(TAG) unHideCompanionView hidden = false \(adSlot)")
+        //self.bannerAdView.isHidden = false
     }
     
     @IBAction func start(_ sender: Any) {
@@ -109,6 +132,8 @@ class InitialViewController: UIViewController {
             print("vmaxAdsConfig is nil")
             return
         }
+        let stickyBottomAdSpot = VMaxAdsPluginHelper().getStickyBottomAdSpot(vmaxAdsConfig: vmaxAdsConfig)
+        print("\(TAG) stickyBottomAdSpot:\(stickyBottomAdSpot)")
         do{
             plugin = try VMaxZeeAdsPlugin(config: vmaxAdsConfig,delegate: self)
         }catch let error{
@@ -253,9 +278,6 @@ extension InitialViewController: VMaxAdBreakEvents{
         }
         print("\(TAG) avPlayer.play")
         avPlayer.play()
-        DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
-            self.bannerAdView.isHidden = true
-        }
     }
     
 }
@@ -358,14 +380,6 @@ extension InitialViewController : VMaxCompanionAdEvents{
     
     func onCompanionRender(_ adSlotId: String) {
         print("\(TAG) VMaxCompanionAdEvents onCompanionRender adSlotId:\(adSlotId)")
-        if adSlotId == "endcard"{
-            self.bannerAdView.isHidden = true
-            DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
-                self.bannerAdView.isHidden = false
-            }
-        }else{
-            self.bannerAdView.isHidden = false
-        }
     }
     
     func onCompanionClick(_ adSlotId: String) {
