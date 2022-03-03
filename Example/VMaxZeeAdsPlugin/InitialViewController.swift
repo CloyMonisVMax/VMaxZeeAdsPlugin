@@ -25,6 +25,7 @@ class InitialViewController: UIViewController {
     var started = false
     var plugin: VMaxZeeAdsPlugin?
     var observeToken: Any?
+    var stickyBottomAdSpot: String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -51,20 +52,20 @@ class InitialViewController: UIViewController {
     
     @objc func hideCompanionView(notification: NSNotification){
         print("\(TAG) hideCompanionView \(String(describing: notification.userInfo))")
-        //guard let userInfo = notification.userInfo as NSDictionary?, let adSlot = userInfo[kVMaxAdSlotId] as? String, adSlot == "9b024bbe" else {
-        //    return
-        //}
-        //print("\(TAG) hideCompanionView hidden = true \(adSlot)")
-        //self.bannerAdView.isHidden = true
+        guard let userInfo = notification.userInfo as NSDictionary?, let adSlot = userInfo[kVMaxAdSlotId] as? String, let stickyBottomAdSpot = stickyBottomAdSpot, adSlot == stickyBottomAdSpot else {
+            return
+        }
+        print("\(TAG) hideCompanionView hidden = true \(adSlot)")
+        self.bannerAdView.isHidden = true
     }
     
     @objc func unHideCompanionView(notification: NSNotification){
         print("\(TAG) unHideCompanionView \(String(describing: notification.userInfo))")
-        //guard let userInfo = notification.userInfo as NSDictionary?, let adSlot = userInfo[kVMaxAdSlotId] as? String, adSlot == "9b024bbe" else {
-        //    return
-        //}
-        //print("\(TAG) unHideCompanionView hidden = false \(adSlot)")
-        //self.bannerAdView.isHidden = false
+        guard let userInfo = notification.userInfo as NSDictionary?, let adSlot = userInfo[kVMaxAdSlotId] as? String, let stickyBottomAdSpot = stickyBottomAdSpot, adSlot == stickyBottomAdSpot else {
+            return
+        }
+        print("\(TAG) unHideCompanionView hidden = false \(adSlot)")
+        self.bannerAdView.isHidden = false
     }
     
     @IBAction func start(_ sender: Any) {
@@ -132,8 +133,7 @@ class InitialViewController: UIViewController {
             print("vmaxAdsConfig is nil")
             return
         }
-        let stickyBottomAdSpot = VMaxAdsPluginHelper().getStickyBottomAdSpot(vmaxAdsConfig: vmaxAdsConfig)
-        print("\(TAG) stickyBottomAdSpot:\(stickyBottomAdSpot)")
+        stickyBottomAdSpot = VMaxAdsPluginHelper().getStickyBottomAdSpot(vmaxAdsConfig: vmaxAdsConfig)
         do{
             plugin = try VMaxZeeAdsPlugin(config: vmaxAdsConfig,delegate: self)
         }catch let error{
