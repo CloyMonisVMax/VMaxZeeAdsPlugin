@@ -20,6 +20,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (strong, nonatomic) VMaxAdView *adView;
 
+@property (nonatomic,strong) NSString *adSlotId;
+
 - (instancetype) initWithDictionary:(NSDictionary *)dictionary andHostVC:(UIViewController *)hostVC andVMaxAddress:(NSString *)vmaxAddress;
 
 -(NSString*)getMarkup;

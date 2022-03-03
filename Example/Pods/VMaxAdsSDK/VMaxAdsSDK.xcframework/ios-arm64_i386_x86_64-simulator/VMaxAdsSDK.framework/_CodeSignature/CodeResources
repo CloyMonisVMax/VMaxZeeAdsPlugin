@@ -42,7 +42,7 @@
 		</data>
 		<key>Headers/VMaxAdBreak.h</key>
 		<data>
-		c05bhVx45G1egkxCKYvfoyAFDzQ=
+		L0F1GDAYfS89qGdXCRY12jTLdi4=
 		</data>
 		<key>Headers/VMaxAdBreakEvents.h</key>
 		<data>
@@ -70,7 +70,7 @@
 		</data>
 		<key>Headers/VMaxAdInfo.h</key>
 		<data>
-		zN8bT4ZDDs8Y9Htm+SL17mr4qJs=
+		G05K1L2TAZNFfiCvutDHvxT/wqc=
 		</data>
 		<key>Headers/VMaxAdMetaData.h</key>
 		<data>
@@ -98,7 +98,7 @@
 		</data>
 		<key>Headers/VMaxAdView.h</key>
 		<data>
-		QzSzc/37OXHjg8rqZfxBe4UrLAE=
+		4S9IdfRpXAWsnonSE2Dp8P2Uvwo=
 		</data>
 		<key>Headers/VMaxAdsSDK.h</key>
 		<data>
@@ -106,7 +106,7 @@
 		</data>
 		<key>Headers/VMaxCache.h</key>
 		<data>
-		ULd3+RhD4jLNnQz6RYdRGJfS4Bo=
+		dYBu5ZDLQFL25PFyv2u6/289/Aw=
 		</data>
 		<key>Headers/VMaxCompanionDelegate.h</key>
 		<data>
@@ -562,11 +562,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			c05bhVx45G1egkxCKYvfoyAFDzQ=
+			L0F1GDAYfS89qGdXCRY12jTLdi4=
 			</data>
 			<key>hash2</key>
 			<data>
-			zsiNWURX2En9235d6kGizY/1cMbio2OF4OEdkTbZMCs=
+			XUApawpvp2V/4DvE57iQzw22uR65KRToMJ0R9Ls7Nyo=
 			</data>
 		</dict>
 		<key>Headers/VMaxAdBreakEvents.h</key>
@@ -639,11 +639,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			zN8bT4ZDDs8Y9Htm+SL17mr4qJs=
+			G05K1L2TAZNFfiCvutDHvxT/wqc=
 			</data>
 			<key>hash2</key>
 			<data>
-			2u9FlO0FeN0lEHcbuEvvKanH92wlnABngXjFDRKRc/A=
+			TlEAg455dyfgatQdTzFXSPqcQPXajptrzQPAWdMz6UA=
 			</data>
 		</dict>
 		<key>Headers/VMaxAdMetaData.h</key>
@@ -716,11 +716,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			QzSzc/37OXHjg8rqZfxBe4UrLAE=
+			4S9IdfRpXAWsnonSE2Dp8P2Uvwo=
 			</data>
 			<key>hash2</key>
 			<data>
-			VggDyAZgw6NwL2jyPdrB7mYEuhXWpx32H5+Rd2p2G0c=
+			NaQCEZyaJAYzmHkK11xS41Zuy/VKabaa4q/Q5J6PXks=
 			</data>
 		</dict>
 		<key>Headers/VMaxAdsSDK.h</key>
@@ -738,11 +738,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			ULd3+RhD4jLNnQz6RYdRGJfS4Bo=
+			dYBu5ZDLQFL25PFyv2u6/289/Aw=
 			</data>
 			<key>hash2</key>
 			<data>
-			P/JUN5W11pTQ5guLUmru5pk3Zvud2XQEOM+BtY7v4wM=
+			zdahmZUeK9KwjbLh/1m6+fDsXQ5cjwnUPf/HSFhaX/Q=
 			</data>
 		</dict>
 		<key>Headers/VMaxCompanionDelegate.h</key>

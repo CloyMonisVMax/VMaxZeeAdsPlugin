@@ -65,6 +65,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 -(void)setRequestedBitrate:(UInt32)bitrate;
 
+-(void)setPodIndex:(UInt32)index;
+
 @end
 
 NS_ASSUME_NONNULL_END

@@ -49,6 +49,7 @@ extern NSString* const STATIC_RESOURCE;
 extern NSString* const HTML_RESOURCE;
 extern NSString* const kVMaxNotificationHideCompanion;
 extern NSString* const kVMaxNotificationUnHideCompanion;
+extern NSString* const kVMaxAdSlotId;
 
 /*!
  @enum      VMaxAdState

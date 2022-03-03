@@ -37,6 +37,7 @@
 //@property (nonatomic) NSTimeInterval* timeOffset; // current time of video
 @property (nonatomic) Boolean* isBumper;
 @property (nonatomic) NSInteger podIndex;
+@property (nonatomic) NSInteger adIndex;
 //@property (nonatomic) NSString mediaBitrate;
 //@property (strong, nonatomic) NSString* creativeId;
 //@property (strong, nonatomic) NSString* advertiserName;
