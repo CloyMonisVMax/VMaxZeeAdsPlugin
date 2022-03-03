@@ -47,6 +47,8 @@ extern NSString* const AD_EVENTS_NOTIFIER;
 extern NSString* const SKIPPABLE_TIME;
 extern NSString* const STATIC_RESOURCE;
 extern NSString* const HTML_RESOURCE;
+extern NSString* const kVMaxNotificationHideCompanion;
+extern NSString* const kVMaxNotificationUnHideCompanion;
 
 /*!
  @enum      VMaxAdState

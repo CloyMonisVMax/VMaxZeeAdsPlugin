@@ -97,11 +97,13 @@ class InitialViewController: UIViewController {
             NotificationCenter.default.addObserver(self, selector: sel,name: NSNotification.Name.AVPlayerItemDidPlayToEndTime, object: currentItem)
         }
     }
+    
     @objc func playerDidFinishPlaying(note: NSNotification) {
         print("Video Finished")
         plugin?.stop()
         plugin = nil
     }
+    
     func startPlugin(){
         guard let vmaxAdsConfig = getVMaxAdsConfig() else {
             print("vmaxAdsConfig is nil")
