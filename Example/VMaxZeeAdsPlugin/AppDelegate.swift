@@ -7,17 +7,14 @@
 //
 
 import UIKit
-import VMaxAdsSDK
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        VMaxAdSDK .setLogLevel(VMAX_LogLevel.LEVEL_DEBUG)
         return true
     }
 

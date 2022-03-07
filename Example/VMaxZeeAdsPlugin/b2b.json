@@ -1,74 +1,50 @@
 {
+    "video_ads": {
+        "0": [
+            {
+                "adspot_key": "480ccbb2"
+            },
+            {
+                "adspot_key": "1426a8e7"
+            }
+        ],
+        "360": [
+            {
+                "adspot_key": "8a423d44"
+            },
+            {
+                "adspot_key": "644c5c68"
+            }
+        ],
+        "660": [
+            {
+                "adspot_key": "f4f341f9"
+            },
+            {
+                "adspot_key": "7d576d29"
+            }
+        ],
+        "900": [
+            {
+                "adspot_key": "0a505dbf"
+            },
+            {
+                "adspot_key": "93590c05"
+            }
+        ]
+    },
     "video_break": {
         "0": {
-            "adspot_key": "251e9b17",
-            "tagid": "Stage_Zee5_IOs_Preroll",
+            "adspot_key": "373d81ae",
+            "tagid": "Zee5_IOs_Preroll",
             "requested_ads": 1,
-            "max_time": 70,
-            "expected_time": 60,
+            "max_time": 40,
+            "expected_time": 30,
             "use_total_duration_for_complete_ad": true,
             "order_by_time_ascending": true,
             "allow_only_complete_ad": true,
-            "max_duration_per_ad": 30,
-            "adslots": {
-                "020b1a04": {
-                    "behavior": "DelayShowClose",
-                    "show_delay": 3,
-                    "close_delay": 5,
-                    "hide_on_endcard": true
-                },
-                "9b024bbe": {
-                    "behavior": "DelayShowClose",
-                    "show_delay": 3,
-                    "close_delay": 5,
-                    "hide_on_endcard": true
-                }
-            }
-        },
-        "4": {
-            "adspot_key": "251e9b17",
-            "tagid": "Stage_Zee5_IOs_Preroll",
-            "requested_ads": 1,
-            "max_time": 70,
-            "expected_time": 60,
-            "use_total_duration_for_complete_ad": true,
-            "order_by_time_ascending": true,
-            "allow_only_complete_ad": true,
-            "max_duration_per_ad": 30,
-            "adslots": {
-                "020b1a04": {
-                    "behavior": "DelayShowClose",
-                    "show_delay": 3,
-                    "close_delay": 5,
-                    "hide_on_endcard": true
-                },
-                "9b024bbe": {
-                    "behavior": "DelayShowClose",
-                    "show_delay": 3,
-                    "close_delay": 5,
-                    "hide_on_endcard": true
-                }
-            }
-        },
-        "8": {
-            "adspot_key": "251e9b17",
-            "tagid": "Stage_Zee5_IOs_Preroll",
-            "requested_ads": 1,
-            "max_time": 70,
-            "expected_time": 60,
-            "use_total_duration_for_complete_ad": true,
-            "order_by_time_ascending": true,
-            "allow_only_complete_ad": true,
-            "max_duration_per_ad": 30,
-            "adslots": {
-                "020b1a04": {
-                    "behavior": "DelayShowClose",
-                    "show_delay": 3,
-                    "close_delay": 5,
-                    "hide_on_endcard": true
-                },
-                "9b024bbe": {
-                    "behavior": "DelayShowClose",
+            "override_companion_params": {
+                "DelayShowClose": {
                     "show_delay": 3,
                     "close_delay": 5,
                     "hide_on_endcard": true
@@ -76,36 +52,19 @@
             }
         }
     },
-    "display_ads": {
-        "sticky_bottom": [
-            {
-                "adspot_key": "9b024bbe"
-            }
-        ],
-        "landscape_overlay": [
-            {
-                "adspot_key": "020b1a04"
-            }
-        ],
-        "endcard": [
-            {
-                "adspot_key": "endcard"
-            }
-        ]
-    },
     "key_values": {
-        "video_id": "0-1-6z598967",
-        "video_title": "Preeta Fires Mona",
-        "episode_number": "1184",
-        "show_id": "0-6-366",
-        "show_name": "Kundali Bhagya",
+        "video_id": "0-1-197653",
+        "video_title": "Toofan Aalaya - Episode 1 - April 06 2019 - Full Episode",
+        "episode_number": "1",
+        "show_id": "0-6-1581",
+        "show_name": "Toofan Aalaya 2019",
         "channel_id": "",
-        "season_id": "0-2-KundaliBhagya1",
+        "season_id": "0-2-1437",
         "asset_subtype": "episode",
-        "content_creator": "Zee Entertainment Enterprises Limited",
+        "content_creator": "Zee Entertainment Enterprises Ltd",
         "certificate_type": "U",
         "content_length": "long_form",
-        "audio_language": "hi",
+        "audio_language": "mr",
         "translation": "en",
         "user_language": "en,hi,mr",
         "user_type": "guest",
@@ -114,17 +73,17 @@
         "gender": "",
         "brand": "",
         "model": "",
-        "ca": "LFO7,LFO7,0-1-6z598967",
+        "ca": "LFO7,LFO7,0-1-197653",
         "aud": "LFO7,LFO7",
         "collection_id": "",
         "app_version": "2.50.67.1",
         "is_lat": "",
         "bd_source": "",
-        "content_name": "Kundali Bhagya",
+        "content_name": "Toofan Aalaya 2019",
         "screen_id": "",
         "cue_point": "",
         "ad_pos": "",
-        "genre": "Drama,Romance",
+        "genre": "Reality",
         "utm_source": "",
         "utm_medium": "",
         "utm_campaign": "",

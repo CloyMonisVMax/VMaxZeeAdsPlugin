@@ -77,15 +77,25 @@
                                     <constraint firstAttribute="width" constant="320" id="kD0-x6-qTk"/>
                                 </constraints>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bba-0Q-lbm">
+                                <rect key="frame" x="150.5" y="318" width="74.5" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Destroy"/>
+                                <connections>
+                                    <action selector="actionDestroy:" destination="deR-xr-yKh" eventType="touchUpInside" id="Rfc-83-grp"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Y1u-oK-e6j"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="eKh-An-ysF" firstAttribute="height" secondItem="N99-kV-3gm" secondAttribute="height" id="5Ha-5o-7rY"/>
                             <constraint firstAttribute="trailing" secondItem="eKh-An-ysF" secondAttribute="trailing" id="7tY-Hz-pD7"/>
+                            <constraint firstItem="Bba-0Q-lbm" firstAttribute="centerY" secondItem="Y1u-oK-e6j" secondAttribute="centerY" id="GQH-6C-bAy"/>
                             <constraint firstItem="eKh-An-ysF" firstAttribute="top" secondItem="Y1u-oK-e6j" secondAttribute="top" id="Kop-Me-ZJa"/>
                             <constraint firstItem="eKh-An-ysF" firstAttribute="leading" secondItem="N99-kV-3gm" secondAttribute="leading" id="TiY-7E-L7b"/>
                             <constraint firstItem="C3d-Kd-jRU" firstAttribute="centerX" secondItem="eKh-An-ysF" secondAttribute="centerX" id="b9I-ag-YW3"/>
+                            <constraint firstItem="Bba-0Q-lbm" firstAttribute="centerX" secondItem="Y1u-oK-e6j" secondAttribute="centerX" id="bKI-ii-z9d"/>
                             <constraint firstItem="C3d-Kd-jRU" firstAttribute="top" secondItem="eKh-An-ysF" secondAttribute="bottom" constant="8" symbolic="YES" id="tR2-ke-6E8"/>
                             <constraint firstItem="eKh-An-ysF" firstAttribute="height" secondItem="N99-kV-3gm" secondAttribute="height" multiplier="0.25" id="ymi-ah-2EJ"/>
                         </constraints>

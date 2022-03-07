@@ -32,6 +32,7 @@ public class VMaxZeeAdsPlugin: NSObject {
         self.vmaxAdBreakEvents = self.config?.adBreakEvents
         super.init()
         vmLog("")
+        logging()
         try helper.validate(vmaxAdsConfig: config)
         metaObjects = try helper.parseb2b(vmaxAdsConfig: config)
         let tuple = helper.getAdsScheduled(dict: metaObjects)
@@ -90,8 +91,6 @@ public class VMaxZeeAdsPlugin: NSObject {
         vmaxAdBreakEvents = nil
         adBreaksRendered.removeAll()
         adBreaksStarted.removeAll()
-        blurEffect = nil
-        blurEffectView = nil
         delegate = nil
         config = nil
         playerObserver = nil
@@ -370,6 +369,12 @@ extension VMaxZeeAdsPlugin {
         return response
     }
     
+    private func logging(){
+        guard let conig = config, let enableLogs = conig.enableLogs, enableLogs == true else {
+            return
+        }
+        VMaxAdsSDKEnableLogger.shared.enable()
+    }
 }
 
 public class PlayerObserver {

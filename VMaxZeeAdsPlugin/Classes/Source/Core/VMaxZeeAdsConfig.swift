@@ -15,6 +15,7 @@ public class VMaxZeeAdsConfig: NSObject{
     public var bannerView: UIView?
     public var meta: VMaxAdMetaData?
     public var requestedBitrate: Int?
+    public var enableLogs: Bool?
 }
 extension VMaxZeeAdsConfig {
     public override var debugDescription: String {

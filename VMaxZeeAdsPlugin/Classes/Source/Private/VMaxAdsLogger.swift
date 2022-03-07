@@ -38,3 +38,20 @@ func getDate() -> String {
     dateFormat.dateFormat = "y-MM-dd H:mm:ss.SSSS"
     return dateFormat.string(from: Date())
 }
+
+class VMaxAdsSDKEnableLogger: NSObject {
+    private override init() { vmLog("") }
+    private var enabled = false
+    static var shared: VMaxAdsSDKEnableLogger = {
+        let instance = VMaxAdsSDKEnableLogger()
+        return instance
+    }()
+    func enable(){
+        guard enabled == false else {
+            return
+        }
+        enabled = true
+        vmLog("enabled:\(enabled)")
+        VMaxAdSDK.setLogLevel(.LEVEL_DEBUG)
+    }
+}

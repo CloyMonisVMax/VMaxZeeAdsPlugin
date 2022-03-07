@@ -76,6 +76,11 @@ class InitialViewController: UIViewController {
         playContentVideo()
     }
     
+    @IBAction func actionDestroy(_ sender: Any) {
+        plugin?.stop()
+        plugin = nil
+    }
+    
     func playContentVideo(){
         guard let contentURL: URL = URL(string: mediaUrl) else {
             print("\(TAG) contentURL is nil ")
@@ -181,6 +186,7 @@ extension InitialViewController{
         config.vmaxCompanionAdEvents = self
         config.bannerView = self.bannerAdView
         config.requestedBitrate = 1799
+        config.enableLogs = true
         return config
     }
     
