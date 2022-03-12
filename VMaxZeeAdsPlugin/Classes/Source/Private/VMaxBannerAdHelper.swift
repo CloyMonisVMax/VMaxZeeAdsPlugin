@@ -53,10 +53,10 @@ class VMaxBannerAdHelper : NSObject {
         companionAdEvents = nil
         bannerView = nil
         viewController = nil
-        vMaxAdView?.removeFromSuperview()
         vMaxAdView?.invalidateAd()
         vMaxAdView?.delegate = nil
         vMaxAdView?.delegateCompanion = nil
+        vMaxAdView?.removeFromSuperview()
         vMaxAdView = nil
     }
     

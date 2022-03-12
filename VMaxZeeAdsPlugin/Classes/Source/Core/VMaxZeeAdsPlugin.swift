@@ -394,7 +394,7 @@ public class PlayerObserver {
             return
         }
         let midRollsFiltered = plugin.midRollDurations.filter(){ $0 <= currentSecond }
-        vmLog("currentSecond:\(currentSecond),midRollDurations:\(plugin.midRollDurations),midRollsFiltered:\(midRollsFiltered)")
+        //vmLog("currentSecond:\(currentSecond),midRollDurations:\(plugin.midRollDurations),midRollsFiltered:\(midRollsFiltered)")
         let scratchForward = (currentSecond - plugin.lastPlayedSecond) >= 2
         if let mediaDuration = plugin.config?.mediaDuration,
            currentSecond >= Int(CMTimeGetSeconds(mediaDuration)) &&

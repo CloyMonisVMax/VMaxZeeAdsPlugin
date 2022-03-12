@@ -35,9 +35,9 @@
     },
     "video_break": {
         "0": {
-            "adspot_key": "373d81ae",
+            "adspot_key": "403ab138",
             "tagid": "Zee5_IOs_Preroll",
-            "requested_ads": 1,
+            "requested_ads": 2,
             "max_time": 40,
             "expected_time": 30,
             "use_total_duration_for_complete_ad": true,
@@ -50,7 +50,87 @@
                     "hide_on_endcard": true
                 }
             }
+        },
+        "5": {
+            "adspot_key": "373d81ae",
+            "tagid": "Zee5_IOs_Preroll",
+            "requested_ads": 2,
+            "max_time": 40,
+            "expected_time": 30,
+            "use_total_duration_for_complete_ad": true,
+            "order_by_time_ascending": true,
+            "allow_only_complete_ad": true,
+            "override_companion_params": {
+                "DelayShowClose": {
+                    "show_delay": 3,
+                    "close_delay": 5,
+                    "hide_on_endcard": true
+                }
+            }
+        },
+        "10": {
+            "adspot_key": "373d81ae",
+            "tagid": "Zee5_IOs_Midroll_1",
+            "requested_ads": 2,
+            "max_time": 40,
+            "expected_time": 30,
+            "use_total_duration_for_complete_ad": true,
+            "order_by_time_ascending": true,
+            "allow_only_complete_ad": true,
+            "override_companion_params": {
+                "DelayShowClose": {
+                    "show_delay": 3,
+                    "close_delay": 5,
+                    "hide_on_endcard": true
+                }
+            }
+        },
+        "20": {
+            "adspot_key": "b72fe155",
+            "tagid": "Zee5_IOs_Midroll_2",
+            "requested_ads": 3,
+            "use_total_duration_for_complete_ad": true,
+            "order_by_time_ascending": true,
+            "allow_only_complete_ad": true,
+            "override_companion_params": {
+                "DelayShowClose": {
+                    "close_delay": 5,
+                    "hide_on_endcard": false
+                }
+            }
+        },
+        "30": {
+            "adspot_key": "403ab138",
+            "tagid": "Zee5_IOs_Midroll_3",
+            "max_time": 70,
+            "expected_time": 60,
+            "use_total_duration_for_complete_ad": true,
+            "order_by_time_ascending": true,
+            "allow_only_complete_ad": true,
+            "override_companion_params": {
+                "DelayShowClose": {
+                    "close_delay": 5,
+                    "hide_on_endcard": false
+                }
+            }
         }
+    },
+    "display_ads": {
+        "sticky_bottom": [
+            {
+                "adspot_key": "8fe3c218"
+            }
+        ],
+        "landscape_overlay": [
+            {
+                "adspot_key": "6680672d"
+            }
+        ],
+        "endcard": [
+            {
+                "adspot_key": "endcard"
+            }
+        ]
     },
     "key_values": {
         "video_id": "0-1-197653",

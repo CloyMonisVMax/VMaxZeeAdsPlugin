@@ -21,7 +21,7 @@ class InitialViewController: UIViewController {
     @IBOutlet var slider: UISlider!
     @IBOutlet var videoView: VideoView!
     @IBOutlet var bannerAdView: UIView!
-    let mediaUrl = "https://alpha-zee5-media.vmax.com/v/vast/481763_1626776912699_sd.mp4"
+    let mediaUrl = "https://cfvod.kaltura.com/hls/p/2215841/sp/221584100/serveFlavor/entryId/1_w9zx2eti/v/1/ev/5/flavorId/1_,1obpcggb,3f4sp5qu,1xdbzoa6,k16ccgto,r6q0xdb6,/name/a.mp4/index.m3u8.urlset/master.m3u8"
     var started = false
     var plugin: VMaxZeeAdsPlugin?
     var observeToken: Any?
@@ -30,6 +30,7 @@ class InitialViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.addObservers()
         self.bannerAdView.isHidden = true
         NotificationCenter.default.addObserver(self, selector: #selector(self.hideCompanionView(notification:)), name: NSNotification.Name(kVMaxNotificationHideCompanion), object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(self.unHideCompanionView(notification:)), name: NSNotification.Name(kVMaxNotificationUnHideCompanion), object: nil)
@@ -160,6 +161,31 @@ class InitialViewController: UIViewController {
         print("completed")
         //plugin?.stop()
         //plugin = nil
+    }
+    
+    private func addObservers() {
+        let sel = #selector(self.orientationChanged(notification:))
+        addObserver(sel: sel, name: NSNotification.Name.UIDeviceOrientationDidChange)
+    }
+    
+    private func addObserver(sel: Selector, name: NSNotification.Name) {
+        NotificationCenter.default.addObserver(self, selector: sel, name: name, object: nil)
+    }
+    
+    @objc func orientationChanged(notification: NSNotification) {
+        guard let device = notification.object as? UIDevice else {
+            print("\(TAG) device is nil")
+            return
+        }
+        print("\(TAG) device.orientation\(device.orientation.rawValue)")
+        switch device.orientation {
+        case .portrait :
+            self.bannerAdView.isHidden = false
+        case .landscapeLeft, .landscapeRight:
+            self.bannerAdView.isHidden = true
+        @unknown default:
+            print("\(TAG) rotation not supported for current orientation @unknown")
+        }
     }
 }
 
