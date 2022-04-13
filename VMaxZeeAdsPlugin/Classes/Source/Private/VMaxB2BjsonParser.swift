@@ -47,6 +47,7 @@ class VMaxB2BjsonParser{
             }
             arrayCuePoints.append(durationAsString)
         }
+        arrayCuePoints = self.sortCuePoint(inp: arrayCuePoints)
         for (i,cuePoint) in arrayCuePoints.enumerated(){
             guard let videoBreak: NSDictionary = videoAdJson[cuePoint] as? NSDictionary else{
                 break
@@ -92,7 +93,7 @@ class VMaxB2BjsonParser{
         }
         return dictionary
     }
-
+    
     private func parseKeyValuePair(vmaxJson: NSDictionary) -> NSDictionary{
         let mutableJsonKeyValue = NSMutableDictionary()
         if let commonKeyValueJson : NSDictionary = vmaxJson["key_values"] as? NSDictionary{
@@ -114,7 +115,7 @@ class VMaxB2BjsonParser{
             VMaxAdSDK.setAccountId(accountIdInt)
         }
     }
-
+    
     func getBannerAdSpot(json: NSDictionary,key: String) -> String?{
         guard let displayAdsJson: NSDictionary = json["display_ads"] as? NSDictionary else{
             return nil
@@ -130,70 +131,79 @@ class VMaxB2BjsonParser{
         }
         return key
     }
-        
+    
     private func parseTimeout(vmaxJson: NSDictionary){
-         let vmaxTimeout = VMaxTimeout()
-         guard let settings = vmaxJson["settings"] as? NSDictionary else{
-             return
-         }
-         guard let timeout = settings["timeout"] as? NSDictionary else {
-             vmaxTimeout.configure(.type3G, type: .mediaLoad, value: 7)
-             vmaxTimeout.configure(.type4G, type: .mediaLoad, value: 7)
-             vmaxTimeout.configure(.typeWifi, type: .mediaLoad, value: 5)
-             vmaxTimeout.configure(.type3G, type: .adRequest, value: 5)
-             vmaxTimeout.configure(.type4G, type: .adRequest, value: 5)
-             vmaxTimeout.configure(.typeWifi, type: .adRequest, value: 4)
-             return
-         }
-         if let mediaLoad = timeout["media_load"] as? NSDictionary {
-             vmLog("VMaxTimeout -----------")
-             if let value = mediaLoad["3G"] as? Int32{
-                 vmaxTimeout.configure(.type3G, type: .mediaLoad, value: value)
-             }else{
-                 vmaxTimeout.configure(.type3G, type: .mediaLoad, value: 7)
-             }
-             vmLog("VMaxTimeout -----------")
-             if let value = mediaLoad["4G"] as? Int32{
-                 vmaxTimeout.configure(.type4G, type: .mediaLoad, value: value)
-             }else{
-                 vmaxTimeout.configure(.type4G, type: .mediaLoad, value: 7)
-             }
-             vmLog("VMaxTimeout -----------")
-             if let value = mediaLoad["wifi"] as? Int32{
-                 vmaxTimeout.configure(.typeWifi, type: .mediaLoad, value: value)
-             }else{
-                 vmaxTimeout.configure(.typeWifi, type: .mediaLoad, value: 5)
-             }
-         }else{
-             vmaxTimeout.configure(.type3G, type: .mediaLoad, value: 7)
-             vmaxTimeout.configure(.type4G, type: .mediaLoad, value: 7)
-             vmaxTimeout.configure(.typeWifi, type: .mediaLoad, value: 5)
-         }
-         if let adRequest = timeout["ad_request"] as? NSDictionary {
-             vmLog("VMaxTimeout -----------")
-             if let value = adRequest["3G"] as? Int32{
-                 vmaxTimeout.configure(.type3G, type: .adRequest, value: value)
-             }else{
-                 vmaxTimeout.configure(.type3G, type: .adRequest, value: 5)
-             }
-             vmLog("VMaxTimeout -----------")
-             if let value = adRequest["4G"] as? Int32{
-                 vmaxTimeout.configure(.type4G, type: .adRequest, value: value)
-             }else{
-                 vmaxTimeout.configure(.type4G, type: .adRequest, value: 5)
-             }
-             vmLog("VMaxTimeout -----------")
-             if let value = adRequest["wifi"] as? Int32{
-                 vmaxTimeout.configure(.typeWifi, type: .adRequest, value: value)
-             }else{
-                 vmaxTimeout.configure(.typeWifi, type: .adRequest, value: 4)
-             }
-         }else{
-             vmaxTimeout.configure(.type3G, type: .adRequest, value: 5)
-             vmaxTimeout.configure(.type4G, type: .adRequest, value: 5)
-             vmaxTimeout.configure(.typeWifi, type: .adRequest, value: 4)
-         }
-         VMaxAdSDK.setTimeout(vmaxTimeout)
-     }
- 
+        let vmaxTimeout = VMaxTimeout()
+        guard let settings = vmaxJson["settings"] as? NSDictionary else{
+            return
+        }
+        guard let timeout = settings["timeout"] as? NSDictionary else {
+            vmaxTimeout.configure(.type3G, type: .mediaLoad, value: 7)
+            vmaxTimeout.configure(.type4G, type: .mediaLoad, value: 7)
+            vmaxTimeout.configure(.typeWifi, type: .mediaLoad, value: 5)
+            vmaxTimeout.configure(.type3G, type: .adRequest, value: 5)
+            vmaxTimeout.configure(.type4G, type: .adRequest, value: 5)
+            vmaxTimeout.configure(.typeWifi, type: .adRequest, value: 4)
+            return
+        }
+        if let mediaLoad = timeout["media_load"] as? NSDictionary {
+            vmLog("VMaxTimeout -----------")
+            if let value = mediaLoad["3G"] as? Int32{
+                vmaxTimeout.configure(.type3G, type: .mediaLoad, value: value)
+            }else{
+                vmaxTimeout.configure(.type3G, type: .mediaLoad, value: 7)
+            }
+            vmLog("VMaxTimeout -----------")
+            if let value = mediaLoad["4G"] as? Int32{
+                vmaxTimeout.configure(.type4G, type: .mediaLoad, value: value)
+            }else{
+                vmaxTimeout.configure(.type4G, type: .mediaLoad, value: 7)
+            }
+            vmLog("VMaxTimeout -----------")
+            if let value = mediaLoad["wifi"] as? Int32{
+                vmaxTimeout.configure(.typeWifi, type: .mediaLoad, value: value)
+            }else{
+                vmaxTimeout.configure(.typeWifi, type: .mediaLoad, value: 5)
+            }
+        }else{
+            vmaxTimeout.configure(.type3G, type: .mediaLoad, value: 7)
+            vmaxTimeout.configure(.type4G, type: .mediaLoad, value: 7)
+            vmaxTimeout.configure(.typeWifi, type: .mediaLoad, value: 5)
+        }
+        if let adRequest = timeout["ad_request"] as? NSDictionary {
+            vmLog("VMaxTimeout -----------")
+            if let value = adRequest["3G"] as? Int32{
+                vmaxTimeout.configure(.type3G, type: .adRequest, value: value)
+            }else{
+                vmaxTimeout.configure(.type3G, type: .adRequest, value: 5)
+            }
+            vmLog("VMaxTimeout -----------")
+            if let value = adRequest["4G"] as? Int32{
+                vmaxTimeout.configure(.type4G, type: .adRequest, value: value)
+            }else{
+                vmaxTimeout.configure(.type4G, type: .adRequest, value: 5)
+            }
+            vmLog("VMaxTimeout -----------")
+            if let value = adRequest["wifi"] as? Int32{
+                vmaxTimeout.configure(.typeWifi, type: .adRequest, value: value)
+            }else{
+                vmaxTimeout.configure(.typeWifi, type: .adRequest, value: 4)
+            }
+        }else{
+            vmaxTimeout.configure(.type3G, type: .adRequest, value: 5)
+            vmaxTimeout.configure(.type4G, type: .adRequest, value: 5)
+            vmaxTimeout.configure(.typeWifi, type: .adRequest, value: 4)
+        }
+        VMaxAdSDK.setTimeout(vmaxTimeout)
+    }
+    
+    func sortCuePoint(inp: [String]) -> [String] {
+        let arr = inp.filter{ $0 != "-1" }
+        var sortedArr : [String] = arr.compactMap{Int($0)}.sorted().compactMap{String($0)}
+        if inp.contains("-1"){
+            sortedArr.append("-1")
+        }
+        return sortedArr
+    }
+    
 }
