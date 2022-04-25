@@ -64,7 +64,7 @@ class VMaxAdSkipCounterLabel : UILabel{
         topLayer.backgroundColor = UIColor.white.cgColor
         self.layer.addSublayer(topLayer)
         let leftLayer = CALayer()
-        leftLayer.frame = CGRect(x: 0, y: 0, width: borderWidth, height: frame.height)
+        leftLayer.frame = CGRect(x: 0, y: 0, width: borderWidth * 1.5 , height: frame.height)
         leftLayer.backgroundColor = UIColor.white.cgColor
         self.layer.addSublayer(leftLayer)
         let insets = UIEdgeInsets(top: 0, left: 10, bottom: 0, right: 10)

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
@@ -26,14 +26,14 @@
                         <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7Eb-sH-N2Z">
                             <rect key="frame" x="0.0" y="0.0" width="414" height="200"/>
                             <subviews>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qfc-Oi-bG0">
-                                    <rect key="frame" x="12" y="188" width="0.0" height="0.0"/>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="AD" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qfc-Oi-bG0">
+                                    <rect key="frame" x="12" y="168" width="19.5" height="20"/>
                                     <fontDescription key="fontDescription" name="NotoSansOriya" family="Noto Sans Oriya" pointSize="14"/>
                                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xRG-kW-zux">
-                                    <rect key="frame" x="12" y="188" width="2" height="0.0"/>
+                                    <rect key="frame" x="31.5" y="178" width="2" height="0.0"/>
                                     <constraints>
                                         <constraint firstAttribute="width" constant="2" id="cIC-oR-6Y6"/>
                                     </constraints>
@@ -42,7 +42,7 @@
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZsL-lh-gxN">
-                                    <rect key="frame" x="14" y="188" width="0.0" height="0.0"/>
+                                    <rect key="frame" x="33.5" y="178" width="0.0" height="0.0"/>
                                     <fontDescription key="fontDescription" name="NotoSansOriya" family="Noto Sans Oriya" pointSize="14"/>
                                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <nil key="highlightedColor"/>
@@ -91,7 +91,7 @@
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <view hidden="YES" opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="L01-iu-76n">
-                                    <rect key="frame" x="12" y="128" width="320" height="50"/>
+                                    <rect key="frame" x="12" y="98" width="320" height="50"/>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="50" id="DHG-aG-7bt"/>
@@ -99,27 +99,41 @@
                                     </constraints>
                                 </view>
                             </subviews>
+                            <viewLayoutGuide key="safeArea" id="TlD-od-teo"/>
                             <constraints>
                                 <constraint firstItem="xRG-kW-zux" firstAttribute="leading" secondItem="Qfc-Oi-bG0" secondAttribute="trailing" id="1KW-Hb-REL"/>
-                                <constraint firstAttribute="trailing" secondItem="fsP-sm-4lg" secondAttribute="trailing" id="4ir-76-hsQ"/>
+                                <constraint firstItem="L01-iu-76n" firstAttribute="leading" secondItem="TlD-od-teo" secondAttribute="leading" constant="12" id="3G9-bE-MaR"/>
+                                <constraint firstItem="4yj-ib-mlb" firstAttribute="trailing" secondItem="TlD-od-teo" secondAttribute="trailing" id="4j3-g6-bHv"/>
                                 <constraint firstItem="fsP-sm-4lg" firstAttribute="top" secondItem="WI5-Y2-BPC" secondAttribute="bottom" constant="12" id="9Ow-5t-n43"/>
-                                <constraint firstAttribute="trailing" secondItem="WI5-Y2-BPC" secondAttribute="trailing" id="GTU-BD-yYQ"/>
+                                <constraint firstItem="WI5-Y2-BPC" firstAttribute="trailing" secondItem="TlD-od-teo" secondAttribute="trailing" id="FOT-Rq-w4r"/>
+                                <constraint firstItem="TlD-od-teo" firstAttribute="bottom" secondItem="WI5-Y2-BPC" secondAttribute="bottom" constant="30" id="Ier-bZ-KsB"/>
                                 <constraint firstItem="Qfc-Oi-bG0" firstAttribute="leading" secondItem="7Eb-sH-N2Z" secondAttribute="leading" constant="12" id="JhL-39-IUp"/>
-                                <constraint firstItem="4yj-ib-mlb" firstAttribute="trailing" secondItem="WI5-Y2-BPC" secondAttribute="trailing" id="LEU-CZ-ydh"/>
-                                <constraint firstItem="fsP-sm-4lg" firstAttribute="leading" secondItem="7Eb-sH-N2Z" secondAttribute="leading" id="LWH-3r-rOC"/>
                                 <constraint firstItem="WI5-Y2-BPC" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="ZsL-lh-gxN" secondAttribute="trailing" constant="8" symbolic="YES" id="T9T-bQ-ELD"/>
                                 <constraint firstItem="ZsL-lh-gxN" firstAttribute="centerY" secondItem="xRG-kW-zux" secondAttribute="centerY" id="TsU-6f-JDX"/>
+                                <constraint firstItem="Qfc-Oi-bG0" firstAttribute="leading" secondItem="TlD-od-teo" secondAttribute="leading" constant="12" id="XOM-in-aZ5"/>
                                 <constraint firstAttribute="bottom" secondItem="Qfc-Oi-bG0" secondAttribute="bottom" constant="12" id="cot-Jv-STu"/>
+                                <constraint firstItem="fsP-sm-4lg" firstAttribute="leading" secondItem="TlD-od-teo" secondAttribute="leading" id="fNw-Pc-1DA"/>
                                 <constraint firstItem="xRG-kW-zux" firstAttribute="centerY" secondItem="Qfc-Oi-bG0" secondAttribute="centerY" id="fpG-Ph-QEx"/>
                                 <constraint firstItem="4yj-ib-mlb" firstAttribute="height" secondItem="WI5-Y2-BPC" secondAttribute="height" id="gpE-aP-PsY"/>
                                 <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="ZsL-lh-gxN" secondAttribute="trailing" constant="20" symbolic="YES" id="iRY-ty-z7Q"/>
-                                <constraint firstItem="L01-iu-76n" firstAttribute="leading" secondItem="7Eb-sH-N2Z" secondAttribute="leading" constant="12" id="jPD-2z-5gR"/>
                                 <constraint firstItem="4yj-ib-mlb" firstAttribute="centerY" secondItem="WI5-Y2-BPC" secondAttribute="centerY" id="jYN-BR-GLw"/>
+                                <constraint firstItem="TlD-od-teo" firstAttribute="trailing" secondItem="fsP-sm-4lg" secondAttribute="trailing" id="k4e-R0-HaZ"/>
                                 <constraint firstItem="ZsL-lh-gxN" firstAttribute="leading" secondItem="xRG-kW-zux" secondAttribute="trailing" id="o3t-dJ-fcK"/>
                                 <constraint firstAttribute="bottom" secondItem="fsP-sm-4lg" secondAttribute="bottom" id="tf6-W8-Aul"/>
-                                <constraint firstItem="Qfc-Oi-bG0" firstAttribute="top" secondItem="L01-iu-76n" secondAttribute="bottom" constant="10" id="uhE-lr-ypm"/>
+                                <constraint firstItem="Qfc-Oi-bG0" firstAttribute="top" secondItem="L01-iu-76n" secondAttribute="bottom" constant="20" id="uhE-lr-ypm"/>
                                 <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="xRG-kW-zux" secondAttribute="trailing" constant="20" symbolic="YES" id="x7L-SN-90b"/>
                             </constraints>
+                            <variation key="default">
+                                <mask key="constraints">
+                                    <exclude reference="Ier-bZ-KsB"/>
+                                </mask>
+                            </variation>
+                            <variation key="heightClass=compact-widthClass=compact">
+                                <mask key="constraints">
+                                    <include reference="Ier-bZ-KsB"/>
+                                    <exclude reference="9Ow-5t-n43"/>
+                                </mask>
+                            </variation>
                         </view>
                     </subviews>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
