@@ -1,0 +1,6 @@
+framework module VMaxGamAdapter {
+  umbrella header "VMaxGamAdapter-umbrella.h"
+
+  export *
+  module * { export * }
+}

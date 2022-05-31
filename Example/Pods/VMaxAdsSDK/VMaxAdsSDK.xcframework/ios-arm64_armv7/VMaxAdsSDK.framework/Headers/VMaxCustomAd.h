@@ -88,6 +88,7 @@ extern NSString* const kVMaxResponseParam_moat_AdSpotID;
 - (UIView *)getPrimaryView:(CGFloat)width;
 -(void)updateCTAButton:(UIButton*)btn;
 -(void)updateMediaView:(id)mediaView;
+-(BOOL)canDurationPassInRequest; //3.15.8 sce
 void VMAXNSLog(NSString *format, ...);
 @end
 

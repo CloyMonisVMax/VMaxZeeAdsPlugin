@@ -13,6 +13,7 @@ Pod::Spec.new do |s|
   s.source_files = 'VMaxZeeAdsPlugin/Classes/**/*'
   s.dependency 'VMaxAdsSDK'
   s.dependency 'VMaxZeeOMSDK'
+  s.dependency 'VMaxGamAdapter'
   s.resource_bundles = {
       'VMaxZeeAdsPlugin' => ['VMaxZeeAdsPlugin/**']
   }

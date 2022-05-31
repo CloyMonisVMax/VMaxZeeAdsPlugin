@@ -12,12 +12,14 @@ class ZeeIAdsReordering : NSObject, IAdsReordering {
     
     func doAdvsReordering(_ adList: [Any]!) -> [Any]! {
         var response: [AdViewMetaData] = [AdViewMetaData]()
-        for eachObj in adList{
-            if let adViewMetaObj: AdViewMetaData = eachObj as? AdViewMetaData{
-                response.append(adViewMetaObj)
-            }
+        guard let inputAdsList: [AdViewMetaData] = adList as? [AdViewMetaData] else {
+            return []
         }
-        response.sort{ $0.adDuration < $1.adDuration }
+        var bodyAds = inputAdsList.filter{ $0.isMediationAd == false }
+        let c2sAds = inputAdsList.filter{ $0.isMediationAd == true }
+        bodyAds.sort{ $0.adDuration < $1.adDuration }
+        response.append(contentsOf: bodyAds)
+        response.append(contentsOf: c2sAds)
         return response
     }
     

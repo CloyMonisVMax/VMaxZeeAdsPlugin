@@ -67,6 +67,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 -(void)setPodIndex:(UInt32)index;
 
+-(void)setVideoPlayerContainer:(UIView *)container;
+
 @end
 
 NS_ASSUME_NONNULL_END

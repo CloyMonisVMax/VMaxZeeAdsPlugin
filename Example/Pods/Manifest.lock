@@ -1,7 +1,12 @@
 PODS:
-  - VMaxAdsSDK (0.0.135)
-  - VMaxZeeAdsPlugin (0.1.35):
+  - GoogleAds-IMA-iOS-SDK (3.16.3)
+  - VMaxAdsSDK (0.0.136)
+  - VMaxGamAdapter (0.0.1):
+    - GoogleAds-IMA-iOS-SDK (~> 3.16.3)
     - VMaxAdsSDK
+  - VMaxZeeAdsPlugin (0.1.37):
+    - VMaxAdsSDK
+    - VMaxGamAdapter
     - VMaxZeeOMSDK
   - VMaxZeeOMSDK (0.0.3)
 
@@ -10,7 +15,9 @@ DEPENDENCIES:
 
 SPEC REPOS:
   trunk:
+    - GoogleAds-IMA-iOS-SDK
     - VMaxAdsSDK
+    - VMaxGamAdapter
     - VMaxZeeOMSDK
 
 EXTERNAL SOURCES:
@@ -18,10 +25,12 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  VMaxAdsSDK: 9ac7e96fd6f6a98b92f8ecd9f9f13b536f68a0cc
-  VMaxZeeAdsPlugin: 46f4b927060f399ea6cabd80a12936b1996a692d
+  GoogleAds-IMA-iOS-SDK: 1aba71fa5b58dc463cc5b752f06e970ec7c739c1
+  VMaxAdsSDK: 6bc6876c878681b6a2dd1cce3fdcec22e593abc8
+  VMaxGamAdapter: 612d6198ae1b744a7c79fa1f245e3df54ec3c416
+  VMaxZeeAdsPlugin: 22a8e0859f9fd396ac5491ee0a5140523d48b0c5
   VMaxZeeOMSDK: d21c3eed82d56e4c58c522cec137c81cc8662c9c
 
 PODFILE CHECKSUM: 46ba75e463d09cf5149acd3ce4ca77acf04f3856
 
-COCOAPODS: 1.11.2
+COCOAPODS: 1.11.3

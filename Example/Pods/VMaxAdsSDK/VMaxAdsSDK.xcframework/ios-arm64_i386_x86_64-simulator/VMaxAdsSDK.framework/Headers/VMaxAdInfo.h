@@ -42,9 +42,6 @@
 @property (strong,nonatomic) NSString *videoLayout;
 @property (assign, nonatomic) CGFloat playedDuration;
 
-
-
-
 @end
 
 @interface AdViewMetaData : NSObject
@@ -58,5 +55,7 @@
 @property (nonatomic, assign) UInt32 mediationLocalBackupDuration;
 
 @property (nonatomic, strong) VMaxAdView *adView;
+
+@property (nonatomic, assign) BOOL isMediationAd;
 
 @end

@@ -513,7 +513,7 @@ typedef NS_ENUM(NSUInteger, VMaxAdVideoTag) {
  @abstract      setting section
  @param         section, Section
  */
--(void) setSectionCategory:(VMAXSectionCategory *)sectionCategory;
+-(void)setSectionCategory:(VMAXSectionCategory *)sectionCategory;
 
 -(void) setPageCategory:(VMAXPageCategory *)pageCategory;
 
@@ -588,7 +588,7 @@ typedef NS_ENUM(NSUInteger,VMaxCompanionState) {
 
 @property (nonatomic) VMaxCompanionState companionState;
 
-@property (nonatomic,weak) UIView *viewForVMax;
+//@property (nonatomic,weak) UIView *viewForVMax;
 
 @property (weak, nonatomic) id<ICompanionEventsReceiver> delegateCompanionReceiver;
 
@@ -604,6 +604,7 @@ typedef NS_ENUM(NSUInteger,VMaxCompanionState) {
 //*/
 //- (NSDictionary*)getAdParams;
 
+-(void)setLayoutInfo:(NSDictionary*)layoutInfo;
 
 @end
 

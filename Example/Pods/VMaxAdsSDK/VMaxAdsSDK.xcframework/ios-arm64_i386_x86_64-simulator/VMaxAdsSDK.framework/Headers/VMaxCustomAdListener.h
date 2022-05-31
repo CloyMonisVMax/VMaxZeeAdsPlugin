@@ -64,4 +64,21 @@
 -(VMaxAdView *)getVmaxAdView;
 //..(3.9.18) Added
 -(void)AddSameConstraintFromParentView:(UIView *)parentView toChildView :(UIView*) childView :(void (^)(BOOL isDone))completeBlock;
+
+-(void)VMaxCustomFirstQuartile; //3.15.8
+
+-(void)VMaxCustomMidPoint; //3.15.8
+
+-(void)VMaxCustomThirdQuartile; //3.15.8
+
+-(void)VMaxCustomAdImpression; //3.15.8
+
+-(void)VMaxCustomAdRender; //3.15.8
+
+-(void)VMaxCustomAdFill:(id<VMaxCustomAd>)inCustomAd; //3.15.8
+
+-(void)VMaxCustomAdPause; //3.15.8
+
+-(void)VMaxCustomAdResume; //3.15.8
+
 @end

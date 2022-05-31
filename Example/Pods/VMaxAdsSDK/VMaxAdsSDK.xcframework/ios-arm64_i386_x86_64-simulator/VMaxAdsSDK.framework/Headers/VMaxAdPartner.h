@@ -23,7 +23,11 @@ extern NSString* const kVMaxAdPartner_MediationPartner_AdView;
 extern NSString* const kVMaxAdPartner_AppNext; //.. (3.9.1) AppNext Ads
 extern NSString* const kVMaxCustomAdAdapter_GADMobileAdsApplicationId; //..(3.9.12)
 extern NSString* const kVMaxKey_ImageMain; //838.2
-
+extern NSString* const kVMaxMaxDuration;
+extern NSString* const kVMaxMaxDurationPerAd;
+extern NSString* const kVMaxMediationDirectShow;
+extern NSString* const kVMaxMediationPodIndex;
+extern NSString* const kVMaxMediationTotalAds;
 
 typedef NS_ENUM(NSUInteger, VMaxAdaperClass) {
     FacebookNativeAdapterClass,

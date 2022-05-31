@@ -249,6 +249,9 @@ extension VMaxZeeAdsPlugin {
             vmaxAdBreak.vmaxCompaionAdEvents = vmaxCompanionAdEvents
         }
         vmaxAdBreak.setLayoutInfo(videoLayouts)
+        if let view = config?.videoView {
+            vmaxAdBreak.setVideoPlayerContainer(view)
+        }
         vmaxAdBreak.start()
         if let podIndex = timeBreakMeta.podIndex, podIndex >= 0{
             vmaxAdBreak.setPodIndex(UInt32(podIndex))
@@ -393,7 +396,7 @@ public class PlayerObserver {
         guard let plugin = plugin else {
             return
         }
-        let midRollsFiltered = plugin.midRollDurations.filter(){ $0 <= currentSecond }
+        let midRollsFiltered = plugin.midRollDurations.filter(){ $0 >= plugin.lastPlayedSecond && $0 <= currentSecond }
         //vmLog("currentSecond:\(currentSecond),midRollDurations:\(plugin.midRollDurations),midRollsFiltered:\(midRollsFiltered)")
         let scratchForward = (currentSecond - plugin.lastPlayedSecond) >= 2
         if let mediaDuration = plugin.config?.mediaDuration,
@@ -406,8 +409,8 @@ public class PlayerObserver {
                 vmLog("Found Cue Point\(selectedMidRoll)")
                 plugin.delegate?.requestContentPause()
             }
-        }else if let maxCuePoint = midRollsFiltered.max(),let minCuePoint = midRollsFiltered.min(),
-                 scratchForward && plugin.cueNotRendered(maxCuePoint) && plugin.selectedMidRoll == nil && currentSecond > minCuePoint
+        }else if let maxCuePoint = midRollsFiltered.max(),let _ = midRollsFiltered.min(),
+                 scratchForward && plugin.cueNotRendered(maxCuePoint) && plugin.selectedMidRoll == nil
         {
             plugin.selectedMidRoll = maxCuePoint
             if let selectedMidRoll = plugin.selectedMidRoll{

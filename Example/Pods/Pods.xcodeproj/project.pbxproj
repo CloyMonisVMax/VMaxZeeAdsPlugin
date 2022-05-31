@@ -7,6 +7,16 @@
 	objects = {
 
 /* Begin PBXAggregateTarget section */
+		7362DAB47E2EFA5452F30DD7E9830B56 /* GoogleAds-IMA-iOS-SDK */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = AA82C62FBB7F00A3C7D4DBA0C7D6C570 /* Build configuration list for PBXAggregateTarget "GoogleAds-IMA-iOS-SDK" */;
+			buildPhases = (
+				AB37133E634E9E9E1420FFB5022FD0D3 /* [CP] Copy XCFrameworks */,
+			);
+			dependencies = (
+			);
+			name = "GoogleAds-IMA-iOS-SDK";
+		};
 		817A96449E289ED6E83FFCB8E0905EA6 /* VMaxAdsSDK */ = {
 			isa = PBXAggregateTarget;
 			buildConfigurationList = F6D34CA22D627379E36900A31932A894 /* Build configuration list for PBXAggregateTarget "VMaxAdsSDK" */;
@@ -19,9 +29,9 @@
 		};
 		EFE88ECCFF77A879C4E4F501DECB83E0 /* VMaxZeeOMSDK */ = {
 			isa = PBXAggregateTarget;
-			buildConfigurationList = 539D6A44376A048DE2999E82C7C9EF77 /* Build configuration list for PBXAggregateTarget "VMaxZeeOMSDK" */;
+			buildConfigurationList = B91A150B94F7E46CDED2DB6EBC87B27B /* Build configuration list for PBXAggregateTarget "VMaxZeeOMSDK" */;
 			buildPhases = (
-				D7A54B54DA79C048F882F1476C8DF0E8 /* [CP] Copy XCFrameworks */,
+				CF11040DE76A35DAF0561BF63B0957E3 /* [CP] Copy XCFrameworks */,
 			);
 			dependencies = (
 			);
@@ -30,87 +40,127 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
-		06C033FF4231E890BA5AFA5288CEC605 /* VMaxAdsPluginHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23940787AC03C068C06BF7BE77D54605 /* VMaxAdsPluginHelper.swift */; };
-		18EA0716428EC6AA6A9F2E09968F9B17 /* VMaxZeeAdsConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0CF1B106BB04D4768EFC2B466E46F7 /* VMaxZeeAdsConfig.swift */; };
-		1D3766CBDB59167B93A4F9590F6DD774 /* Classes in Resources */ = {isa = PBXBuildFile; fileRef = 8C4E53EB18E5FB5A7BF5C2DCD77C0469 /* Classes */; };
-		2219ADAAE6EAF85027E99F106A59C9AF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
-		237E93F4D1835D2DCB7CEFCA3A041462 /* VMaxZeeAdsPlugin-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E897922782AA7EE1DF2F98089BDCDE20 /* VMaxZeeAdsPlugin-dummy.m */; };
+		00CC0DFFB4E3D88535DA9AE07FAE13E3 /* WoctaView.xib in Sources */ = {isa = PBXBuildFile; fileRef = 01077EBC91A56D35C5ABC2A2E9284ABB /* WoctaView.xib */; };
+		0631B156B154A799E95E763F25CBBA53 /* ZeeView.xib in Sources */ = {isa = PBXBuildFile; fileRef = D7665918694920489364B01619BE3920 /* ZeeView.xib */; };
+		0A05218E764FE88D4299A996A1A594F8 /* VMaxZeeAdsPlugin-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 59D9A697B0FFFB6E2EDCE9C322EE786D /* VMaxZeeAdsPlugin-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0EBAA7289374C1DE9E1859E84AB551E6 /* Pods-VMaxZeeAdsPlugin_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = BCA5143AC9E5739184AC1D9888C764DE /* Pods-VMaxZeeAdsPlugin_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		142B1965F8DC1FDD00D9CDC85BF56D8E /* VMaxB2BjsonParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABA135DF922714F1EAB5A8CFA6D34ED3 /* VMaxB2BjsonParser.swift */; };
+		151C3A6EEE1FEF17B409545CAB3213BF /* vmax_omid.js in Sources */ = {isa = PBXBuildFile; fileRef = 7BA541D629700C5B2BBFCD1029EEF56B /* vmax_omid.js */; };
+		17E2DB1F4894612E43FF55398A4790CD /* VMaxZeeAdsPlugin-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E897922782AA7EE1DF2F98089BDCDE20 /* VMaxZeeAdsPlugin-dummy.m */; };
+		202C8AEFC0CA16FACE054F6E8F824865 /* Models&Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0834C61B4C22D422067565B9E223D6C0 /* Models&Extensions.swift */; };
 		2899C9FBBDA8F6FB9D8E9F3DB67EF77F /* Pods-VMaxZeeAdsPlugin_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 738E00BFB52FEF25A0ECC5B4F3AB11DC /* Pods-VMaxZeeAdsPlugin_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		29CA19FA806B982BF870C1F6FB2C5E79 /* Pods-VMaxZeeAdsPlugin_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D2E6B791C882667E4CCFEEE1033A9923 /* Pods-VMaxZeeAdsPlugin_Example-dummy.m */; };
 		2A863781556AB8C9088BFB7276FA7222 /* Pods-VMaxZeeAdsPlugin_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A00651C5D093C4FDED0F415AFD733D9 /* Pods-VMaxZeeAdsPlugin_Tests-dummy.m */; };
-		36E56C38A6AD065E7F5310F43247C6B3 /* ZeeLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4AD638AACB5B191E212B49D17C6CA0D /* ZeeLayout.swift */; };
-		3AD496D63C61B702FC4E81BBCC46B6FB /* VMaxZeeAdsPlugin-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 59D9A697B0FFFB6E2EDCE9C322EE786D /* VMaxZeeAdsPlugin-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		3AFF70A528F69CE94DB285B51BCC4135 /* Pods-VMaxZeeAdsPlugin_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = BCA5143AC9E5739184AC1D9888C764DE /* Pods-VMaxZeeAdsPlugin_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		4DB37F2AECB0AF083BF731500CC82B9C /* VMaxZeeAdsPlugin-VMaxZeeAdsPlugin in Resources */ = {isa = PBXBuildFile; fileRef = 40EA87E8CEB57D44042D83B6885B3AB4 /* VMaxZeeAdsPlugin-VMaxZeeAdsPlugin */; };
-		70AC4738D2980FF7A7AC9A27A66EC994 /* WoctaLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4F86E4F50F1B477B9F454225F4E86CF /* WoctaLayout.swift */; };
-		72C76E8628A5926D875C1B3CAADF9199 /* vmax_omid.js in Sources */ = {isa = PBXBuildFile; fileRef = 7BA541D629700C5B2BBFCD1029EEF56B /* vmax_omid.js */; };
-		797FCDB3C9D801314266207D273ED989 /* ZeeIAdsReordering.swift in Sources */ = {isa = PBXBuildFile; fileRef = 193BDEFC2806CEE7D50EEC1D71E6A972 /* ZeeIAdsReordering.swift */; };
-		7B4FD8A60A1074A81752EA31A3B759C6 /* VMaxZeeAdsPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 804D9CAD7491B7E0AC0F2F6928E1B822 /* VMaxZeeAdsPlugin.swift */; };
-		864F0C596FCE70CCBAA25B12382E8194 /* WoctaView.xib in Sources */ = {isa = PBXBuildFile; fileRef = 01077EBC91A56D35C5ABC2A2E9284ABB /* WoctaView.xib */; };
-		86D72AF7C917A68D1FF13BE1EA054644 /* vmax_omid.js in Resources */ = {isa = PBXBuildFile; fileRef = 7BA541D629700C5B2BBFCD1029EEF56B /* vmax_omid.js */; };
-		94D17A558E0494A5B5BE35883774EBDA /* VMaxZeeAds.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C0F3050D2A6C6987F25C529280975410 /* VMaxZeeAds.xcassets */; };
-		9AD2AEF6D43A3C14E5F856A8DCA066AC /* Assets in Resources */ = {isa = PBXBuildFile; fileRef = 24907D257F7686D8AD635176D18C6079 /* Assets */; };
-		AC912D4F0FA29DF91F19DD98595035B9 /* Models&Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0834C61B4C22D422067565B9E223D6C0 /* Models&Extensions.swift */; };
-		B81D86D738639B69A8273B37866B707F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
-		BFECF05C9620335E978E06CE9D5F075A /* VMaxB2BjsonParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABA135DF922714F1EAB5A8CFA6D34ED3 /* VMaxB2BjsonParser.swift */; };
-		C024A3DA62F3490D3D379538B4985D34 /* VMaxOM.h in Headers */ = {isa = PBXBuildFile; fileRef = 29159A079517DA5822CD1AB327AEFD5E /* VMaxOM.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2F98289D1DA00C7631D5C0C2F76A8441 /* VMaxZeeAds.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C0F3050D2A6C6987F25C529280975410 /* VMaxZeeAds.xcassets */; };
+		334DB800776E902C456DBC27375BA417 /* ZeeLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4AD638AACB5B191E212B49D17C6CA0D /* ZeeLayout.swift */; };
+		38637A1D0AA6E675704F9926F0641062 /* VMaxAdsLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ED78874A9688244E8CDBA5B254660E3 /* VMaxAdsLogger.swift */; };
+		40F9251557BDCBFF561BACBD2F9BF738 /* VMaxOM.h in Headers */ = {isa = PBXBuildFile; fileRef = 29159A079517DA5822CD1AB327AEFD5E /* VMaxOM.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5620E6E9EDC0145F30911E9979DD1AEF /* ZeeIAdsReordering.swift in Sources */ = {isa = PBXBuildFile; fileRef = 193BDEFC2806CEE7D50EEC1D71E6A972 /* ZeeIAdsReordering.swift */; };
+		6E40FBE123491CFC63D178C745D45D35 /* VMaxZeeAdsConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0CF1B106BB04D4768EFC2B466E46F7 /* VMaxZeeAdsConfig.swift */; };
+		758D2A018A22D4064A0FFE82A121A6EA /* VMaxBannerAdHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 270EE8FC418565A01CA1C167D1E5F53A /* VMaxBannerAdHelper.swift */; };
+		7930FCAC4B62C7EBDBB33A80104BBC3F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		7FCBE13823CA48857B1996781D60987D /* VMaxGoogleIMAAdapter.h in Headers */ = {isa = PBXBuildFile; fileRef = 37D3F9039EE6435017C41FB21402C8BD /* VMaxGoogleIMAAdapter.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		852B68C14286A19FE1100A92567F9CAA /* vmax_omid.js in Resources */ = {isa = PBXBuildFile; fileRef = 7BA541D629700C5B2BBFCD1029EEF56B /* vmax_omid.js */; };
+		94B38831941C815B8C46698DC856EBE9 /* VMaxGamAdapter-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 8D4F7C533A3F29E70AB4F04334E3A9BD /* VMaxGamAdapter-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		976B04F4608F5B9F6C92A102AE063EF5 /* VMaxZeeAdsPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 804D9CAD7491B7E0AC0F2F6928E1B822 /* VMaxZeeAdsPlugin.swift */; };
+		9DAAEF976E838C3F97363866323C7F5D /* VMaxGoogleIMAAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B3E6F016FF7360EBC05352DB8607F85 /* VMaxGoogleIMAAdapter.m */; };
+		9FF9BEEC0862046AC5389298367EA4B6 /* VMaxOM.m in Sources */ = {isa = PBXBuildFile; fileRef = 373F2ECADEE97636AD360D215FDC87C2 /* VMaxOM.m */; };
+		B9705A1D4A12E422F268A415725253CA /* WoctaLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4F86E4F50F1B477B9F454225F4E86CF /* WoctaLayout.swift */; };
 		C21AABD2E80054983ACB434A2B1C7EFA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
-		C5D53F4086DB12DCBC7361E81754298A /* ZeeView.xib in Sources */ = {isa = PBXBuildFile; fileRef = D7665918694920489364B01619BE3920 /* ZeeView.xib */; };
-		DE916F727D91E1486E4CC5832508444C /* VMaxBannerAdHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 270EE8FC418565A01CA1C167D1E5F53A /* VMaxBannerAdHelper.swift */; };
-		EB1DA837738FB17D1F85D760BD17F4AC /* VMaxAdsPluginDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7999DAC446A1FD70B15F3EBEBCCD9671 /* VMaxAdsPluginDelegate.swift */; };
-		F0A40EB8E651451D81E79638256E070F /* Pods-VMaxZeeAdsPlugin_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D2E6B791C882667E4CCFEEE1033A9923 /* Pods-VMaxZeeAdsPlugin_Example-dummy.m */; };
-		F8421C57FC854F1D17DF1F9C6CA10674 /* VMaxAdsLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ED78874A9688244E8CDBA5B254660E3 /* VMaxAdsLogger.swift */; };
-		FD36EB7FB2BC3F7C990065FD1EB6D25F /* VMaxOM.m in Sources */ = {isa = PBXBuildFile; fileRef = 373F2ECADEE97636AD360D215FDC87C2 /* VMaxOM.m */; };
+		C5B3B24E1B74253F60FAE1FD624A2008 /* Classes in Resources */ = {isa = PBXBuildFile; fileRef = 8C4E53EB18E5FB5A7BF5C2DCD77C0469 /* Classes */; };
+		D35B6BA10A7168AE730FF84626B51059 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		E04041E81BFD0C514B611C211E6EEB44 /* Assets in Resources */ = {isa = PBXBuildFile; fileRef = 24907D257F7686D8AD635176D18C6079 /* Assets */; };
+		E670A24ED1E83F0D20AFFD280A8A7FB2 /* VMaxZeeAdsPlugin-VMaxZeeAdsPlugin in Resources */ = {isa = PBXBuildFile; fileRef = 40EA87E8CEB57D44042D83B6885B3AB4 /* VMaxZeeAdsPlugin-VMaxZeeAdsPlugin */; };
+		EFA448EAF7C46150BED1EE20E3C63AC6 /* VMaxAdsPluginDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7999DAC446A1FD70B15F3EBEBCCD9671 /* VMaxAdsPluginDelegate.swift */; };
+		F8B70B69AC69987D28634FDB7AE89D8E /* VMaxGamAdapter-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B51107CA890A4F73CF6CC6686FA94A2D /* VMaxGamAdapter-dummy.m */; };
+		FE5A62983DDEAFCC81665792C4BD1DC0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		FF8588F4662C999F43D9BA558AAC87EB /* VMaxAdsPluginHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23940787AC03C068C06BF7BE77D54605 /* VMaxAdsPluginHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		033A3B127739BC8C4D2F1F0252B6EE09 /* PBXContainerItemProxy */ = {
+		205083FC87A54B66E953C960DA08CCB9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7362DAB47E2EFA5452F30DD7E9830B56;
+			remoteInfo = "GoogleAds-IMA-iOS-SDK";
+		};
+		3AEFE2295A1E0C90E3C8D76108B9A608 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 817A96449E289ED6E83FFCB8E0905EA6;
 			remoteInfo = VMaxAdsSDK;
 		};
-		4504BF73FC021D72DB14B51EC1C7F58B /* PBXContainerItemProxy */ = {
+		3BD253CF3DE98BA2094F26C51E93594B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = EFE88ECCFF77A879C4E4F501DECB83E0;
-			remoteInfo = VMaxZeeOMSDK;
+			remoteGlobalIDString = 7362DAB47E2EFA5452F30DD7E9830B56;
+			remoteInfo = "GoogleAds-IMA-iOS-SDK";
 		};
-		58D91728A2B2A9BF2FA8309CA96C28D0 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 51587B2DF986851843525862120F7CB5;
-			remoteInfo = "Pods-VMaxZeeAdsPlugin_Example";
-		};
-		799E17C14BBBB97A4AED0BB06859ECAB /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = EFE88ECCFF77A879C4E4F501DECB83E0;
-			remoteInfo = VMaxZeeOMSDK;
-		};
-		AC01B503F81FE7FBD79C98A85E971ACB /* PBXContainerItemProxy */ = {
+		515A9106D73AF09654BBF7F9CEDB43AB /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 6B7C714A908CBFD286BD0F22B5CC2660;
 			remoteInfo = "VMaxZeeAdsPlugin-VMaxZeeAdsPlugin";
 		};
-		C77B8A1257363F255DE02D175C7CAA64 /* PBXContainerItemProxy */ = {
+		7147B2659809B27501AC2F76788C2A49 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EFE88ECCFF77A879C4E4F501DECB83E0;
+			remoteInfo = VMaxZeeOMSDK;
+		};
+		798F881E9692E10A410AA932E25E0AEC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EFE88ECCFF77A879C4E4F501DECB83E0;
+			remoteInfo = VMaxZeeOMSDK;
+		};
+		9D1F56FCD23FC601C02C9EE7B743E7B9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 817A96449E289ED6E83FFCB8E0905EA6;
+			remoteInfo = VMaxAdsSDK;
+		};
+		C6BB37F281BA80173D2E8B3BBE738C8F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 06ED15F112A32EDEF3B9271AB1116076;
+			remoteInfo = VMaxGamAdapter;
+		};
+		D0841CE31477D105C3A12D94B7AA3F1D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 817A96449E289ED6E83FFCB8E0905EA6;
+			remoteInfo = VMaxAdsSDK;
+		};
+		D0A4862765FF086A543398C167B6033E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 51587B2DF986851843525862120F7CB5;
+			remoteInfo = "Pods-VMaxZeeAdsPlugin_Example";
+		};
+		D353F8C0D3B38FE7D672A7FC8FF65797 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = AF1ED8616AB5C5411AB4D5E53F340080;
 			remoteInfo = VMaxZeeAdsPlugin;
 		};
-		E775F6F4A2040A6475889308FDC2718B /* PBXContainerItemProxy */ = {
+		F33BF33E6806B1240D06592C4FC275AF /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 817A96449E289ED6E83FFCB8E0905EA6;
-			remoteInfo = VMaxAdsSDK;
+			remoteGlobalIDString = 06ED15F112A32EDEF3B9271AB1116076;
+			remoteInfo = VMaxGamAdapter;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -119,75 +169,105 @@
 		019BA7ED0CA4D2C0CD562D3EB4DBBEE3 /* VMaxZeeAdsPlugin-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "VMaxZeeAdsPlugin-Info.plist"; sourceTree = "<group>"; };
 		0834C61B4C22D422067565B9E223D6C0 /* Models&Extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "Models&Extensions.swift"; sourceTree = "<group>"; };
 		116912B7F6AC50B459F186FB90F6BB47 /* Pods-VMaxZeeAdsPlugin_Example */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-VMaxZeeAdsPlugin_Example"; path = Pods_VMaxZeeAdsPlugin_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1465D599645FBF0E6B8DB7DEB336039E /* GoogleAds-IMA-iOS-SDK-xcframeworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "GoogleAds-IMA-iOS-SDK-xcframeworks.sh"; sourceTree = "<group>"; };
 		193BDEFC2806CEE7D50EEC1D71E6A972 /* ZeeIAdsReordering.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ZeeIAdsReordering.swift; sourceTree = "<group>"; };
 		1C3DC916EE3610F35BF9111F70924471 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
-		212F443F78162627597B949F255CF00A /* VMaxAdsSDK-xcframeworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "VMaxAdsSDK-xcframeworks.sh"; sourceTree = "<group>"; };
+		1F85538D730C23D1A300C6B686E3D40C /* VMaxZeeOMSDK-xcframeworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "VMaxZeeOMSDK-xcframeworks.sh"; sourceTree = "<group>"; };
+		2173FB496EB728C3BD0F412D7418FF1F /* OMSDK_Zeedigitalesselgroup.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; path = OMSDK_Zeedigitalesselgroup.xcframework; sourceTree = "<group>"; };
+		21C67A01B876735F2E01968CCC02B137 /* VMaxAdsSDK.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; path = VMaxAdsSDK.xcframework; sourceTree = "<group>"; };
 		23940787AC03C068C06BF7BE77D54605 /* VMaxAdsPluginHelper.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = VMaxAdsPluginHelper.swift; sourceTree = "<group>"; };
 		24907D257F7686D8AD635176D18C6079 /* Assets */ = {isa = PBXFileReference; includeInIndex = 1; name = Assets; path = VMaxZeeAdsPlugin/Assets; sourceTree = "<group>"; };
 		270EE8FC418565A01CA1C167D1E5F53A /* VMaxBannerAdHelper.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = VMaxBannerAdHelper.swift; sourceTree = "<group>"; };
 		29159A079517DA5822CD1AB327AEFD5E /* VMaxOM.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = VMaxOM.h; sourceTree = "<group>"; };
+		3500E633567FE00561357ACED6182BD9 /* VMaxGamAdapter */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = VMaxGamAdapter; path = VMaxGamAdapter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		373F2ECADEE97636AD360D215FDC87C2 /* VMaxOM.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = VMaxOM.m; sourceTree = "<group>"; };
+		378D26063C32743BACBE222CFACE44E5 /* VMaxZeeOMSDK.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = VMaxZeeOMSDK.debug.xcconfig; sourceTree = "<group>"; };
+		37D3F9039EE6435017C41FB21402C8BD /* VMaxGoogleIMAAdapter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = VMaxGoogleIMAAdapter.h; path = VMaxGamAdapter/Classes/Source/VMaxGoogleIMAAdapter.h; sourceTree = "<group>"; };
 		3A00651C5D093C4FDED0F415AFD733D9 /* Pods-VMaxZeeAdsPlugin_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-VMaxZeeAdsPlugin_Tests-dummy.m"; sourceTree = "<group>"; };
+		3BE4E182DA791BAD4C853017CB001A3A /* VMaxAdsSDK-xcframeworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "VMaxAdsSDK-xcframeworks.sh"; sourceTree = "<group>"; };
 		40EA87E8CEB57D44042D83B6885B3AB4 /* VMaxZeeAdsPlugin-VMaxZeeAdsPlugin */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = "VMaxZeeAdsPlugin-VMaxZeeAdsPlugin"; path = VMaxZeeAdsPlugin.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
 		424B215A3531F7466A22F367DCB51AF4 /* VMaxZeeAdsPlugin-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "VMaxZeeAdsPlugin-prefix.pch"; sourceTree = "<group>"; };
+		4B3E6F016FF7360EBC05352DB8607F85 /* VMaxGoogleIMAAdapter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = VMaxGoogleIMAAdapter.m; path = VMaxGamAdapter/Classes/Source/VMaxGoogleIMAAdapter.m; sourceTree = "<group>"; };
 		4D45D43C0F6BDBF4C7BDF65AFEB076EC /* Pods-VMaxZeeAdsPlugin_Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-VMaxZeeAdsPlugin_Tests-Info.plist"; sourceTree = "<group>"; };
 		540202E473A0ADD927E92787F27B8102 /* Pods-VMaxZeeAdsPlugin_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-VMaxZeeAdsPlugin_Example-acknowledgements.plist"; sourceTree = "<group>"; };
 		59D9A697B0FFFB6E2EDCE9C322EE786D /* VMaxZeeAdsPlugin-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "VMaxZeeAdsPlugin-umbrella.h"; sourceTree = "<group>"; };
 		5AB344E6CE48C18401B9C288E0FE4191 /* Pods-VMaxZeeAdsPlugin_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-VMaxZeeAdsPlugin_Example-frameworks.sh"; sourceTree = "<group>"; };
+		5AF0B5B165F174DB8C30C8BE7F61F483 /* GoogleAds-IMA-iOS-SDK.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "GoogleAds-IMA-iOS-SDK.debug.xcconfig"; sourceTree = "<group>"; };
+		600E9D8F248B66F1E3B1D46B21AA5B07 /* GoogleInteractiveMediaAds.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; path = GoogleInteractiveMediaAds.xcframework; sourceTree = "<group>"; };
 		604030E4E1D1E103981098BC37516A6C /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
-		69812A4832E038F79342432C592B3EC1 /* VMaxZeeOMSDK-xcframeworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "VMaxZeeOMSDK-xcframeworks.sh"; sourceTree = "<group>"; };
 		6B1FDC263A1C4A6CE7964A1D9CC078F5 /* Pods-VMaxZeeAdsPlugin_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-VMaxZeeAdsPlugin_Tests.modulemap"; sourceTree = "<group>"; };
 		6ED78874A9688244E8CDBA5B254660E3 /* VMaxAdsLogger.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = VMaxAdsLogger.swift; sourceTree = "<group>"; };
 		7008AB424693E7B29715E613352D692F /* Pods-VMaxZeeAdsPlugin_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-VMaxZeeAdsPlugin_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		738E00BFB52FEF25A0ECC5B4F3AB11DC /* Pods-VMaxZeeAdsPlugin_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-VMaxZeeAdsPlugin_Tests-umbrella.h"; sourceTree = "<group>"; };
+		77EFC2C949E5513D3FF94A55762C0889 /* VMaxGamAdapter-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "VMaxGamAdapter-Info.plist"; sourceTree = "<group>"; };
 		7999DAC446A1FD70B15F3EBEBCCD9671 /* VMaxAdsPluginDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = VMaxAdsPluginDelegate.swift; sourceTree = "<group>"; };
 		7BA541D629700C5B2BBFCD1029EEF56B /* vmax_omid.js */ = {isa = PBXFileReference; includeInIndex = 1; path = vmax_omid.js; sourceTree = "<group>"; };
+		7BCC8DB979677373484A25364D7129F1 /* GoogleAds-IMA-iOS-SDK.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "GoogleAds-IMA-iOS-SDK.release.xcconfig"; sourceTree = "<group>"; };
 		804D9CAD7491B7E0AC0F2F6928E1B822 /* VMaxZeeAdsPlugin.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = VMaxZeeAdsPlugin.swift; sourceTree = "<group>"; };
 		843E59883CCE36A8A05F41FAD9F4F2FA /* VMaxZeeAdsPlugin.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = VMaxZeeAdsPlugin.debug.xcconfig; sourceTree = "<group>"; };
 		89B80B9C3FDADBBDB9257539DFEA448B /* Pods-VMaxZeeAdsPlugin_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-VMaxZeeAdsPlugin_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
 		8C4E53EB18E5FB5A7BF5C2DCD77C0469 /* Classes */ = {isa = PBXFileReference; includeInIndex = 1; name = Classes; path = VMaxZeeAdsPlugin/Classes; sourceTree = "<group>"; };
-		8EC68DF779A8B96AB069E0F2BC81A68A /* VMaxAdsSDK.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = VMaxAdsSDK.release.xcconfig; sourceTree = "<group>"; };
+		8D4F7C533A3F29E70AB4F04334E3A9BD /* VMaxGamAdapter-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "VMaxGamAdapter-umbrella.h"; sourceTree = "<group>"; };
 		951F7F6443F08153E7495BF865776F62 /* Pods-VMaxZeeAdsPlugin_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-VMaxZeeAdsPlugin_Example-Info.plist"; sourceTree = "<group>"; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		A305E54A48C121581689696F1D56B527 /* VMaxAdsSDK.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; path = VMaxAdsSDK.xcframework; sourceTree = "<group>"; };
 		A5745512B0CC82FBDB5E06F4FF0367E7 /* Pods-VMaxZeeAdsPlugin_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-VMaxZeeAdsPlugin_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		ABA135DF922714F1EAB5A8CFA6D34ED3 /* VMaxB2BjsonParser.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = VMaxB2BjsonParser.swift; sourceTree = "<group>"; };
 		AC0CF1B106BB04D4768EFC2B466E46F7 /* VMaxZeeAdsConfig.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = VMaxZeeAdsConfig.swift; sourceTree = "<group>"; };
+		AFEF5A9C8ECE6994CAEF7ADB43CE928A /* VMaxGamAdapter.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = VMaxGamAdapter.release.xcconfig; sourceTree = "<group>"; };
+		B24B93C117D840DEB22D2EB211DD6FC6 /* VMaxAdsSDK.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = VMaxAdsSDK.debug.xcconfig; sourceTree = "<group>"; };
+		B51107CA890A4F73CF6CC6686FA94A2D /* VMaxGamAdapter-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "VMaxGamAdapter-dummy.m"; sourceTree = "<group>"; };
 		BCA5143AC9E5739184AC1D9888C764DE /* Pods-VMaxZeeAdsPlugin_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-VMaxZeeAdsPlugin_Example-umbrella.h"; sourceTree = "<group>"; };
 		C0F3050D2A6C6987F25C529280975410 /* VMaxZeeAds.xcassets */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder.assetcatalog; path = VMaxZeeAds.xcassets; sourceTree = "<group>"; };
 		C234891A972BEBA3994B9E85F86E7C0A /* Pods-VMaxZeeAdsPlugin_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-VMaxZeeAdsPlugin_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		C2432DF86FDD9583EF7B6276E558BB41 /* VMaxGamAdapter-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "VMaxGamAdapter-prefix.pch"; sourceTree = "<group>"; };
+		C315EDE9505E473A928EBD3E519AFD1C /* VMaxZeeOMSDK.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = VMaxZeeOMSDK.release.xcconfig; sourceTree = "<group>"; };
 		C4F86E4F50F1B477B9F454225F4E86CF /* WoctaLayout.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = WoctaLayout.swift; sourceTree = "<group>"; };
 		C87EAA68B474E2EF482E050511D85ED0 /* VMaxZeeAdsPlugin */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = VMaxZeeAdsPlugin; path = VMaxZeeAdsPlugin.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CFEC65DAAB824B982836F735F0108B27 /* ResourceBundle-VMaxZeeAdsPlugin-VMaxZeeAdsPlugin-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ResourceBundle-VMaxZeeAdsPlugin-VMaxZeeAdsPlugin-Info.plist"; sourceTree = "<group>"; };
 		D2E6B791C882667E4CCFEEE1033A9923 /* Pods-VMaxZeeAdsPlugin_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-VMaxZeeAdsPlugin_Example-dummy.m"; sourceTree = "<group>"; };
 		D3FCAD167A95770BB97E1CB9D95334FD /* VMaxZeeAdsPlugin.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = VMaxZeeAdsPlugin.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		D4AD638AACB5B191E212B49D17C6CA0D /* ZeeLayout.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ZeeLayout.swift; sourceTree = "<group>"; };
-		D689CAEE7BE2882BD9FE2AF13E1BDFE3 /* VMaxZeeOMSDK.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = VMaxZeeOMSDK.release.xcconfig; sourceTree = "<group>"; };
 		D7665918694920489364B01619BE3920 /* ZeeView.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; path = ZeeView.xib; sourceTree = "<group>"; };
 		D7AE827929C24AA4D9E869256A499925 /* Pods-VMaxZeeAdsPlugin_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-VMaxZeeAdsPlugin_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
+		D833CDF64BC4D8E2F66340BC8DEB86B6 /* VMaxGamAdapter.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = VMaxGamAdapter.modulemap; sourceTree = "<group>"; };
+		D8E4F6163640AECEE0C730776922DCD8 /* VMaxAdsSDK.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = VMaxAdsSDK.release.xcconfig; sourceTree = "<group>"; };
 		E252330133CBAE254A2F98B400F32277 /* Pods-VMaxZeeAdsPlugin_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-VMaxZeeAdsPlugin_Example.modulemap"; sourceTree = "<group>"; };
-		E3243F3E7451E7B0D1409CB624C822FE /* OMSDK_Zeedigitalesselgroup.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; path = OMSDK_Zeedigitalesselgroup.xcframework; sourceTree = "<group>"; };
 		E5EB6E06F8A6C90D29D33B8D8377BBEB /* Pods-VMaxZeeAdsPlugin_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-VMaxZeeAdsPlugin_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		E796D848C3F14C7A0DEFA8F2405A84E3 /* Pods-VMaxZeeAdsPlugin_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-VMaxZeeAdsPlugin_Example.release.xcconfig"; sourceTree = "<group>"; };
 		E8708586EA07F6F3587A091105B0B921 /* VMaxZeeAdsPlugin.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = VMaxZeeAdsPlugin.release.xcconfig; sourceTree = "<group>"; };
 		E897922782AA7EE1DF2F98089BDCDE20 /* VMaxZeeAdsPlugin-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "VMaxZeeAdsPlugin-dummy.m"; sourceTree = "<group>"; };
-		ED686A347B2E1D4A5BACEFA1DC2085C6 /* VMaxZeeOMSDK.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = VMaxZeeOMSDK.debug.xcconfig; sourceTree = "<group>"; };
 		EEEC6EA7D707F7930A3948F87A4ED150 /* Pods-VMaxZeeAdsPlugin_Tests */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-VMaxZeeAdsPlugin_Tests"; path = Pods_VMaxZeeAdsPlugin_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F9316D9B616E2758C8AB55A4C413F5A3 /* VMaxGamAdapter.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = VMaxGamAdapter.debug.xcconfig; sourceTree = "<group>"; };
 		FCE1F045342BBFB92F67081879632787 /* VMaxZeeAdsPlugin.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = VMaxZeeAdsPlugin.modulemap; sourceTree = "<group>"; };
-		FD35A1C969DF5C273401EAA11B0576EF /* VMaxAdsSDK.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = VMaxAdsSDK.debug.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		1F05B31B1D723612C3747224D78DBA87 /* Frameworks */ = {
+		1B8AE2AEE2600EB489E734E1A05DEF33 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2219ADAAE6EAF85027E99F106A59C9AF /* Foundation.framework in Frameworks */,
+				7930FCAC4B62C7EBDBB33A80104BBC3F /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		5B57BCBDFE43AAB0C16EE56879333253 /* Frameworks */ = {
+		2C81588400AD881367B966185872F7C2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D35B6BA10A7168AE730FF84626B51059 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		803D7EE45CAE8F349C132DCE57ED0F6F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FE5A62983DDEAFCC81665792C4BD1DC0 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ABC884716CCF9213738C30F927847BF7 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -202,26 +282,37 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		E3FC5CD73AC4E66FCF18BE00663E6130 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				B81D86D738639B69A8273B37866B707F /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		17976852C805222CC480EA297A53EE2E /* Support Files */ = {
+		0748C73472BD3113398AC6BF9254ED26 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				69812A4832E038F79342432C592B3EC1 /* VMaxZeeOMSDK-xcframeworks.sh */,
-				ED686A347B2E1D4A5BACEFA1DC2085C6 /* VMaxZeeOMSDK.debug.xcconfig */,
-				D689CAEE7BE2882BD9FE2AF13E1BDFE3 /* VMaxZeeOMSDK.release.xcconfig */,
+				21C67A01B876735F2E01968CCC02B137 /* VMaxAdsSDK.xcframework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		10DD55CADCF63E57827E289BD5904238 /* VMaxGamAdapter */ = {
+			isa = PBXGroup;
+			children = (
+				37D3F9039EE6435017C41FB21402C8BD /* VMaxGoogleIMAAdapter.h */,
+				4B3E6F016FF7360EBC05352DB8607F85 /* VMaxGoogleIMAAdapter.m */,
+				9A08B1C4D6423130F6A9964F0CB80225 /* Support Files */,
+			);
+			name = VMaxGamAdapter;
+			path = VMaxGamAdapter;
+			sourceTree = "<group>";
+		};
+		1259E9FA6ADCA569885FE3C084299FB0 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				3BE4E182DA791BAD4C853017CB001A3A /* VMaxAdsSDK-xcframeworks.sh */,
+				B24B93C117D840DEB22D2EB211DD6FC6 /* VMaxAdsSDK.debug.xcconfig */,
+				D8E4F6163640AECEE0C730776922DCD8 /* VMaxAdsSDK.release.xcconfig */,
 			);
 			name = "Support Files";
-			path = "../Target Support Files/VMaxZeeOMSDK";
+			path = "../Target Support Files/VMaxAdsSDK";
 			sourceTree = "<group>";
 		};
 		2C0644BFA15A06F3133B1AFF0AFB1937 /* AdLayouts */ = {
@@ -232,24 +323,6 @@
 			);
 			name = AdLayouts;
 			path = VMaxZeeAdsPlugin/Classes/Source/AdLayouts;
-			sourceTree = "<group>";
-		};
-		30CDBBE9611F8F510688C6055C8B0317 /* VMaxZeeOMSDK */ = {
-			isa = PBXGroup;
-			children = (
-				346A038E72873A6504B1900752E45297 /* Frameworks */,
-				17976852C805222CC480EA297A53EE2E /* Support Files */,
-			);
-			name = VMaxZeeOMSDK;
-			path = VMaxZeeOMSDK;
-			sourceTree = "<group>";
-		};
-		346A038E72873A6504B1900752E45297 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				E3243F3E7451E7B0D1409CB624C822FE /* OMSDK_Zeedigitalesselgroup.xcframework */,
-			);
-			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		3A3619BBD3F1B658C391B757A2B0784E /* Private */ = {
@@ -265,6 +338,16 @@
 			);
 			name = Private;
 			path = VMaxZeeAdsPlugin/Classes/Source/Private;
+			sourceTree = "<group>";
+		};
+		3FA476E48CA9FB6AC867BE43C9DFB2BA /* VMaxAdsSDK */ = {
+			isa = PBXGroup;
+			children = (
+				0748C73472BD3113398AC6BF9254ED26 /* Frameworks */,
+				1259E9FA6ADCA569885FE3C084299FB0 /* Support Files */,
+			);
+			name = VMaxAdsSDK;
+			path = VMaxAdsSDK;
 			sourceTree = "<group>";
 		};
 		44D8604D32CE076F81735C42932F9542 /* Assets */ = {
@@ -286,6 +369,16 @@
 			path = VMaxZeeAdsPlugin/Classes/Source/Core;
 			sourceTree = "<group>";
 		};
+		4B867C1CC6E79B1DD9434AC1571D96BC /* GoogleAds-IMA-iOS-SDK */ = {
+			isa = PBXGroup;
+			children = (
+				A8D819D260C9A20B68C4660F7CA5EABD /* Frameworks */,
+				5599FD8F2D0AF3B2965CC3964EE1ADE9 /* Support Files */,
+			);
+			name = "GoogleAds-IMA-iOS-SDK";
+			path = "GoogleAds-IMA-iOS-SDK";
+			sourceTree = "<group>";
+		};
 		517614F454AE49F46E0266D7972298B8 /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -293,6 +386,25 @@
 				DB21E8154044B47BF41D38663FE6FB20 /* Pods-VMaxZeeAdsPlugin_Tests */,
 			);
 			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		51FD93DE8A8BACA97FB45773A60E61C7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2173FB496EB728C3BD0F412D7418FF1F /* OMSDK_Zeedigitalesselgroup.xcframework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5599FD8F2D0AF3B2965CC3964EE1ADE9 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				1465D599645FBF0E6B8DB7DEB336039E /* GoogleAds-IMA-iOS-SDK-xcframeworks.sh */,
+				5AF0B5B165F174DB8C30C8BE7F61F483 /* GoogleAds-IMA-iOS-SDK.debug.xcconfig */,
+				7BCC8DB979677373484A25364D7129F1 /* GoogleAds-IMA-iOS-SDK.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/GoogleAds-IMA-iOS-SDK";
 			sourceTree = "<group>";
 		};
 		578452D2E740E91742655AC8F1636D1F /* iOS */ = {
@@ -303,15 +415,15 @@
 			name = iOS;
 			sourceTree = "<group>";
 		};
-		67819E64C5D4ABEC216D82B24056BE3C /* Products */ = {
+		6C9CC4CA0264B4AADA080AD146CD357D /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				116912B7F6AC50B459F186FB90F6BB47 /* Pods-VMaxZeeAdsPlugin_Example */,
-				EEEC6EA7D707F7930A3948F87A4ED150 /* Pods-VMaxZeeAdsPlugin_Tests */,
-				C87EAA68B474E2EF482E050511D85ED0 /* VMaxZeeAdsPlugin */,
-				40EA87E8CEB57D44042D83B6885B3AB4 /* VMaxZeeAdsPlugin-VMaxZeeAdsPlugin */,
+				4B867C1CC6E79B1DD9434AC1571D96BC /* GoogleAds-IMA-iOS-SDK */,
+				3FA476E48CA9FB6AC867BE43C9DFB2BA /* VMaxAdsSDK */,
+				10DD55CADCF63E57827E289BD5904238 /* VMaxGamAdapter */,
+				A12568C902901E42F983B0DDA0F55E6B /* VMaxZeeOMSDK */,
 			);
-			name = Products;
+			name = Pods;
 			sourceTree = "<group>";
 		};
 		708EDA3EDE09C29C35E186C72FB7300F /* VMaxOM */ = {
@@ -343,15 +455,6 @@
 			name = "Development Pods";
 			sourceTree = "<group>";
 		};
-		96D0716AD868EF1C83410A92EB491F49 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				C74AF2A2E50EFE7C8A1892DE293B202F /* VMaxAdsSDK */,
-				30CDBBE9611F8F510688C6055C8B0317 /* VMaxZeeOMSDK */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
 		98A00C2FD4B52E3F47CAE7EAE0262890 /* VMaxZeeAdsPlugin */ = {
 			isa = PBXGroup;
 			children = (
@@ -367,6 +470,21 @@
 			);
 			name = VMaxZeeAdsPlugin;
 			path = ../..;
+			sourceTree = "<group>";
+		};
+		9A08B1C4D6423130F6A9964F0CB80225 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				D833CDF64BC4D8E2F66340BC8DEB86B6 /* VMaxGamAdapter.modulemap */,
+				B51107CA890A4F73CF6CC6686FA94A2D /* VMaxGamAdapter-dummy.m */,
+				77EFC2C949E5513D3FF94A55762C0889 /* VMaxGamAdapter-Info.plist */,
+				C2432DF86FDD9583EF7B6276E558BB41 /* VMaxGamAdapter-prefix.pch */,
+				8D4F7C533A3F29E70AB4F04334E3A9BD /* VMaxGamAdapter-umbrella.h */,
+				F9316D9B616E2758C8AB55A4C413F5A3 /* VMaxGamAdapter.debug.xcconfig */,
+				AFEF5A9C8ECE6994CAEF7ADB43CE928A /* VMaxGamAdapter.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/VMaxGamAdapter";
 			sourceTree = "<group>";
 		};
 		9C2617D3FDFE638365EAB9C6766D6AC2 /* Support Files */ = {
@@ -385,10 +503,20 @@
 			path = "Example/Pods/Target Support Files/VMaxZeeAdsPlugin";
 			sourceTree = "<group>";
 		};
-		B0C98D0F33856F4A5347743AA16BD68E /* Frameworks */ = {
+		A12568C902901E42F983B0DDA0F55E6B /* VMaxZeeOMSDK */ = {
 			isa = PBXGroup;
 			children = (
-				A305E54A48C121581689696F1D56B527 /* VMaxAdsSDK.xcframework */,
+				51FD93DE8A8BACA97FB45773A60E61C7 /* Frameworks */,
+				D3557BD4FFB588CCB3B96E4DE4E71455 /* Support Files */,
+			);
+			name = VMaxZeeOMSDK;
+			path = VMaxZeeOMSDK;
+			sourceTree = "<group>";
+		};
+		A8D819D260C9A20B68C4660F7CA5EABD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				600E9D8F248B66F1E3B1D46B21AA5B07 /* GoogleInteractiveMediaAds.xcframework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -403,14 +531,16 @@
 			path = WoctaLayout;
 			sourceTree = "<group>";
 		};
-		C74AF2A2E50EFE7C8A1892DE293B202F /* VMaxAdsSDK */ = {
+		C861E9CCA9AB212FD78E038B2B3C3D0E /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				B0C98D0F33856F4A5347743AA16BD68E /* Frameworks */,
-				EE4425C7C77D2B179DD73C23E76887F2 /* Support Files */,
+				116912B7F6AC50B459F186FB90F6BB47 /* Pods-VMaxZeeAdsPlugin_Example */,
+				EEEC6EA7D707F7930A3948F87A4ED150 /* Pods-VMaxZeeAdsPlugin_Tests */,
+				3500E633567FE00561357ACED6182BD9 /* VMaxGamAdapter */,
+				C87EAA68B474E2EF482E050511D85ED0 /* VMaxZeeAdsPlugin */,
+				40EA87E8CEB57D44042D83B6885B3AB4 /* VMaxZeeAdsPlugin-VMaxZeeAdsPlugin */,
 			);
-			name = VMaxAdsSDK;
-			path = VMaxAdsSDK;
+			name = Products;
 			sourceTree = "<group>";
 		};
 		CF1408CF629C7361332E53B88F7BD30C = {
@@ -419,8 +549,8 @@
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
 				96CD81166EFF665F60C1D871CE65B7D0 /* Development Pods */,
 				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
-				96D0716AD868EF1C83410A92EB491F49 /* Pods */,
-				67819E64C5D4ABEC216D82B24056BE3C /* Products */,
+				6C9CC4CA0264B4AADA080AD146CD357D /* Pods */,
+				C861E9CCA9AB212FD78E038B2B3C3D0E /* Products */,
 				517614F454AE49F46E0266D7972298B8 /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
@@ -431,6 +561,17 @@
 				578452D2E740E91742655AC8F1636D1F /* iOS */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D3557BD4FFB588CCB3B96E4DE4E71455 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				1F85538D730C23D1A300C6B686E3D40C /* VMaxZeeOMSDK-xcframeworks.sh */,
+				378D26063C32743BACBE222CFACE44E5 /* VMaxZeeOMSDK.debug.xcconfig */,
+				C315EDE9505E473A928EBD3E519AFD1C /* VMaxZeeOMSDK.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/VMaxZeeOMSDK";
 			sourceTree = "<group>";
 		};
 		DB21E8154044B47BF41D38663FE6FB20 /* Pods-VMaxZeeAdsPlugin_Tests */ = {
@@ -459,17 +600,6 @@
 			path = ZeeLayout;
 			sourceTree = "<group>";
 		};
-		EE4425C7C77D2B179DD73C23E76887F2 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				212F443F78162627597B949F255CF00A /* VMaxAdsSDK-xcframeworks.sh */,
-				FD35A1C969DF5C273401EAA11B0576EF /* VMaxAdsSDK.debug.xcconfig */,
-				8EC68DF779A8B96AB069E0F2BC81A68A /* VMaxAdsSDK.release.xcconfig */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/VMaxAdsSDK";
-			sourceTree = "<group>";
-		};
 		F431327C287618389C429EB9D5698055 /* Pods-VMaxZeeAdsPlugin_Example */ = {
 			isa = PBXGroup;
 			children = (
@@ -490,20 +620,12 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		15E65A14A36DDC0060C0EC3255A0E189 /* Headers */ = {
+		0FAAD56388497C37869F7D26C44B8083 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C024A3DA62F3490D3D379538B4985D34 /* VMaxOM.h in Headers */,
-				3AD496D63C61B702FC4E81BBCC46B6FB /* VMaxZeeAdsPlugin-umbrella.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		3770F79BF6E299F1D0B9BE542E75375E /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				3AFF70A528F69CE94DB285B51BCC4135 /* Pods-VMaxZeeAdsPlugin_Example-umbrella.h in Headers */,
+				40F9251557BDCBFF561BACBD2F9BF738 /* VMaxOM.h in Headers */,
+				0A05218E764FE88D4299A996A1A594F8 /* VMaxZeeAdsPlugin-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -515,9 +637,46 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		61478E1F8844DD787008A140EE8F0EB4 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				94B38831941C815B8C46698DC856EBE9 /* VMaxGamAdapter-umbrella.h in Headers */,
+				7FCBE13823CA48857B1996781D60987D /* VMaxGoogleIMAAdapter.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		672F2635834EEB2E48C82C65797EC82C /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0EBAA7289374C1DE9E1859E84AB551E6 /* Pods-VMaxZeeAdsPlugin_Example-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		06ED15F112A32EDEF3B9271AB1116076 /* VMaxGamAdapter */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F9E8345BB5AE1E46527303EBF48B2983 /* Build configuration list for PBXNativeTarget "VMaxGamAdapter" */;
+			buildPhases = (
+				61478E1F8844DD787008A140EE8F0EB4 /* Headers */,
+				188E4C1D600110C3CFD3146E66ED4BE6 /* Sources */,
+				803D7EE45CAE8F349C132DCE57ED0F6F /* Frameworks */,
+				27E3AA46B7D9214D08177F1B6FFCE3B3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				71ECDFBF25F8C0AE915005BA3D136494 /* PBXTargetDependency */,
+				4C4998A2D392F8C73F29301877E43B16 /* PBXTargetDependency */,
+			);
+			name = VMaxGamAdapter;
+			productName = VMaxGamAdapter;
+			productReference = 3500E633567FE00561357ACED6182BD9 /* VMaxGamAdapter */;
+			productType = "com.apple.product-type.framework";
+		};
 		1BDF92609C061BACF5CEF8637CFC4275 /* Pods-VMaxZeeAdsPlugin_Tests */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = FD76D0E8BFF58C8E923AFD5251ADBC7D /* Build configuration list for PBXNativeTarget "Pods-VMaxZeeAdsPlugin_Tests" */;
@@ -530,7 +689,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				EF223E2075D7C999D4ADD2A9B239D11E /* PBXTargetDependency */,
+				C80354411A05A443FB27659028E2BCA0 /* PBXTargetDependency */,
 			);
 			name = "Pods-VMaxZeeAdsPlugin_Tests";
 			productName = Pods_VMaxZeeAdsPlugin_Tests;
@@ -539,19 +698,21 @@
 		};
 		51587B2DF986851843525862120F7CB5 /* Pods-VMaxZeeAdsPlugin_Example */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = CFBDF7EE0CBDB830CE519E11BEC8CA75 /* Build configuration list for PBXNativeTarget "Pods-VMaxZeeAdsPlugin_Example" */;
+			buildConfigurationList = 7D03A68617A03F485B0229201BD65262 /* Build configuration list for PBXNativeTarget "Pods-VMaxZeeAdsPlugin_Example" */;
 			buildPhases = (
-				3770F79BF6E299F1D0B9BE542E75375E /* Headers */,
-				362FF63E45A3E7C3663F246AD23C9E14 /* Sources */,
-				E3FC5CD73AC4E66FCF18BE00663E6130 /* Frameworks */,
-				B47E1DE3622631FD145FF2A9CEB76716 /* Resources */,
+				672F2635834EEB2E48C82C65797EC82C /* Headers */,
+				8EF1F8F713DC5A56FC77B766729B0417 /* Sources */,
+				2C81588400AD881367B966185872F7C2 /* Frameworks */,
+				09F122251745604EBD8FA9F7CDF923C7 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				765DDEC0D427023B0D8DDA182FDD5487 /* PBXTargetDependency */,
-				805BE4A5E512B3FF0390E722421A7F57 /* PBXTargetDependency */,
-				4198B0FCA1172BB1F0B5D8B925FDA4A0 /* PBXTargetDependency */,
+				FF8F63F70DE58E54E7ED5E3F786DB10E /* PBXTargetDependency */,
+				1A0331D55476E43941D925E099684FCF /* PBXTargetDependency */,
+				85C89FBDDB8722643FA9CB00BC966610 /* PBXTargetDependency */,
+				C5F3CBC6E3084EB2D9BAC1E474DF68AE /* PBXTargetDependency */,
+				3F51AE79076C03261638B6B2A7DAA15E /* PBXTargetDependency */,
 			);
 			name = "Pods-VMaxZeeAdsPlugin_Example";
 			productName = Pods_VMaxZeeAdsPlugin_Example;
@@ -560,11 +721,11 @@
 		};
 		6B7C714A908CBFD286BD0F22B5CC2660 /* VMaxZeeAdsPlugin-VMaxZeeAdsPlugin */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2A9EC967407998E5EAE7D89213BB128A /* Build configuration list for PBXNativeTarget "VMaxZeeAdsPlugin-VMaxZeeAdsPlugin" */;
+			buildConfigurationList = 6E016F4B1E3B6A296AADE1EA692E91F3 /* Build configuration list for PBXNativeTarget "VMaxZeeAdsPlugin-VMaxZeeAdsPlugin" */;
 			buildPhases = (
-				26F847299B001A177D663DC74FAC5188 /* Sources */,
-				5B57BCBDFE43AAB0C16EE56879333253 /* Frameworks */,
-				A9BC3DEDDC615264A2DC4A2AB8104CFD /* Resources */,
+				12FC2A0BA748A124E4B7B594CFC28B5E /* Sources */,
+				ABC884716CCF9213738C30F927847BF7 /* Frameworks */,
+				6E308BCC545BC60F700B032AB00E53F4 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -577,19 +738,20 @@
 		};
 		AF1ED8616AB5C5411AB4D5E53F340080 /* VMaxZeeAdsPlugin */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = E3353E5951499F9A12314BD7162576DF /* Build configuration list for PBXNativeTarget "VMaxZeeAdsPlugin" */;
+			buildConfigurationList = 2A248D00D8650A79F581E429AF6DE96B /* Build configuration list for PBXNativeTarget "VMaxZeeAdsPlugin" */;
 			buildPhases = (
-				15E65A14A36DDC0060C0EC3255A0E189 /* Headers */,
-				14134E1E1CF579141DC08B0337BDE6FB /* Sources */,
-				1F05B31B1D723612C3747224D78DBA87 /* Frameworks */,
-				FFB070299866EEECC825EAB8EBB0580B /* Resources */,
+				0FAAD56388497C37869F7D26C44B8083 /* Headers */,
+				AB38F9525D317933D0CCE9ADAC32D606 /* Sources */,
+				1B8AE2AEE2600EB489E734E1A05DEF33 /* Frameworks */,
+				42FFA8DBA3D11B1F84A79AD889311AE3 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				01A3DC37DD8E0526142CBB748010498C /* PBXTargetDependency */,
-				D1E3B1B53ACA072EA3C3043D877F5FCD /* PBXTargetDependency */,
-				B5E2AD3A0B195A2F0E0F8CFCCD9A76DB /* PBXTargetDependency */,
+				95350CC568E6B04C55419130F6F7326C /* PBXTargetDependency */,
+				CCD771E365EFA45D2B46715832667186 /* PBXTargetDependency */,
+				BC3D5544FE6BFAE1D4C44937F85F2F80 /* PBXTargetDependency */,
+				6759E80BE4738E2820037B587F040274 /* PBXTargetDependency */,
 			);
 			name = VMaxZeeAdsPlugin;
 			productName = VMaxZeeAdsPlugin;
@@ -614,13 +776,15 @@
 				en,
 			);
 			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
-			productRefGroup = 67819E64C5D4ABEC216D82B24056BE3C /* Products */;
+			productRefGroup = C861E9CCA9AB212FD78E038B2B3C3D0E /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
+				7362DAB47E2EFA5452F30DD7E9830B56 /* GoogleAds-IMA-iOS-SDK */,
 				51587B2DF986851843525862120F7CB5 /* Pods-VMaxZeeAdsPlugin_Example */,
 				1BDF92609C061BACF5CEF8637CFC4275 /* Pods-VMaxZeeAdsPlugin_Tests */,
 				817A96449E289ED6E83FFCB8E0905EA6 /* VMaxAdsSDK */,
+				06ED15F112A32EDEF3B9271AB1116076 /* VMaxGamAdapter */,
 				AF1ED8616AB5C5411AB4D5E53F340080 /* VMaxZeeAdsPlugin */,
 				6B7C714A908CBFD286BD0F22B5CC2660 /* VMaxZeeAdsPlugin-VMaxZeeAdsPlugin */,
 				EFE88ECCFF77A879C4E4F501DECB83E0 /* VMaxZeeOMSDK */,
@@ -629,6 +793,13 @@
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		09F122251745604EBD8FA9F7CDF923C7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		19893AE98691EAA5F97780E8C8221229 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -636,29 +807,29 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		A9BC3DEDDC615264A2DC4A2AB8104CFD /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				9AD2AEF6D43A3C14E5F856A8DCA066AC /* Assets in Resources */,
-				1D3766CBDB59167B93A4F9590F6DD774 /* Classes in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		B47E1DE3622631FD145FF2A9CEB76716 /* Resources */ = {
+		27E3AA46B7D9214D08177F1B6FFCE3B3 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		FFB070299866EEECC825EAB8EBB0580B /* Resources */ = {
+		42FFA8DBA3D11B1F84A79AD889311AE3 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				86D72AF7C917A68D1FF13BE1EA054644 /* vmax_omid.js in Resources */,
-				94D17A558E0494A5B5BE35883774EBDA /* VMaxZeeAds.xcassets in Resources */,
-				4DB37F2AECB0AF083BF731500CC82B9C /* VMaxZeeAdsPlugin-VMaxZeeAdsPlugin in Resources */,
+				852B68C14286A19FE1100A92567F9CAA /* vmax_omid.js in Resources */,
+				2F98289D1DA00C7631D5C0C2F76A8441 /* VMaxZeeAds.xcassets in Resources */,
+				E670A24ED1E83F0D20AFFD280A8A7FB2 /* VMaxZeeAdsPlugin-VMaxZeeAdsPlugin in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6E308BCC545BC60F700B032AB00E53F4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E04041E81BFD0C514B611C211E6EEB44 /* Assets in Resources */,
+				C5B3B24E1B74253F60FAE1FD624A2008 /* Classes in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -683,7 +854,25 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/VMaxAdsSDK/VMaxAdsSDK-xcframeworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		D7A54B54DA79C048F882F1476C8DF0E8 /* [CP] Copy XCFrameworks */ = {
+		AB37133E634E9E9E1420FFB5022FD0D3 /* [CP] Copy XCFrameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/GoogleAds-IMA-iOS-SDK/GoogleAds-IMA-iOS-SDK-xcframeworks.sh",
+				"${PODS_ROOT}/GoogleAds-IMA-iOS-SDK/GoogleInteractiveMediaAds.xcframework",
+			);
+			name = "[CP] Copy XCFrameworks";
+			outputPaths = (
+				"${PODS_XCFRAMEWORKS_BUILD_DIR}/GoogleAds-IMA-iOS-SDK/GoogleInteractiveMediaAds.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/GoogleAds-IMA-iOS-SDK/GoogleAds-IMA-iOS-SDK-xcframeworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CF11040DE76A35DAF0561BF63B0957E3 /* [CP] Copy XCFrameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -704,41 +893,19 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		14134E1E1CF579141DC08B0337BDE6FB /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				AC912D4F0FA29DF91F19DD98595035B9 /* Models&Extensions.swift in Sources */,
-				72C76E8628A5926D875C1B3CAADF9199 /* vmax_omid.js in Sources */,
-				F8421C57FC854F1D17DF1F9C6CA10674 /* VMaxAdsLogger.swift in Sources */,
-				EB1DA837738FB17D1F85D760BD17F4AC /* VMaxAdsPluginDelegate.swift in Sources */,
-				06C033FF4231E890BA5AFA5288CEC605 /* VMaxAdsPluginHelper.swift in Sources */,
-				BFECF05C9620335E978E06CE9D5F075A /* VMaxB2BjsonParser.swift in Sources */,
-				DE916F727D91E1486E4CC5832508444C /* VMaxBannerAdHelper.swift in Sources */,
-				FD36EB7FB2BC3F7C990065FD1EB6D25F /* VMaxOM.m in Sources */,
-				18EA0716428EC6AA6A9F2E09968F9B17 /* VMaxZeeAdsConfig.swift in Sources */,
-				7B4FD8A60A1074A81752EA31A3B759C6 /* VMaxZeeAdsPlugin.swift in Sources */,
-				237E93F4D1835D2DCB7CEFCA3A041462 /* VMaxZeeAdsPlugin-dummy.m in Sources */,
-				70AC4738D2980FF7A7AC9A27A66EC994 /* WoctaLayout.swift in Sources */,
-				864F0C596FCE70CCBAA25B12382E8194 /* WoctaView.xib in Sources */,
-				797FCDB3C9D801314266207D273ED989 /* ZeeIAdsReordering.swift in Sources */,
-				36E56C38A6AD065E7F5310F43247C6B3 /* ZeeLayout.swift in Sources */,
-				C5D53F4086DB12DCBC7361E81754298A /* ZeeView.xib in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		26F847299B001A177D663DC74FAC5188 /* Sources */ = {
+		12FC2A0BA748A124E4B7B594CFC28B5E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		362FF63E45A3E7C3663F246AD23C9E14 /* Sources */ = {
+		188E4C1D600110C3CFD3146E66ED4BE6 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F0A40EB8E651451D81E79638256E070F /* Pods-VMaxZeeAdsPlugin_Example-dummy.m in Sources */,
+				F8B70B69AC69987D28634FDB7AE89D8E /* VMaxGamAdapter-dummy.m in Sources */,
+				9DAAEF976E838C3F97363866323C7F5D /* VMaxGoogleIMAAdapter.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -750,389 +917,116 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		8EF1F8F713DC5A56FC77B766729B0417 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				29CA19FA806B982BF870C1F6FB2C5E79 /* Pods-VMaxZeeAdsPlugin_Example-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AB38F9525D317933D0CCE9ADAC32D606 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				202C8AEFC0CA16FACE054F6E8F824865 /* Models&Extensions.swift in Sources */,
+				151C3A6EEE1FEF17B409545CAB3213BF /* vmax_omid.js in Sources */,
+				38637A1D0AA6E675704F9926F0641062 /* VMaxAdsLogger.swift in Sources */,
+				EFA448EAF7C46150BED1EE20E3C63AC6 /* VMaxAdsPluginDelegate.swift in Sources */,
+				FF8588F4662C999F43D9BA558AAC87EB /* VMaxAdsPluginHelper.swift in Sources */,
+				142B1965F8DC1FDD00D9CDC85BF56D8E /* VMaxB2BjsonParser.swift in Sources */,
+				758D2A018A22D4064A0FFE82A121A6EA /* VMaxBannerAdHelper.swift in Sources */,
+				9FF9BEEC0862046AC5389298367EA4B6 /* VMaxOM.m in Sources */,
+				6E40FBE123491CFC63D178C745D45D35 /* VMaxZeeAdsConfig.swift in Sources */,
+				976B04F4608F5B9F6C92A102AE063EF5 /* VMaxZeeAdsPlugin.swift in Sources */,
+				17E2DB1F4894612E43FF55398A4790CD /* VMaxZeeAdsPlugin-dummy.m in Sources */,
+				B9705A1D4A12E422F268A415725253CA /* WoctaLayout.swift in Sources */,
+				00CC0DFFB4E3D88535DA9AE07FAE13E3 /* WoctaView.xib in Sources */,
+				5620E6E9EDC0145F30911E9979DD1AEF /* ZeeIAdsReordering.swift in Sources */,
+				334DB800776E902C456DBC27375BA417 /* ZeeLayout.swift in Sources */,
+				0631B156B154A799E95E763F25CBBA53 /* ZeeView.xib in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		01A3DC37DD8E0526142CBB748010498C /* PBXTargetDependency */ = {
+		1A0331D55476E43941D925E099684FCF /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = VMaxAdsSDK;
 			target = 817A96449E289ED6E83FFCB8E0905EA6 /* VMaxAdsSDK */;
-			targetProxy = E775F6F4A2040A6475889308FDC2718B /* PBXContainerItemProxy */;
+			targetProxy = 3AEFE2295A1E0C90E3C8D76108B9A608 /* PBXContainerItemProxy */;
 		};
-		4198B0FCA1172BB1F0B5D8B925FDA4A0 /* PBXTargetDependency */ = {
+		3F51AE79076C03261638B6B2A7DAA15E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = VMaxZeeOMSDK;
 			target = EFE88ECCFF77A879C4E4F501DECB83E0 /* VMaxZeeOMSDK */;
-			targetProxy = 799E17C14BBBB97A4AED0BB06859ECAB /* PBXContainerItemProxy */;
+			targetProxy = 7147B2659809B27501AC2F76788C2A49 /* PBXContainerItemProxy */;
 		};
-		765DDEC0D427023B0D8DDA182FDD5487 /* PBXTargetDependency */ = {
+		4C4998A2D392F8C73F29301877E43B16 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = VMaxAdsSDK;
 			target = 817A96449E289ED6E83FFCB8E0905EA6 /* VMaxAdsSDK */;
-			targetProxy = 033A3B127739BC8C4D2F1F0252B6EE09 /* PBXContainerItemProxy */;
+			targetProxy = D0841CE31477D105C3A12D94B7AA3F1D /* PBXContainerItemProxy */;
 		};
-		805BE4A5E512B3FF0390E722421A7F57 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = VMaxZeeAdsPlugin;
-			target = AF1ED8616AB5C5411AB4D5E53F340080 /* VMaxZeeAdsPlugin */;
-			targetProxy = C77B8A1257363F255DE02D175C7CAA64 /* PBXContainerItemProxy */;
-		};
-		B5E2AD3A0B195A2F0E0F8CFCCD9A76DB /* PBXTargetDependency */ = {
+		6759E80BE4738E2820037B587F040274 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = VMaxZeeOMSDK;
 			target = EFE88ECCFF77A879C4E4F501DECB83E0 /* VMaxZeeOMSDK */;
-			targetProxy = 4504BF73FC021D72DB14B51EC1C7F58B /* PBXContainerItemProxy */;
+			targetProxy = 798F881E9692E10A410AA932E25E0AEC /* PBXContainerItemProxy */;
 		};
-		D1E3B1B53ACA072EA3C3043D877F5FCD /* PBXTargetDependency */ = {
+		71ECDFBF25F8C0AE915005BA3D136494 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "GoogleAds-IMA-iOS-SDK";
+			target = 7362DAB47E2EFA5452F30DD7E9830B56 /* GoogleAds-IMA-iOS-SDK */;
+			targetProxy = 3BD253CF3DE98BA2094F26C51E93594B /* PBXContainerItemProxy */;
+		};
+		85C89FBDDB8722643FA9CB00BC966610 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = VMaxGamAdapter;
+			target = 06ED15F112A32EDEF3B9271AB1116076 /* VMaxGamAdapter */;
+			targetProxy = F33BF33E6806B1240D06592C4FC275AF /* PBXContainerItemProxy */;
+		};
+		95350CC568E6B04C55419130F6F7326C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = VMaxAdsSDK;
+			target = 817A96449E289ED6E83FFCB8E0905EA6 /* VMaxAdsSDK */;
+			targetProxy = 9D1F56FCD23FC601C02C9EE7B743E7B9 /* PBXContainerItemProxy */;
+		};
+		BC3D5544FE6BFAE1D4C44937F85F2F80 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "VMaxZeeAdsPlugin-VMaxZeeAdsPlugin";
 			target = 6B7C714A908CBFD286BD0F22B5CC2660 /* VMaxZeeAdsPlugin-VMaxZeeAdsPlugin */;
-			targetProxy = AC01B503F81FE7FBD79C98A85E971ACB /* PBXContainerItemProxy */;
+			targetProxy = 515A9106D73AF09654BBF7F9CEDB43AB /* PBXContainerItemProxy */;
 		};
-		EF223E2075D7C999D4ADD2A9B239D11E /* PBXTargetDependency */ = {
+		C5F3CBC6E3084EB2D9BAC1E474DF68AE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = VMaxZeeAdsPlugin;
+			target = AF1ED8616AB5C5411AB4D5E53F340080 /* VMaxZeeAdsPlugin */;
+			targetProxy = D353F8C0D3B38FE7D672A7FC8FF65797 /* PBXContainerItemProxy */;
+		};
+		C80354411A05A443FB27659028E2BCA0 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "Pods-VMaxZeeAdsPlugin_Example";
 			target = 51587B2DF986851843525862120F7CB5 /* Pods-VMaxZeeAdsPlugin_Example */;
-			targetProxy = 58D91728A2B2A9BF2FA8309CA96C28D0 /* PBXContainerItemProxy */;
+			targetProxy = D0A4862765FF086A543398C167B6033E /* PBXContainerItemProxy */;
+		};
+		CCD771E365EFA45D2B46715832667186 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = VMaxGamAdapter;
+			target = 06ED15F112A32EDEF3B9271AB1116076 /* VMaxGamAdapter */;
+			targetProxy = C6BB37F281BA80173D2E8B3BBE738C8F /* PBXContainerItemProxy */;
+		};
+		FF8F63F70DE58E54E7ED5E3F786DB10E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "GoogleAds-IMA-iOS-SDK";
+			target = 7362DAB47E2EFA5452F30DD7E9830B56 /* GoogleAds-IMA-iOS-SDK */;
+			targetProxy = 205083FC87A54B66E953C960DA08CCB9 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		065F66A1CBC87DC8D63417DCF718895D /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = E8708586EA07F6F3587A091105B0B921 /* VMaxZeeAdsPlugin.release.xcconfig */;
-			buildSettings = {
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/VMaxZeeAdsPlugin/VMaxZeeAdsPlugin-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/VMaxZeeAdsPlugin/VMaxZeeAdsPlugin-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/VMaxZeeAdsPlugin/VMaxZeeAdsPlugin.modulemap";
-				PRODUCT_MODULE_NAME = VMaxZeeAdsPlugin;
-				PRODUCT_NAME = VMaxZeeAdsPlugin;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 5;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		16E12F6200EDA8DFF9060D51BA81B2C6 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = A5745512B0CC82FBDB5E06F4FF0367E7 /* Pods-VMaxZeeAdsPlugin_Tests.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-VMaxZeeAdsPlugin_Tests/Pods-VMaxZeeAdsPlugin_Tests-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-VMaxZeeAdsPlugin_Tests/Pods-VMaxZeeAdsPlugin_Tests.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		723BD51AA70A690C9E5F397E0058252C /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = E796D848C3F14C7A0DEFA8F2405A84E3 /* Pods-VMaxZeeAdsPlugin_Example.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-VMaxZeeAdsPlugin_Example/Pods-VMaxZeeAdsPlugin_Example-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-VMaxZeeAdsPlugin_Example/Pods-VMaxZeeAdsPlugin_Example.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		729C6AEEAF5536A5924960F20C2B30F8 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = D689CAEE7BE2882BD9FE2AF13E1BDFE3 /* VMaxZeeOMSDK.release.xcconfig */;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				SDKROOT = iphoneos;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		7EE7A78859F657F6BEFC651185B43192 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_ENABLE_OBJC_WEAK = YES;
-				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_COMMA = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INFINITE_RECURSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
-				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
-				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
-				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
-				CLANG_WARN_STRICT_PROTOTYPES = YES;
-				CLANG_WARN_SUSPICIOUS_MOVE = YES;
-				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				COPY_PHASE_STRIP = NO;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				ENABLE_NS_ASSERTIONS = NO;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu11;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"POD_CONFIGURATION_RELEASE=1",
-					"$(inherited)",
-				);
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				MTL_ENABLE_DEBUG_INFO = NO;
-				MTL_FAST_MATH = YES;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				STRIP_INSTALLED_PRODUCT = NO;
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
-				SWIFT_VERSION = 5.0;
-				SYMROOT = "${SRCROOT}/../build";
-			};
-			name = Release;
-		};
-		815742CC14DED0C117B796350FBC5974 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = FD35A1C969DF5C273401EAA11B0576EF /* VMaxAdsSDK.debug.xcconfig */;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				SDKROOT = iphoneos;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		A97DA1AC47AF9053AFDEC44F80613E6A /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 843E59883CCE36A8A05F41FAD9F4F2FA /* VMaxZeeAdsPlugin.debug.xcconfig */;
-			buildSettings = {
-				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/VMaxZeeAdsPlugin";
-				IBSC_MODULE = VMaxZeeAdsPlugin;
-				INFOPLIST_FILE = "Target Support Files/VMaxZeeAdsPlugin/ResourceBundle-VMaxZeeAdsPlugin-VMaxZeeAdsPlugin-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				PRODUCT_NAME = VMaxZeeAdsPlugin;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				WRAPPER_EXTENSION = bundle;
-			};
-			name = Debug;
-		};
-		AA9E5F21BB8B87E161682B65A09AB3EC /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 843E59883CCE36A8A05F41FAD9F4F2FA /* VMaxZeeAdsPlugin.debug.xcconfig */;
-			buildSettings = {
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/VMaxZeeAdsPlugin/VMaxZeeAdsPlugin-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/VMaxZeeAdsPlugin/VMaxZeeAdsPlugin-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/VMaxZeeAdsPlugin/VMaxZeeAdsPlugin.modulemap";
-				PRODUCT_MODULE_NAME = VMaxZeeAdsPlugin;
-				PRODUCT_NAME = VMaxZeeAdsPlugin;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 5;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		B0C95227A8646EB95C0091B520656AC2 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = ED686A347B2E1D4A5BACEFA1DC2085C6 /* VMaxZeeOMSDK.debug.xcconfig */;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				SDKROOT = iphoneos;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		BDC88CD4625E88433BC0E9E0B3C6E7FE /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7008AB424693E7B29715E613352D692F /* Pods-VMaxZeeAdsPlugin_Tests.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-VMaxZeeAdsPlugin_Tests/Pods-VMaxZeeAdsPlugin_Tests-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-VMaxZeeAdsPlugin_Tests/Pods-VMaxZeeAdsPlugin_Tests.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		C1392F46FF676C4030A449B6CADC8D8F /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = C234891A972BEBA3994B9E85F86E7C0A /* Pods-VMaxZeeAdsPlugin_Example.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-VMaxZeeAdsPlugin_Example/Pods-VMaxZeeAdsPlugin_Example-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-VMaxZeeAdsPlugin_Example/Pods-VMaxZeeAdsPlugin_Example.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		C90A3BC03BF6A87C196FFC566ED2C2A1 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = E8708586EA07F6F3587A091105B0B921 /* VMaxZeeAdsPlugin.release.xcconfig */;
-			buildSettings = {
-				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/VMaxZeeAdsPlugin";
-				IBSC_MODULE = VMaxZeeAdsPlugin;
-				INFOPLIST_FILE = "Target Support Files/VMaxZeeAdsPlugin/ResourceBundle-VMaxZeeAdsPlugin-VMaxZeeAdsPlugin-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				PRODUCT_NAME = VMaxZeeAdsPlugin;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				WRAPPER_EXTENSION = bundle;
-			};
-			name = Release;
-		};
-		D299434AB35E7FD6F7921C8EF24742FF /* Debug */ = {
+		2B9E26EAE2CD392AD762421F663075A1 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -1185,7 +1079,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -1198,10 +1092,251 @@
 			};
 			name = Debug;
 		};
-		E75B369A24DFF0E03A4044A5C1660262 /* Release */ = {
+		2D0F2E5412862ACBA442F890D470E66C /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8EC68DF779A8B96AB069E0F2BC81A68A /* VMaxAdsSDK.release.xcconfig */;
+			baseConfigurationReference = E796D848C3F14C7A0DEFA8F2405A84E3 /* Pods-VMaxZeeAdsPlugin_Example.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-VMaxZeeAdsPlugin_Example/Pods-VMaxZeeAdsPlugin_Example-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-VMaxZeeAdsPlugin_Example/Pods-VMaxZeeAdsPlugin_Example.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		37B71937601731F03FBA18ADFF6BE376 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 378D26063C32743BACBE222CFACE44E5 /* VMaxZeeOMSDK.debug.xcconfig */;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		3F0D5B21352AD3511C8B8B36BEBD3299 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E8708586EA07F6F3587A091105B0B921 /* VMaxZeeAdsPlugin.release.xcconfig */;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/VMaxZeeAdsPlugin/VMaxZeeAdsPlugin-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/VMaxZeeAdsPlugin/VMaxZeeAdsPlugin-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/VMaxZeeAdsPlugin/VMaxZeeAdsPlugin.modulemap";
+				PRODUCT_MODULE_NAME = VMaxZeeAdsPlugin;
+				PRODUCT_NAME = VMaxZeeAdsPlugin;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		4BDD04304F1376E2469C76A6B41BFDF1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7BCC8DB979677373484A25364D7129F1 /* GoogleAds-IMA-iOS-SDK.release.xcconfig */;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		51B59D17E8E30A9A4B002D8C9634D781 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F9316D9B616E2758C8AB55A4C413F5A3 /* VMaxGamAdapter.debug.xcconfig */;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/VMaxGamAdapter/VMaxGamAdapter-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/VMaxGamAdapter/VMaxGamAdapter-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/VMaxGamAdapter/VMaxGamAdapter.modulemap";
+				PRODUCT_MODULE_NAME = VMaxGamAdapter;
+				PRODUCT_NAME = VMaxGamAdapter;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		5C6BD9E8CE3E31CB4FEB23CB0AEBC6D8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 843E59883CCE36A8A05F41FAD9F4F2FA /* VMaxZeeAdsPlugin.debug.xcconfig */;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/VMaxZeeAdsPlugin/VMaxZeeAdsPlugin-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/VMaxZeeAdsPlugin/VMaxZeeAdsPlugin-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/VMaxZeeAdsPlugin/VMaxZeeAdsPlugin.modulemap";
+				PRODUCT_MODULE_NAME = VMaxZeeAdsPlugin;
+				PRODUCT_NAME = VMaxZeeAdsPlugin;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		63FAF33E1C55B71A5F5A8B3CC8749F99 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		64B045749C324DF45060749D9D3D6992 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B24B93C117D840DEB22D2EB211DD6FC6 /* VMaxAdsSDK.debug.xcconfig */;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		97DDA6619DA368184F62600A876634BF /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D8E4F6163640AECEE0C730776922DCD8 /* VMaxAdsSDK.release.xcconfig */;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_ENABLE_OBJC_WEAK = NO;
@@ -1213,14 +1348,213 @@
 			};
 			name = Release;
 		};
+		97EACFA8691281DB1B4D9D19F1846C7F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5AF0B5B165F174DB8C30C8BE7F61F483 /* GoogleAds-IMA-iOS-SDK.debug.xcconfig */;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		9E556648AF97FBD7060556E0147D38C9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C315EDE9505E473A928EBD3E519AFD1C /* VMaxZeeOMSDK.release.xcconfig */;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A47AF375CE881BF8339CD05A7D0964E2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 843E59883CCE36A8A05F41FAD9F4F2FA /* VMaxZeeAdsPlugin.debug.xcconfig */;
+			buildSettings = {
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/VMaxZeeAdsPlugin";
+				IBSC_MODULE = VMaxZeeAdsPlugin;
+				INFOPLIST_FILE = "Target Support Files/VMaxZeeAdsPlugin/ResourceBundle-VMaxZeeAdsPlugin-VMaxZeeAdsPlugin-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				PRODUCT_NAME = VMaxZeeAdsPlugin;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Debug;
+		};
+		AD3362408FF90309EC779E058D71C435 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7008AB424693E7B29715E613352D692F /* Pods-VMaxZeeAdsPlugin_Tests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-VMaxZeeAdsPlugin_Tests/Pods-VMaxZeeAdsPlugin_Tests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-VMaxZeeAdsPlugin_Tests/Pods-VMaxZeeAdsPlugin_Tests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		CCEF25C09FAD62C9EB887C13E42A0D81 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E8708586EA07F6F3587A091105B0B921 /* VMaxZeeAdsPlugin.release.xcconfig */;
+			buildSettings = {
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/VMaxZeeAdsPlugin";
+				IBSC_MODULE = VMaxZeeAdsPlugin;
+				INFOPLIST_FILE = "Target Support Files/VMaxZeeAdsPlugin/ResourceBundle-VMaxZeeAdsPlugin-VMaxZeeAdsPlugin-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				PRODUCT_NAME = VMaxZeeAdsPlugin;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Release;
+		};
+		D3F375E7C7186ABE37D3A7FE617CF2B4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AFEF5A9C8ECE6994CAEF7ADB43CE928A /* VMaxGamAdapter.release.xcconfig */;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/VMaxGamAdapter/VMaxGamAdapter-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/VMaxGamAdapter/VMaxGamAdapter-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/VMaxGamAdapter/VMaxGamAdapter.modulemap";
+				PRODUCT_MODULE_NAME = VMaxGamAdapter;
+				PRODUCT_NAME = VMaxGamAdapter;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		D6E2D42D417C308FAC17FCABEBB01669 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C234891A972BEBA3994B9E85F86E7C0A /* Pods-VMaxZeeAdsPlugin_Example.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-VMaxZeeAdsPlugin_Example/Pods-VMaxZeeAdsPlugin_Example-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-VMaxZeeAdsPlugin_Example/Pods-VMaxZeeAdsPlugin_Example.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		DA97008E44DD017B1ABF914241B23F25 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A5745512B0CC82FBDB5E06F4FF0367E7 /* Pods-VMaxZeeAdsPlugin_Tests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-VMaxZeeAdsPlugin_Tests/Pods-VMaxZeeAdsPlugin_Tests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-VMaxZeeAdsPlugin_Tests/Pods-VMaxZeeAdsPlugin_Tests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		2A9EC967407998E5EAE7D89213BB128A /* Build configuration list for PBXNativeTarget "VMaxZeeAdsPlugin-VMaxZeeAdsPlugin" */ = {
+		2A248D00D8650A79F581E429AF6DE96B /* Build configuration list for PBXNativeTarget "VMaxZeeAdsPlugin" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				A97DA1AC47AF9053AFDEC44F80613E6A /* Debug */,
-				C90A3BC03BF6A87C196FFC566ED2C2A1 /* Release */,
+				5C6BD9E8CE3E31CB4FEB23CB0AEBC6D8 /* Debug */,
+				3F0D5B21352AD3511C8B8B36BEBD3299 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1228,35 +1562,44 @@
 		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				D299434AB35E7FD6F7921C8EF24742FF /* Debug */,
-				7EE7A78859F657F6BEFC651185B43192 /* Release */,
+				2B9E26EAE2CD392AD762421F663075A1 /* Debug */,
+				63FAF33E1C55B71A5F5A8B3CC8749F99 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		539D6A44376A048DE2999E82C7C9EF77 /* Build configuration list for PBXAggregateTarget "VMaxZeeOMSDK" */ = {
+		6E016F4B1E3B6A296AADE1EA692E91F3 /* Build configuration list for PBXNativeTarget "VMaxZeeAdsPlugin-VMaxZeeAdsPlugin" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				B0C95227A8646EB95C0091B520656AC2 /* Debug */,
-				729C6AEEAF5536A5924960F20C2B30F8 /* Release */,
+				A47AF375CE881BF8339CD05A7D0964E2 /* Debug */,
+				CCEF25C09FAD62C9EB887C13E42A0D81 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		CFBDF7EE0CBDB830CE519E11BEC8CA75 /* Build configuration list for PBXNativeTarget "Pods-VMaxZeeAdsPlugin_Example" */ = {
+		7D03A68617A03F485B0229201BD65262 /* Build configuration list for PBXNativeTarget "Pods-VMaxZeeAdsPlugin_Example" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				C1392F46FF676C4030A449B6CADC8D8F /* Debug */,
-				723BD51AA70A690C9E5F397E0058252C /* Release */,
+				D6E2D42D417C308FAC17FCABEBB01669 /* Debug */,
+				2D0F2E5412862ACBA442F890D470E66C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		E3353E5951499F9A12314BD7162576DF /* Build configuration list for PBXNativeTarget "VMaxZeeAdsPlugin" */ = {
+		AA82C62FBB7F00A3C7D4DBA0C7D6C570 /* Build configuration list for PBXAggregateTarget "GoogleAds-IMA-iOS-SDK" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				AA9E5F21BB8B87E161682B65A09AB3EC /* Debug */,
-				065F66A1CBC87DC8D63417DCF718895D /* Release */,
+				97EACFA8691281DB1B4D9D19F1846C7F /* Debug */,
+				4BDD04304F1376E2469C76A6B41BFDF1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B91A150B94F7E46CDED2DB6EBC87B27B /* Build configuration list for PBXAggregateTarget "VMaxZeeOMSDK" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				37B71937601731F03FBA18ADFF6BE376 /* Debug */,
+				9E556648AF97FBD7060556E0147D38C9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1264,8 +1607,17 @@
 		F6D34CA22D627379E36900A31932A894 /* Build configuration list for PBXAggregateTarget "VMaxAdsSDK" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				815742CC14DED0C117B796350FBC5974 /* Debug */,
-				E75B369A24DFF0E03A4044A5C1660262 /* Release */,
+				64B045749C324DF45060749D9D3D6992 /* Debug */,
+				97DDA6619DA368184F62600A876634BF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F9E8345BB5AE1E46527303EBF48B2983 /* Build configuration list for PBXNativeTarget "VMaxGamAdapter" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				51B59D17E8E30A9A4B002D8C9634D781 /* Debug */,
+				D3F375E7C7186ABE37D3A7FE617CF2B4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1273,8 +1625,8 @@
 		FD76D0E8BFF58C8E923AFD5251ADBC7D /* Build configuration list for PBXNativeTarget "Pods-VMaxZeeAdsPlugin_Tests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				16E12F6200EDA8DFF9060D51BA81B2C6 /* Debug */,
-				BDC88CD4625E88433BC0E9E0B3C6E7FE /* Release */,
+				DA97008E44DD017B1ABF914241B23F25 /* Debug */,
+				AD3362408FF90309EC779E058D71C435 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

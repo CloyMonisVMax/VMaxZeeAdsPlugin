@@ -426,30 +426,31 @@ extension InitialViewController : VMaxCompanionAdEvents{
 
 extension VmaxAdInfo {
     open override var debugDescription: String {
-        """
-        ----------------------------------------------------------------------
-                    \(String(describing: Swift.type(of: self)))
-        ----------------------------------------------------------------------
-        mediaFile.url:\(String(describing: self.mediaFile.url))
-        mediaFile.bitrate:\(String(describing: self.mediaFile.bitrate))
-        mediaFile.delivery:\(String(describing: self.mediaFile.delivery))
-        mediaFile.height:\(String(describing: self.mediaFile.height))
-        mediaFile.width:\(String(describing: self.mediaFile.width))
-        mediaFile.type:\(String(describing: self.mediaFile.type))
-        adDescription:\(String(describing: self.adDescription))
-        adDuration:\(String(describing: self.adDuration))
-        adTitle:\(String(describing: self.adTitle))
-        isSkippable:\(String(describing: self.isSkippable))
-        adId:\(String(describing: self.adId))
-        adSystem:\(String(describing: self.adSystem))
-        totalAds:\(String(describing: self.totalAds))
-        adPosition:\(String(describing: self.adPosition))
-        isBumper:\(String(describing: self.isBumper))
-        podIndex:\(String(describing: self.podIndex))
-        adMeta:\(String(describing: self.adMeta))
-        videoLayout:\(String(describing: self.videoLayout))
-        ----------------------------------------------------------------------
-        ----------------------------------------------------------------------
-        """
+        ""
+//        """
+//        ----------------------------------------------------------------------
+//                    \(String(describing: Swift.type(of: self)))
+//        ----------------------------------------------------------------------
+//        mediaFile.url:\(String(describing: self.mediaFile.url))
+//        mediaFile.bitrate:\(String(describing: self.mediaFile.bitrate))
+//        mediaFile.delivery:\(String(describing: self.mediaFile.delivery))
+//        mediaFile.height:\(String(describing: self.mediaFile.height))
+//        mediaFile.width:\(String(describing: self.mediaFile.width))
+//        mediaFile.type:\(String(describing: self.mediaFile.type))
+//        adDescription:\(String(describing: self.adDescription))
+//        adDuration:\(String(describing: self.adDuration))
+//        adTitle:\(String(describing: self.adTitle))
+//        isSkippable:\(String(describing: self.isSkippable))
+//        adId:\(String(describing: self.adId))
+//        adSystem:\(String(describing: self.adSystem))
+//        totalAds:\(String(describing: self.totalAds))
+//        adPosition:\(String(describing: self.adPosition))
+//        isBumper:\(String(describing: self.isBumper))
+//        podIndex:\(String(describing: self.podIndex))
+//        adMeta:\(String(describing: self.adMeta))
+//        videoLayout:\(String(describing: self.videoLayout))
+//        ----------------------------------------------------------------------
+//        ----------------------------------------------------------------------
+//        """
     }
 }

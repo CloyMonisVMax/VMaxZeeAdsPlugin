@@ -42,7 +42,7 @@
 		</data>
 		<key>Headers/VMaxAdBreak.h</key>
 		<data>
-		L0F1GDAYfS89qGdXCRY12jTLdi4=
+		+A6dIez3cLvC2g4fc4ByzQ45ojc=
 		</data>
 		<key>Headers/VMaxAdBreakEvents.h</key>
 		<data>
@@ -70,7 +70,7 @@
 		</data>
 		<key>Headers/VMaxAdInfo.h</key>
 		<data>
-		jHxIsMbQbSgPhhnCsp360qfd+Zs=
+		kgz9pmvDMua28zkN3Ichsi1eyCw=
 		</data>
 		<key>Headers/VMaxAdMetaData.h</key>
 		<data>
@@ -78,7 +78,7 @@
 		</data>
 		<key>Headers/VMaxAdPartner.h</key>
 		<data>
-		h/4VhnFkZMsZYvsQnivQ9J/n/eY=
+		6E15xi/Qg601p6HAMSBvLMj2nCU=
 		</data>
 		<key>Headers/VMaxAdSDK-umbrella.h</key>
 		<data>
@@ -98,7 +98,7 @@
 		</data>
 		<key>Headers/VMaxAdView.h</key>
 		<data>
-		4S9IdfRpXAWsnonSE2Dp8P2Uvwo=
+		sJB2Jf/KAqlw0lesExXohacEcks=
 		</data>
 		<key>Headers/VMaxAdsSDK.h</key>
 		<data>
@@ -114,11 +114,11 @@
 		</data>
 		<key>Headers/VMaxCustomAd.h</key>
 		<data>
-		vsakyevi6St47oyvcMrlBTj73H4=
+		e66+TW9UCDtR5HEXNQohkQK4LUM=
 		</data>
 		<key>Headers/VMaxCustomAdListener.h</key>
 		<data>
-		5w7kWOk3sh9CIoY/LjTUqkwd26k=
+		qHjG1grnfTWhfW4rzi1O1RyLNR8=
 		</data>
 		<key>Headers/VMaxError.h</key>
 		<data>
@@ -198,7 +198,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		XeFGLcKODQCXRBHjA1643VXoIjY=
+		NqOPNw/kqlOGcvFK5ANu59NTnz0=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -562,11 +562,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			L0F1GDAYfS89qGdXCRY12jTLdi4=
+			+A6dIez3cLvC2g4fc4ByzQ45ojc=
 			</data>
 			<key>hash2</key>
 			<data>
-			XUApawpvp2V/4DvE57iQzw22uR65KRToMJ0R9Ls7Nyo=
+			Fozs0/S80yIH47shXx8lmME/yPAQX5dAyylbqj3sQEw=
 			</data>
 		</dict>
 		<key>Headers/VMaxAdBreakEvents.h</key>
@@ -639,11 +639,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			jHxIsMbQbSgPhhnCsp360qfd+Zs=
+			kgz9pmvDMua28zkN3Ichsi1eyCw=
 			</data>
 			<key>hash2</key>
 			<data>
-			SClwHd/dibhVYl+Qfv2NQylyIXBgEBpztrvoKPlgxEo=
+			9p6AS2rM3YoN2kgrZn8Cr5JMLNck0bgiOV5WHMCthkU=
 			</data>
 		</dict>
 		<key>Headers/VMaxAdMetaData.h</key>
@@ -661,11 +661,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			h/4VhnFkZMsZYvsQnivQ9J/n/eY=
+			6E15xi/Qg601p6HAMSBvLMj2nCU=
 			</data>
 			<key>hash2</key>
 			<data>
-			Akl5sT7UQQAfcdwRydO/hLeoBflmgbG9PAfFmMOvpQI=
+			Zwl8S1ALF1iSLgi4iaGaNUROcMFuy6WT76SalE/reoE=
 			</data>
 		</dict>
 		<key>Headers/VMaxAdSDK-umbrella.h</key>
@@ -716,11 +716,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			4S9IdfRpXAWsnonSE2Dp8P2Uvwo=
+			sJB2Jf/KAqlw0lesExXohacEcks=
 			</data>
 			<key>hash2</key>
 			<data>
-			NaQCEZyaJAYzmHkK11xS41Zuy/VKabaa4q/Q5J6PXks=
+			8QM5hX4GnhCU3fUV3yObVegmSBiTpBZSis7JHsSakIw=
 			</data>
 		</dict>
 		<key>Headers/VMaxAdsSDK.h</key>
@@ -760,22 +760,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			vsakyevi6St47oyvcMrlBTj73H4=
+			e66+TW9UCDtR5HEXNQohkQK4LUM=
 			</data>
 			<key>hash2</key>
 			<data>
-			l7MRjvqqOJADUcw1p+p2l/F/ewx9ArkPAo99cdyejdc=
+			k8KH0hQ4jDMAHKwelohpD2bvLgPn3unfy2yw/WQblOU=
 			</data>
 		</dict>
 		<key>Headers/VMaxCustomAdListener.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			5w7kWOk3sh9CIoY/LjTUqkwd26k=
+			qHjG1grnfTWhfW4rzi1O1RyLNR8=
 			</data>
 			<key>hash2</key>
 			<data>
-			yOwkkpCrR+oUbhoxbQLLOAfkiLTzDxJoZH0zM7+5J1A=
+			bds5201mc2lLmppa2pK/8Cf9kCUNAdUns9RsQF+pVSE=
 			</data>
 		</dict>
 		<key>Headers/VMaxError.h</key>
