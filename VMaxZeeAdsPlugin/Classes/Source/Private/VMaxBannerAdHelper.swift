@@ -108,6 +108,16 @@ extension VMaxBannerAdHelper: VMaxCompanionDelegate {
         vmLog("onCompanionClick")
         companionAdEvents?.onCompanionClick(adView.adslotID)
     }
+    
+    func onCompanionSkip(_ adView: VMaxAdView!) {
+        vmLog("onCompanionSkip")
+        companionAdEvents?.onCompanionSkip(adView.adslotID)
+    }
+    
+    func onCompanionComplete(_ adView: VMaxAdView!) {
+        vmLog("onCompanionComplete")
+        companionAdEvents?.onCompanionComplete(adView.adslotID)
+    }
 }
 
 extension VMaxBannerAdHelper {

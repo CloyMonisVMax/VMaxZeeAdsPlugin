@@ -32,6 +32,7 @@ NS_ASSUME_NONNULL_BEGIN
 -(void)onAdResume:(VmaxAdInfo*)vmaxAdInfo;
 -(void)onAdMediaBitrateChange:(float)indicatedBitrate;
 -(void)onAdTapped:(VmaxAdInfo*)vmaxAdInfo;
+-(void)onAdMediaProgress:(NSInteger)currentDuration withTotalDuration:(NSInteger)totalDuration;
 
 @end
 
@@ -42,6 +43,8 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)onCompanionError:(NSString*)adSlotId;
 - (void)onCompanionClose:(NSString*)adSlotId;
 - (void)onCompanionClick:(NSString*)adSlotId;
+- (void)onCompanionSkip:(NSString*)adSlotId;
+- (void)onCompanionComplete:(NSString*)adSlotId;
 
 @end
 

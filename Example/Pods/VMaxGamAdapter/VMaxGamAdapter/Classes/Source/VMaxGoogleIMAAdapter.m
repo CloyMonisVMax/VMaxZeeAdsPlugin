@@ -12,7 +12,7 @@
 
 NSString *const kInContentVideo_AdTagUrl             = @"ad_tag_url";
 NSString *const kInContentVideo_MaxAdDur             = @"max_ad_duration";
-NSString *const errorAdTagUrl = @"https://asdfgpubads.g.doubleclick.net/gampad/ads?iu=/21665149170/TEST_JAN_2021&description_url=%5Bplaceholder%5D&tfcd=0&npa=0&sz=640x480&gdfp_req=1&output=vast&unviewed_position_start=1&env=vp&impl=s&correlator=&max_ad_duration=100000"; //@"https://pubads.g.doubleclick.net/gampad/ads?iu=/21665149170/TEST_JAN_2021&description_url=%5Bplaceholder%5D&tfcd=0&npa=0&sz=640x480&gdfp_req=1&output=vast&unviewed_position_start=1&env=vp&impl=s&correlator=";
+//NSString *const errorAdTagUrl = @"https://asdfgpubads.g.doubleclick.net/gampad/ads?iu=/21665149170/TEST_JAN_2021&description_url=%5Bplaceholder%5D&tfcd=0&npa=0&sz=640x480&gdfp_req=1&output=vast&unviewed_position_start=1&env=vp&impl=s&correlator=&max_ad_duration=100000"; //@"https://pubads.g.doubleclick.net/gampad/ads?iu=/21665149170/TEST_JAN_2021&description_url=%5Bplaceholder%5D&tfcd=0&npa=0&sz=640x480&gdfp_req=1&output=vast&unviewed_position_start=1&env=vp&impl=s&correlator=";
 
 @interface VMaxGoogleIMAAdapter () <IMAAdsLoaderDelegate, IMAAdsManagerDelegate, IMALinkOpenerDelegate>
 @property (nonatomic, weak) AVPlayer *contentPlayer; // Content video player.
@@ -47,7 +47,6 @@ NSString *const errorAdTagUrl = @"https://asdfgpubads.g.doubleclick.net/gampad/a
     if ((idAdTagURL != nil) && ( [idAdTagURL isKindOfClass:[NSString class]])){
         self.adTagUrl = [inParams objectForKey:kInContentVideo_AdTagUrl];
     }
-    //self.adTagUrl = errorAdTagUrl;
 
     self.contentURL = [NSURL URLWithString:@"."];
 
@@ -740,5 +739,12 @@ NSString *const errorAdTagUrl = @"https://asdfgpubads.g.doubleclick.net/gampad/a
         [self.adsManager resume];
     }
 }
+
+- (void)updateMediaProgess:(NSNumber*) currentDuration withTotalDuration:(NSNumber*)totalDuration {
+    if (self.delegate && [self.delegate respondsToSelector:@selector(VMaxCustomAdProgress:withTotalDuration:)]) {
+        [self.delegate VMaxCustomAdProgress:currentDuration withTotalDuration:totalDuration];
+    }
+}
+
 
 @end

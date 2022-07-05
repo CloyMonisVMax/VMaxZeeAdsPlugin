@@ -20,4 +20,8 @@
 
 - (void)onCompanionClick:(VMaxAdView *)adView;
 
+- (void)onCompanionSkip:(VMaxAdView *)adView;
+
+- (void)onCompanionComplete:(VMaxAdView *)adView;
+
 @end

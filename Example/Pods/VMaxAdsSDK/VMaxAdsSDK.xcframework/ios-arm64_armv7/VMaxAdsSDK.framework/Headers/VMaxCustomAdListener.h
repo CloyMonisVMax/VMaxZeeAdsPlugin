@@ -81,4 +81,6 @@
 
 -(void)VMaxCustomAdResume; //3.15.8
 
+-(void)VMaxCustomAdProgress:(NSNumber*) currentDuration withTotalDuration:(NSNumber*)totalDuration; //3.15.10
+
 @end

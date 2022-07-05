@@ -398,6 +398,10 @@ extension InitialViewController: VMaxAdEvents{
         print("\(TAG) onAdTapped")
     }
     
+    func onAdMediaProgress(_ currentDuration: Int, withTotalDuration totalDuration: Int) {
+        print("\(TAG) onAdMediaProgress")
+    }
+    
 }
 
 extension InitialViewController : VMaxCompanionAdEvents{
@@ -420,6 +424,14 @@ extension InitialViewController : VMaxCompanionAdEvents{
     
     func onCompanionError(_ adSlotId: String) {
         print("\(TAG) VMaxCompanionAdEvents onCompanionError adSlotId:\(adSlotId)")
+    }
+    
+    func onCompanionSkip(_ adSlotId: String) {
+        print("\(TAG) VMaxCompanionAdEvents onCompanionSkip adSlotId:\(adSlotId)")
+    }
+    
+    func onCompanionComplete(_ adSlotId: String) {
+        print("\(TAG) VMaxCompanionAdEvents onCompanionComplete adSlotId:\(adSlotId)")
     }
     
 }
