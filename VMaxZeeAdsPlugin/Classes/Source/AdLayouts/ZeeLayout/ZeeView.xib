@@ -81,7 +81,7 @@
                                         <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     </state>
                                 </button>
-                                <label userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Oe8-l0-jyW" customClass="VMaxAdSkipCounterLabel" customModule="VMaxZeeAdsPlugin" customModuleProvider="target">
+                                <label hidden="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Oe8-l0-jyW" customClass="VMaxAdSkipCounterLabel" customModule="VMaxZeeAdsPlugin" customModuleProvider="target">
                                     <rect key="frame" x="284" y="130" width="130" height="40"/>
                                     <color key="backgroundColor" white="0.0" alpha="0.5954720402" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <constraints>
@@ -108,6 +108,7 @@
                                 </view>
                             </subviews>
                             <viewLayoutGuide key="safeArea" id="yai-LK-sM2"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
                                 <constraint firstAttribute="bottom" secondItem="O2I-9P-eWn" secondAttribute="bottom" id="3Kc-zS-kmD"/>
                                 <constraint firstItem="Oe8-l0-jyW" firstAttribute="trailing" secondItem="yai-LK-sM2" secondAttribute="trailing" id="5yP-Jp-qrx"/>
@@ -164,7 +165,7 @@
                 </view>
             </subviews>
             <viewLayoutGuide key="safeArea" id="TAP-ax-sra"/>
-            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
                 <constraint firstAttribute="trailing" secondItem="01s-Ud-oAu" secondAttribute="trailing" id="75E-uU-Lld"/>
                 <constraint firstAttribute="leading" secondItem="01s-Ud-oAu" secondAttribute="leading" id="DW8-dk-t0h"/>

@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name             = 'VMaxZeeAdsPlugin'
-  s.version          = '0.1.41'
+  s.version          = '0.1.42'
   s.summary          = 'VMaxZeeAdsPlugin integrates VMaxAdsSDK to show instream ads'
   s.description      = 'VMaxZeeAdsPlugin has currently integtared Instream Video Ads with companion banner ads.'
   s.homepage         = 'https://github.com/CloyMonisVMax/VMaxZeeAdsPlugin'

@@ -100,6 +100,7 @@
                                 </view>
                             </subviews>
                             <viewLayoutGuide key="safeArea" id="TlD-od-teo"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
                                 <constraint firstItem="xRG-kW-zux" firstAttribute="leading" secondItem="Qfc-Oi-bG0" secondAttribute="trailing" id="1KW-Hb-REL"/>
                                 <constraint firstItem="L01-iu-76n" firstAttribute="leading" secondItem="TlD-od-teo" secondAttribute="leading" constant="12" id="3G9-bE-MaR"/>
@@ -154,7 +155,7 @@
                 </view>
             </subviews>
             <viewLayoutGuide key="safeArea" id="hr9-r8-zZ3"/>
-            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
                 <constraint firstAttribute="top" secondItem="4V1-qO-Kho" secondAttribute="top" id="9yi-5N-uJP"/>
                 <constraint firstAttribute="leading" secondItem="4V1-qO-Kho" secondAttribute="leading" id="LBP-EL-zsK"/>
