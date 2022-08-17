@@ -40,7 +40,7 @@ typedef NS_ENUM(NSUInteger,VastEventType) {
 
 Boolean isOMSdkActivated = false;
 OMIDZeedigitalesselgroupPartner *partner;
-OMIDZeedigitalesselgroupAdSession *adSession; 
+OMIDZeedigitalesselgroupAdSession *adSession;
 OMIDZeedigitalesselgroupAdEvents *adEvents;
 OMIDZeedigitalesselgroupMediaEvents *omidVideoEvents;
 
@@ -48,7 +48,7 @@ AVPlayer * avPlayerVideoPlayer;
 NSString *strScript;
 UIView *viewMainAdPlayerView;
 
-@implementation VMaxOM 
+@implementation VMaxOM
 
 #pragma mark Activate the OM SDK
 
@@ -66,7 +66,7 @@ UIView *viewMainAdPlayerView;
 }
 
 -(void)script {
-    NSString *path =[[NSBundle bundleForClass: self.class] pathForResource:@"vmax_omid" ofType:@"js"];
+    NSString *path = [[NSBundle bundleForClass: self.class] pathForResource:@"vmax_omid" ofType:@"js"];
     NSData *data = [NSData dataWithContentsOfFile:path];
     strScript = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
     VLog(@"%@",strScript);
@@ -298,25 +298,41 @@ UIView *viewMainAdPlayerView;
     [self script];
     NSMutableArray *verificationScriptResources = [[NSMutableArray alloc]init];
     if (andOmResources.count > 0) {
-        for (NSDictionary* omResource in andOmResources)
-        {
-            NSString *omJavaScriptResourceURL = [omResource valueForKey:@"omJavaScriptResourceURL"];
-            NSString *strVendorKey = [omResource valueForKey:@"omVendorKey"];
-            NSString *strVerificationParam = [omResource valueForKey:@"omVerificationParam"];
-            NSURL *url = [NSURL URLWithString:omJavaScriptResourceURL];
-            VLog(@"OM_vmax : %@",url);
-            VLog(@"OM_vmax : vendorKey %@",strVendorKey);
-            VLog(@"OM_vmax : verificationParam %@",strVerificationParam);
-            [verificationScriptResources addObject:[[OMIDZeedigitalesselgroupVerificationScriptResource alloc] initWithURL:url vendorKey: strVendorKey
-                                                                                                                parameters:strVerificationParam]];
+        for (NSDictionary* omResource in andOmResources) {
+            if ([omResource count] > 0) {
+                if ([omResource objectForKey:@"omJavaScriptResourceURL"] == nil) {
+                    VLog(@"Couldn't find omJavaScriptResourceURL");
+                    return;
+                }
+                if ([omResource objectForKey:@"omVendorKey"] == nil) {
+                    VLog(@"Couldn't find omVendorKey");
+                    return;
+                }
+                if ([omResource objectForKey:@"omVerificationParam"] == nil) {
+                    VLog(@"Couldn't find omVerificationParam");
+                    return;
+                }
+                NSString *omJavaScriptResourceURL = [omResource valueForKey:@"omJavaScriptResourceURL"];
+                NSString *strVendorKey = [omResource valueForKey:@"omVendorKey"];
+                NSString *strVerificationParam = [omResource valueForKey:@"omVerificationParam"];
+                NSURL *url = [NSURL URLWithString:omJavaScriptResourceURL];
+                VLog(@"OM_vmax : %@",url);
+                VLog(@"OM_vmax : vendorKey %@",strVendorKey);
+                VLog(@"OM_vmax : verificationParam %@",strVerificationParam);
+                [verificationScriptResources addObject:[[OMIDZeedigitalesselgroupVerificationScriptResource alloc] initWithURL:url vendorKey: strVendorKey parameters:strVerificationParam]];
+            }
         }
-    }
-    else{
-        for (NSDictionary* omResource in andOmResources)
-        {
-            NSString *omJavaScriptResourceURL = [omResource valueForKey:@"omJavaScriptResourceURL"];
-            NSURL *url = [NSURL URLWithString:omJavaScriptResourceURL];
-            [verificationScriptResources addObject:[[OMIDZeedigitalesselgroupVerificationScriptResource alloc] initWithURL:url]];
+    } else{
+        for (NSDictionary* omResource in andOmResources) {
+            if ([omResource count] > 0) {
+                if ([omResource objectForKey:@"omJavaScriptResourceURL"] == nil) {
+                    VLog(@"Couldn't find omJavaScriptResourceURL");
+                    return;
+                }
+                NSString *omJavaScriptResourceURL = [omResource valueForKey:@"omJavaScriptResourceURL"];
+                NSURL *url = [NSURL URLWithString:omJavaScriptResourceURL];
+                [verificationScriptResources addObject:[[OMIDZeedigitalesselgroupVerificationScriptResource alloc] initWithURL:url]];
+            }
         }
         
     }
